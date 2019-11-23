@@ -10,7 +10,7 @@ public class Joueur {
     private List<String> deck;
     private List<String> defausse;
     private List<String> main;
-
+//cc
 
     public Joueur( char pDriection, int pPositionX, int pPositionY)
     {
