@@ -1,18 +1,36 @@
 import java.util.List;
 
 public class Joueur {
-    private int position;
-    private char direction;
-    private List<String> deck;
-    private List<String> defausse;
-    private List<String> main;
+    int positionX;
+    int positionY;
+    char direction;
+    List<String> deck;
+    List<String> defausse;
+    List<String> main;
 
-    public int getPosition() {
-        return position;
+
+    public Joueur( char pDriection, int pPositionX, int pPositionY)
+    {
+        System.out.println("Création d'un joueur avec des paramètres !");
+        positionX = pPositionX;
+        positionY = pPositionY;
+        direction = pDriection;
     }
 
-    public void setPosition(int position) {
-        this.position = position;
+    public int getPositionX() {
+        return positionX;
+    }
+
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
     }
 
     public char getDirection() {
@@ -21,29 +39,5 @@ public class Joueur {
 
     public void setDirection(char direction) {
         this.direction = direction;
-    }
+    }}
 
-    public List<String> getDeck() {
-        return deck;
-    }
-
-    public void setDeck(List<String> deck) {
-        this.deck = deck;
-    }
-
-    public List<String> getDefausse() {
-        return defausse;
-    }
-
-    public void setDefausse(List<String> defausse) {
-        this.defausse = defausse;
-    }
-
-    public List<String> getMain() {
-        return main;
-    }
-
-    public void setMain(List<String> main) {
-        this.main = main;
-    }
-}
