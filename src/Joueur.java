@@ -21,12 +21,23 @@ public class Joueur {
     }
     public void avancer(){
         if(this.direction=='N'){
-            if(this.positionY==1){this.po}
+            if(this.positionY==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionY=this.positionY-1;}
         }
-        else if(this.direction=='E'){}
-        else if(this.direction=='S'){}
-        else if(this.direction=='O'){}
+        else if(this.direction=='E'){
+            if(this.positionX==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionX=this.positionX+1;}
+        }
+        else if(this.direction=='S'){
+            if(this.positionY==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionY=this.positionY+1;}
+        }
+        else if(this.direction=='O'){
+            if(this.positionX==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionX=this.positionX-1;}
+        }
     }
+
     public void tournerD(){
 
         if(this.direction=='N'){this.direction='E';}
