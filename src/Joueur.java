@@ -20,6 +20,7 @@ public class Joueur {
         direction = pDriection;
     }
     public void avancer(){
+        //Mettre en fonction du nombre de joueur
         if(this.direction=='N'){
             if(this.positionY==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
             else{this.positionY=this.positionY-1;}
@@ -37,7 +38,16 @@ public class Joueur {
             else{this.positionX=this.positionX-1;}
         }
     }
-
+    public void test(){
+        // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
+        //plateau[y][x]
+        if(this.direction=='N'){
+            if(jeu.plateau[this.positionY][this.positionX].equals(".")){}
+        }
+        else if(this.direction=='E'){}
+        else if(this.direction=='S'){}
+        else if(this.direction=='O'){}
+    }
     public void tournerD(){
 
         if(this.direction=='N'){this.direction='E';}
