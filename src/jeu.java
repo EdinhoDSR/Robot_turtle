@@ -1,14 +1,13 @@
 import java.util.*;
 public class jeu {
     //plateau[y][x]
-    public static String [][] plateau = new String[10][10];
+    private static String [][] plateau = new String[10][10];
     private static Scanner scanner = new Scanner(System.in);
-    public static int nombreDeJoueurs;
 
     public static void main(String[] args) {
         System.out.println("Entrez le nombre de joueurs");
-        nombreDeJoueurs = Integer.parseInt(scanner.nextLine());
-        initialisation(nombreDeJoueurs);
+        int saisie = Integer.parseInt(scanner.nextLine());
+        initialisation(saisie);
         afficher();
         Joueur J1 = new Joueur('N',1,5);
         J1.setPositionX(2);

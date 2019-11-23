@@ -63,6 +63,18 @@ public class Joueur {
         else if(this.direction=='E'){this.direction='N';}
     }
 
+    public void utiliserLaser(){
+        if (direction == 'E'){
+            for(int i=0;i<nb){
+
+            }
+        }
+    }
+
+    public void poserMur(String typeDeMur) {
+        //A remplir !!!!
+    }
+
     public int getPositionX() {
         return positionX;
     }
@@ -85,5 +97,36 @@ public class Joueur {
 
     public void setDirection(char direction) {
         this.direction = direction;
-    }}
+    }
+
+    public void utiliserCarte(String carte) {
+        if (carte.equals("avancer")) {
+            this.avancer();
+        }
+        if (carte.equals("reculer")) {
+            this.tournerD();
+            this.tournerD();
+            this.avancer();
+        }
+        if (carte.equals("tournerG")) {
+            this.tournerG();
+        }
+        if (carte.equals("tournerD")) {
+            this.tournerD();
+        }
+        if (carte.equals("tournerD")) {
+            this.utiliserLaser();
+        }
+        if (carte.equals("murDeGlace")) {
+            this.poserMur("murDeGlace");
+        }
+        if (carte.equals("murDeBois")) {
+            this.poserMur("murDeBois");
+        }
+        if (carte.equals("murEnPierre")) {
+            this.poserMur("murEnPierre");
+        }
+    }
+
+    }
 
