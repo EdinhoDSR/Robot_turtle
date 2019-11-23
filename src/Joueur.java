@@ -3,6 +3,9 @@ import java.util.List;
 public class Joueur {
     private int positionX;
     private int positionY;
+    private int positionXDepart;
+    private int positionYDepart;
+    private int numero;
     private char direction;
     private List<String> deck;
     private List<String> defausse;
