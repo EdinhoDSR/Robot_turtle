@@ -9,9 +9,15 @@ public class jeu {
         int saisie = Integer.parseInt(scanner.nextLine());
         initialisation(saisie);
         afficher();
-        Joueur J1 = new Joueur('D',1,5);
+        Joueur J1 = new Joueur('N',1,5);
         J1.setPositionX(2);
         System.out.println("J"+1+"="+J1.getPositionX());
+        System.out.println("J"+1+"="+J1.getDirection());
+        J1.tournerD();
+        System.out.println("J"+1+"="+J1.getDirection());
+        J1.tournerG();
+        System.out.println("J"+1+"="+J1.getDirection());
+
     }
     private static void initialisation(int nombreJoueurs){
             for (int x = 1; x < 9; x++) {//boucle qui fait le tableau jouable

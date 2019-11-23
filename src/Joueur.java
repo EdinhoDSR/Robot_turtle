@@ -16,6 +16,28 @@ public class Joueur {
         positionY = pPositionY;
         direction = pDriection;
     }
+    public void avancer(){
+        if(this.direction=='N'){
+            if(this.positionY==1){this.po}
+        }
+        else if(this.direction=='E'){}
+        else if(this.direction=='S'){}
+        else if(this.direction=='O'){}
+    }
+    public void tournerD(){
+
+        if(this.direction=='N'){this.direction='E';}
+        else if(this.direction=='E'){this.direction='S';}
+        else if(this.direction=='S'){this.direction='O';}
+        else if(this.direction=='O'){this.direction='N';}
+    }
+    public void tournerG(){
+
+        if(this.direction=='N'){this.direction='O';}
+        else if(this.direction=='O'){this.direction='S';}
+        else if(this.direction=='S'){this.direction='E';}
+        else if(this.direction=='E'){this.direction='N';}
+    }
 
     public int getPositionX() {
         return positionX;
