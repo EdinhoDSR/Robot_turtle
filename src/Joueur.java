@@ -1,12 +1,12 @@
 import java.util.List;
 
 public class Joueur {
-    int positionX;
-    int positionY;
-    char direction;
-    List<String> deck;
-    List<String> defausse;
-    List<String> main;
+    private int positionX;
+    private int positionY;
+    private char direction;
+    private List<String> deck;
+    private List<String> defausse;
+    private List<String> main;
 
 
     public Joueur( char pDriection, int pPositionX, int pPositionY)
