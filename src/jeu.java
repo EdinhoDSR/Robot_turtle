@@ -1,17 +1,19 @@
 import java.util.*;
 public class jeu {
     //plateau[y][x]
-    public static String [][] plateau = new String[10][10];
-    static Scanner scanner = new Scanner(System.in);
+    private static String [][] plateau = new String[10][10];
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        initialisation(2);
+        System.out.println("Entrez le nombre de joueurs");
+        int saisie = Integer.parseInt(scanner.nextLine());
+        initialisation(saisie);
         afficher();
         Joueur J1 = new Joueur('D',1,5);
-        J1.positionX = 2;
-        System.out.println("J"+Integer.toString(1)+"="+J1.positionX);
+        J1.setPositionX(2);
+        System.out.println("J"+1+"="+J1.getPositionX());
     }
-    public static void initialisation(int nombreJoueurs){
+    private static void initialisation(int nombreJoueurs){
             for (int x = 1; x < 9; x++) {//boucle qui fait le tableau jouable
                 for (int y = 1; y < 9; y++) {
                     plateau[y][x] = ".";
@@ -28,10 +30,10 @@ public class jeu {
             }
         plateau[1][2]="E";
     }
-    public static void afficher(){
+    private static void afficher(){
         for(int i=0; i<10; i++){
             for(int j=0; j<10; j++){System.out.print(plateau[i][j]);}// on a une ligne
-            System.out.println("");// on a le retour a la ligne
+            System.out.println();// on a le retour a la ligne
         }
     }
 }
