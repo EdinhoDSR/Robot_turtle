@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.List;
 
-public class Joueur extends objetJeu {
+public class Joueur {
     private int positionX;
     private int positionY;
     private int positionXDepart;
@@ -11,73 +11,74 @@ public class Joueur extends objetJeu {
     private List<String> defausse;
     private List<String> main;
 
-    public Joueur( char pDriection, int pPositionX, int pPositionY, int pNumero)
+    public Joueur( char pDriection, int pPositionX, int pPositionY)
     {
         System.out.println("Création d'un joueur avec des paramètres !");
         positionX = pPositionX;
         positionY = pPositionY;
         direction = pDriection;
-        numero = pNumero;
-        type = 'J';
     }
     public void avancer(){
-        //methode termine
+        //C'est fait en fonction du nombre de joueur reste plus qu'à changer la place du joueur dans le tableau
         if(this.direction=='N'){
-            if(this.positionY==1){
-                this.positionX=this.positionXDepart;
-                this.positionY=this.positionYDepart;
-            }
+            if(this.positionY==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
             else{
-                jeu.plateau[positionY][positionX]=jeu.chemin;
+                jeu.plateau[positionY][positionX]=".";
                 this.positionY=this.positionY-1;
-                jeu.plateau[positionY][positionX]=this;
+                jeu.plateau[positionY][positionX]="J"+this.numero;
             }
+        }
+        else if(this.direction=='E' && jeu.nombreDeJoueurs==4){
+            if(this.positionX==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionX=this.positionX+1;}
         }
         else if(this.direction=='E'){
-            if(this.positionX==7){
-                this.positionX=this.positionXDepart;
-                this.positionY=this.positionYDepart;
-            }
-            else{
-                jeu.plateau[positionY][positionX]=jeu.chemin;
-                this.positionX=this.positionX+1;
-                jeu.plateau[positionY][positionX]=this;
-            }
+            if(this.positionX==7){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionX=this.positionX+1;}
         }
         else if(this.direction=='S'){
-            if(this.positionY==8){
-                this.positionX=this.positionXDepart;
-                this.positionY=this.positionYDepart;
-            }
-            else{
-                jeu.plateau[positionY][positionX]=jeu.chemin;
-                this.positionY=this.positionY+1;
-                jeu.plateau[positionY][positionX]=this;
-            }
+            if(this.positionY==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionY=this.positionY+1;}
         }
         else if(this.direction=='O'){
-            if(this.positionX==1){
-                this.positionX=this.positionXDepart;
-                this.positionY=this.positionYDepart;
-            }
-            else{
-                jeu.plateau[positionY][positionX]=jeu.chemin;
-                this.positionX=this.positionX-1;
-                jeu.plateau[positionY][positionX]=this;
-            }
+            if(this.positionX==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionX=this.positionX-1;}
         }
     }
-    public void avancerMurDeBois(){}
+
+    public int getPositionXDepart() {
+        return positionXDepart;
+    }
+
+    public void setPositionXDepart(int positionXDepart) {
+        this.positionXDepart = positionXDepart;
+    }
+
+    public int getPositionYDepart() {
+        return positionYDepart;
+    }
+
+    public void setPositionYDepart(int positionYDepart) {
+        this.positionYDepart = positionYDepart;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
     public void test(){
         // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
         //plateau[y][x]
-        if(jeu.plateau[this.positionY][this.positionX].type.equals("V")){
-            this.avancer();
+        if(this.direction=='N'){
+            if(jeu.plateau[this.positionY][this.positionX].equals(".")){}
         }
-        else if(jeu.plateau[this.positionY][this.positionX].type.equals("B")){}
-        else if(jeu.plateau[this.positionY][this.positionX].type.equals("P")){}
-        else if(jeu.plateau[this.positionY][this.positionX].type.equals("G")){}
-        else if(jeu.plateau[this.positionY][this.positionX].type.equals("J")){}
+        else if(this.direction=='E'){}
+        else if(this.direction=='S'){}
+        else if(this.direction=='O'){}
     }
     public void tournerD(){
 
@@ -93,27 +94,31 @@ public class Joueur extends objetJeu {
         else if(this.direction=='S'){this.direction='E';}
         else if(this.direction=='E'){this.direction='N';}
     }
-    public void reculer(){
-        this.tournerG();
-        this.tournerG();
-        this.avancer();
+    public void initPositionDebut(int posX,int posY){
+        this.setPositionX(posX);
+        this.setPositionXDepart(posX);
+        this.setPositionY(posY);
+        this.setPositionYDepart(posY);
+        jeu.plateau[this.getPositionY()][this.getPositionX()] = "J1";
     }
 
     public void utiliserLaser(){
         if (direction == 'E'){
             for(int i=positionX;i<8;i++){
-                if (!jeu.plateau[positionY][i].type.equals("V")){
-                    if (jeu.plateau[positionY][i].type.equals("G")){
-                        jeu.plateau[positionY][i] = jeu.chemin;
+                if (!jeu.plateau[positionY][i].equals(".")){
+                    if (jeu.plateau[positionY][i].equals("murDeGlace")){
+                        jeu.plateau[positionY][i] = ".";
                     }
-                    if (jeu.plateau[positionY][i].type.equals("j")){
+                    if (jeu.plateau[positionY][i].substring(0,1).equals("j")){
                         this.tournerD();
                         this.tournerD();
                     }
-                    if (jeu.plateau[positionY][i].type.equals("J")){
-                        jeu.plateau[positionY][i].tournerD();
-                        jeu.plateau[positionY][i].tournerD();
+                    if (jeu.plateau[positionY][i].substring(0,1).equals("J")){
+                        .tournerD();
+                        this.tournerD();
                     }
+
+
                 }
 
             }

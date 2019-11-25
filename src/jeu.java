@@ -1,11 +1,7 @@
 import java.util.*;
 public class jeu {
     //plateau[y][x]
-    public static objetJeu [][] plateau = new objetJeu[10][10];
-    public static vide chemin = new vide();
-    public static murDePierre murDePierre = new murDePierre();
-    public static murDeBois murDeBois = new murDeBois();
-    public static murDeGlace murDeGlace = new murDeGlace();
+    public static String [][] plateau = new String[10][10];
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
     public static void main(String[] args) {
@@ -13,7 +9,7 @@ public class jeu {
         int nombreDeJoueurs = Integer.parseInt(scanner.nextLine());
         initialisation(nombreDeJoueurs);
         afficher();
-        Joueur J1 = new Joueur('N',1,5,1);
+        Joueur J1 = new Joueur('N',1,5);
         J1.setPositionX(2);
         System.out.println("J"+1+"="+J1.getPositionX());
         System.out.println("J"+1+"="+J1.getDirection());
@@ -22,19 +18,18 @@ public class jeu {
         J1.tournerG();
         System.out.println("J"+1+"="+J1.getDirection());
 
-
     }
     private static void initialisation(int nombreJoueurs){
             for (int x = 1; x < 9; x++) {//boucle qui fait le tableau jouable
                 for (int y = 1; y < 9; y++) {
-                    plateau[y][x] = chemin;
+                    plateau[y][x] = ".";
                 }
             }
             for (int i = 0; i < 10; i++) {// boucle qui fait les bords
-                plateau[0][i] = "MurDePierre";
-                plateau[9][i] = "MurDePierre";
-                plateau[i][0] = "MurDePierre";
-                plateau[i][9] = "MurDePierre";
+                plateau[0][i] = "O";
+                plateau[9][i] = "O";
+                plateau[i][0] = "O";
+                plateau[i][9] = "O";
             }
             if (nombreJoueurs==2 || nombreJoueurs==3){// rajoute des bords s'il y a moins de 4 joueurs
                 for (int y = 0; y < 10; y++){plateau[y][8]="O";}
