@@ -18,7 +18,7 @@ public class jeu {
         System.out.println("J"+1+"="+J1.getDirection());
         J1.tournerG();
         System.out.println("J"+1+"="+J1.getDirection());
-        "J1".avancer()
+
 
     }
     private static void initialisation(int nombreJoueurs){

@@ -1,2 +1,2 @@
-public class vide {
+public class vide extends objetJeu {
 }

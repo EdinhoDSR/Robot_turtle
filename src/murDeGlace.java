@@ -1,2 +1,2 @@
-public class murDeGlace {
+public class murDeGlace extends objetJeu {
 }

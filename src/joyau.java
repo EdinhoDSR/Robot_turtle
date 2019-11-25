@@ -1,2 +1,2 @@
-public class joyau {
+public class joyau extends objetJeu {
 }
