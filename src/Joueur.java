@@ -41,7 +41,7 @@ public class Joueur extends objetJeu {
             else{
                 jeu.plateau[positionY][positionX]=jeu.chemin;
                 this.positionX=this.positionX+1;
-                jeu.plateau[positionY][positionX]="J"+this.numero;
+                jeu.plateau[positionY][positionX]=this;
             }
         }
         else if(this.direction=='S'){

@@ -3,6 +3,9 @@ public class jeu {
     //plateau[y][x]
     public static objetJeu [][] plateau = new objetJeu[10][10];
     public static vide chemin = new vide();
+    public static murDePierre murDePierre = new murDePierre();
+    public static murDeBois murDeBois = new murDeBois();
+    public static murDeGlace murDeGlace = new murDeGlace();
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
     public static void main(String[] args) {
@@ -24,7 +27,7 @@ public class jeu {
     private static void initialisation(int nombreJoueurs){
             for (int x = 1; x < 9; x++) {//boucle qui fait le tableau jouable
                 for (int y = 1; y < 9; y++) {
-                    plateau[y][x] = ".";
+                    plateau[y][x] = chemin;
                 }
             }
             for (int i = 0; i < 10; i++) {// boucle qui fait les bords
