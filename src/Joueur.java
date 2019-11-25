@@ -28,9 +28,9 @@ public class Joueur extends objetJeu {
                 this.positionY=this.positionYDepart;
             }
             else{
-                jeu.plateau[positionY][positionX]=vide;
+                jeu.plateau[positionY][positionX]=jeu.chemin;
                 this.positionY=this.positionY-1;
-                jeu.plateau[positionY][positionX]="J"+this.numero;
+                jeu.plateau[positionY][positionX]=this;
             }
         }
         else if(this.direction=='E'){
@@ -39,7 +39,7 @@ public class Joueur extends objetJeu {
                 this.positionY=this.positionYDepart;
             }
             else{
-                jeu.plateau[positionY][positionX]=".";
+                jeu.plateau[positionY][positionX]=jeu.chemin;
                 this.positionX=this.positionX+1;
                 jeu.plateau[positionY][positionX]="J"+this.numero;
             }
@@ -50,9 +50,9 @@ public class Joueur extends objetJeu {
                 this.positionY=this.positionYDepart;
             }
             else{
-                jeu.plateau[positionY][positionX]=".";
+                jeu.plateau[positionY][positionX]=jeu.chemin;
                 this.positionY=this.positionY+1;
-                jeu.plateau[positionY][positionX]="J"+this.numero;
+                jeu.plateau[positionY][positionX]=this;
             }
         }
         else if(this.direction=='O'){
@@ -61,9 +61,9 @@ public class Joueur extends objetJeu {
                 this.positionY=this.positionYDepart;
             }
             else{
-                jeu.plateau[positionY][positionX]=".";
+                jeu.plateau[positionY][positionX]=jeu.chemin;
                 this.positionX=this.positionX-1;
-                jeu.plateau[positionY][positionX]="J"+this.numero;
+                jeu.plateau[positionY][positionX]=this;
             }
         }
     }
@@ -71,13 +71,13 @@ public class Joueur extends objetJeu {
     public void test(){
         // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
         //plateau[y][x]
-        if(jeu.plateau[this.positionY][this.positionX].equals(".")){
+        if(jeu.plateau[this.positionY][this.positionX].type.equals("V")){
             this.avancer();
         }
-        else if(jeu.plateau[this.positionY][this.positionX].equals("murDeBois")){}
-        else if(jeu.plateau[this.positionY][this.positionX].equals("murDePierre")){}
-        else if(jeu.plateau[this.positionY][this.positionX].equals("murDeGlace")){}
-        else if(jeu.plateau[this.positionY][this.positionX].equals("joueur")){}
+        else if(jeu.plateau[this.positionY][this.positionX].type.equals("B")){}
+        else if(jeu.plateau[this.positionY][this.positionX].type.equals("P")){}
+        else if(jeu.plateau[this.positionY][this.positionX].type.equals("G")){}
+        else if(jeu.plateau[this.positionY][this.positionX].type.equals("J")){}
     }
     public void tournerD(){
 
@@ -102,22 +102,18 @@ public class Joueur extends objetJeu {
     public void utiliserLaser(){
         if (direction == 'E'){
             for(int i=positionX;i<8;i++){
-                if (!jeu.plateau[positionY][i].equals(".")){
-                    if (jeu.plateau[positionY][i].equals("murDeGlace")){
-                        jeu.plateau[positionY][i] = ".";
+                if (!jeu.plateau[positionY][i].type.equals("V")){
+                    if (jeu.plateau[positionY][i].type.equals("G")){
+                        jeu.plateau[positionY][i] = jeu.chemin;
                     }
-                    if (jeu.plateau[positionY][i].substring(0,1).equals("j")){
+                    if (jeu.plateau[positionY][i].type.equals("j")){
                         this.tournerD();
                         this.tournerD();
                     }
-                    if (jeu.plateau[positionY][i].substring(0,1).equals("J")){
-                        /*L'objet joueur touché doit reculer
-                        this.tournerD();
-                        this.tournerD();
-                        */
+                    if (jeu.plateau[positionY][i].type.equals("J")){
+                        jeu.plateau[positionY][i].tournerD();
+                        jeu.plateau[positionY][i].tournerD();
                     }
-
-
                 }
 
             }
