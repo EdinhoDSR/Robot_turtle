@@ -42,4 +42,8 @@ public class jeu {
             System.out.println();// on a le retour a la ligne
         }
     }
-}
+
+
+
+    }
+

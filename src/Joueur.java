@@ -10,7 +10,6 @@ public class Joueur {
     private List<String> deck;
     private List<String> defausse;
     private List<String> main;
-//cc
 
     public Joueur( char pDriection, int pPositionX, int pPositionY)
     {
@@ -70,15 +69,30 @@ public class Joueur {
         else if(this.direction=='S'){this.direction='E';}
         else if(this.direction=='E'){this.direction='N';}
     }
-/*
+
     public void utiliserLaser(){
         if (direction == 'E'){
-            for(int i=0;i<nb;i++){
+            for(int i=positionX;i<8;i++){
+                if (!jeu.plateau[positionY][i].equals(".")){
+                    if (jeu.plateau[positionY][i].equals("murDeGlace")){
+                        jeu.plateau[positionY][i] = ".";
+                    }
+                    if (jeu.plateau[positionY][i].substring(0,1).equals("j")){
+                        this.tournerD();
+                        this.tournerD();
+                    }
+                    if (jeu.plateau[positionY][i].substring(0,1).equals("J")){
+                        .tournerD();
+                        this.tournerD();
+                    }
+
+
+                }
 
             }
         }
     }
-*/
+
     public void poserMur(String typeDeMur) {
         //A remplir !!!!
     }
@@ -102,6 +116,7 @@ public class Joueur {
     public char getDirection() {
         return direction;
     }
+
 
     public void setDirection(char direction) {
         this.direction = direction;
