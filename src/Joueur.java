@@ -28,7 +28,7 @@ public class Joueur extends objetJeu {
                 this.positionY=this.positionYDepart;
             }
             else{
-                jeu.plateau[positionY][positionX]=".";
+                jeu.plateau[positionY][positionX]=vide;
                 this.positionY=this.positionY-1;
                 jeu.plateau[positionY][positionX]="J"+this.numero;
             }

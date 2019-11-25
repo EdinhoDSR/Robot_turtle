@@ -2,6 +2,7 @@ import java.util.*;
 public class jeu {
     //plateau[y][x]
     public static objetJeu [][] plateau = new objetJeu[10][10];
+    public static vide chemin = new vide();
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
     public static void main(String[] args) {
