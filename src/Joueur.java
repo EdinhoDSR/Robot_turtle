@@ -1,6 +1,6 @@
-import java.util.List;
+import java.util.*;
 
-public class Joueur {
+public class Joueur extends objetJeu {
     private int positionX;
     private int positionY;
     private int positionXDepart;
@@ -11,49 +11,73 @@ public class Joueur {
     private List<String> defausse;
     private List<String> main;
 
-    public Joueur( char pDriection, int pPositionX, int pPositionY)
+    public Joueur( char pDriection, int pPositionX, int pPositionY, int pNumero)
     {
         System.out.println("Création d'un joueur avec des paramètres !");
         positionX = pPositionX;
         positionY = pPositionY;
         direction = pDriection;
+        numero = pNumero;
+        type = 'J';
     }
     public void avancer(){
-        //C'est fait en fonction du nombre de joueur reste plus qu'à changer la place du joueur dans le tableau
+        //methode termine
         if(this.direction=='N'){
-            if(this.positionY==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            if(this.positionY==1){
+                this.positionX=this.positionXDepart;
+                this.positionY=this.positionYDepart;
+            }
             else{
                 jeu.plateau[positionY][positionX]=".";
                 this.positionY=this.positionY-1;
                 jeu.plateau[positionY][positionX]="J"+this.numero;
             }
         }
-        else if(this.direction=='E' && jeu.nombreDeJoueurs==4){
-            if(this.positionX==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionX=this.positionX+1;}
-        }
         else if(this.direction=='E'){
-            if(this.positionX==7){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionX=this.positionX+1;}
+            if(this.positionX==7){
+                this.positionX=this.positionXDepart;
+                this.positionY=this.positionYDepart;
+            }
+            else{
+                jeu.plateau[positionY][positionX]=".";
+                this.positionX=this.positionX+1;
+                jeu.plateau[positionY][positionX]="J"+this.numero;
+            }
         }
         else if(this.direction=='S'){
-            if(this.positionY==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionY=this.positionY+1;}
+            if(this.positionY==8){
+                this.positionX=this.positionXDepart;
+                this.positionY=this.positionYDepart;
+            }
+            else{
+                jeu.plateau[positionY][positionX]=".";
+                this.positionY=this.positionY+1;
+                jeu.plateau[positionY][positionX]="J"+this.numero;
+            }
         }
         else if(this.direction=='O'){
-            if(this.positionX==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionX=this.positionX-1;}
+            if(this.positionX==1){
+                this.positionX=this.positionXDepart;
+                this.positionY=this.positionYDepart;
+            }
+            else{
+                jeu.plateau[positionY][positionX]=".";
+                this.positionX=this.positionX-1;
+                jeu.plateau[positionY][positionX]="J"+this.numero;
+            }
         }
     }
+    public void avancerMurDeBois(){}
     public void test(){
         // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
         //plateau[y][x]
-        if(this.direction=='N'){
-            if(jeu.plateau[this.positionY][this.positionX].equals(".")){}
+        if(jeu.plateau[this.positionY][this.positionX].equals(".")){
+            this.avancer();
         }
-        else if(this.direction=='E'){}
-        else if(this.direction=='S'){}
-        else if(this.direction=='O'){}
+        else if(jeu.plateau[this.positionY][this.positionX].equals("murDeBois")){}
+        else if(jeu.plateau[this.positionY][this.positionX].equals("murDePierre")){}
+        else if(jeu.plateau[this.positionY][this.positionX].equals("murDeGlace")){}
+        else if(jeu.plateau[this.positionY][this.positionX].equals("joueur")){}
     }
     public void tournerD(){
 
@@ -69,6 +93,11 @@ public class Joueur {
         else if(this.direction=='S'){this.direction='E';}
         else if(this.direction=='E'){this.direction='N';}
     }
+    public void reculer(){
+        this.tournerG();
+        this.tournerG();
+        this.avancer();
+    }
 
     public void utiliserLaser(){
         if (direction == 'E'){
@@ -82,8 +111,10 @@ public class Joueur {
                         this.tournerD();
                     }
                     if (jeu.plateau[positionY][i].substring(0,1).equals("J")){
-                        .tournerD();
+                        /*L'objet joueur touché doit reculer
                         this.tournerD();
+                        this.tournerD();
+                        */
                     }
 
 

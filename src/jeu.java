@@ -1,7 +1,7 @@
 import java.util.*;
 public class jeu {
     //plateau[y][x]
-    public static String [][] plateau = new String[10][10];
+    public static objetJeu [][] plateau = new objetJeu[10][10];
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class jeu {
         int nombreDeJoueurs = Integer.parseInt(scanner.nextLine());
         initialisation(nombreDeJoueurs);
         afficher();
-        Joueur J1 = new Joueur('N',1,5);
+        Joueur J1 = new Joueur('N',1,5,1);
         J1.setPositionX(2);
         System.out.println("J"+1+"="+J1.getPositionX());
         System.out.println("J"+1+"="+J1.getDirection());
@@ -17,6 +17,7 @@ public class jeu {
         System.out.println("J"+1+"="+J1.getDirection());
         J1.tournerG();
         System.out.println("J"+1+"="+J1.getDirection());
+        "J1".avancer()
 
     }
     private static void initialisation(int nombreJoueurs){
@@ -26,10 +27,10 @@ public class jeu {
                 }
             }
             for (int i = 0; i < 10; i++) {// boucle qui fait les bords
-                plateau[0][i] = "O";
-                plateau[9][i] = "O";
-                plateau[i][0] = "O";
-                plateau[i][9] = "O";
+                plateau[0][i] = "MurDePierre";
+                plateau[9][i] = "MurDePierre";
+                plateau[i][0] = "MurDePierre";
+                plateau[i][9] = "MurDePierre";
             }
             if (nombreJoueurs==2 || nombreJoueurs==3){// rajoute des bords s'il y a moins de 4 joueurs
                 for (int y = 0; y < 10; y++){plateau[y][8]="O";}
