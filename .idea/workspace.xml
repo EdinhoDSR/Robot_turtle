@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="366ec995-f67b-45ec-ad61-d870457d95d2" name="Default Changelist" comment="version sans globale">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="366ec995-f67b-45ec-ad61-d870457d95d2" name="Default Changelist" comment="version clean">
+      <change afterPath="$PROJECT_DIR$/src/Cases.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Carte.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/joyau.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/murDeBois.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/murDeGlace.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/murDePierre.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objetJeu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vide.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +18,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1105">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Cases.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="173" column="1" selection-start-line="173" selection-start-column="1" selection-end-line="173" selection-end-column="1" />
+              <folding>
+                <element signature="method#joyau#0;class#Cases#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,37 +48,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Joueur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1075">
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
-              <folding>
-                <element signature="e#1956#1957#0" expanded="true" />
-                <element signature="e#1994#1995#0" expanded="true" />
-                <element signature="e#2053#2054#0" expanded="true" />
-                <element signature="e#2107#2108#0" expanded="true" />
-                <element signature="e#2146#2147#0" expanded="true" />
-                <element signature="e#2184#2185#0" expanded="true" />
-                <element signature="e#2243#2244#0" expanded="true" />
-                <element signature="e#2297#2298#0" expanded="true" />
-                <element signature="e#2327#2328#0" expanded="true" />
-                <element signature="e#2356#2357#0" expanded="true" />
-                <element signature="e#2397#2398#0" expanded="true" />
-                <element signature="e#2433#2434#0" expanded="true" />
-                <element signature="e#4487#4488#0" expanded="true" />
-                <element signature="e#4576#4577#0" expanded="true" />
-                <element signature="e#4641#4642#0" expanded="true" />
-                <element signature="e#4730#4731#0" expanded="true" />
-                <element signature="e#4796#4797#0" expanded="true" />
-                <element signature="e#4887#4888#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="799">
+              <caret line="47" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="102">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -121,11 +115,19 @@
         <option value="$PROJECT_DIR$/src/objetJeu.java" />
         <option value="$PROJECT_DIR$/src/vide.java" />
         <option value="$PROJECT_DIR$/src/Carte.java" />
+        <option value="$PROJECT_DIR$/src/Joueur.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/Cases.java" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectId" id="1U1YWl28Wr8PHckoIO7VZHSlw63" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -134,6 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,14 +153,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574520864752" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575291856536" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP4_G1_EDINHO_DOSREIS/src/TP4.java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -198,6 +200,8 @@
       <workItem from="1573298019043" duration="1802000" />
       <workItem from="1574431916156" duration="7841000" />
       <workItem from="1574452582198" duration="9983000" />
+      <workItem from="1575037968649" duration="4487000" />
+      <workItem from="1575291743010" duration="106000" />
     </task>
     <task id="LOCAL-00001" summary="test 1">
       <created>1573297546198</created>
@@ -255,17 +259,24 @@
       <option name="project" value="LOCAL" />
       <updated>1574517649421</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="version clean">
+      <created>1574699123545</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574699123545</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="740000" />
+    <option name="totallyTimeSpent" value="5739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27272728" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28181818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -373,7 +384,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test 1" />
     <MESSAGE value="version sans globale" />
-    <option name="LAST_COMMIT_MESSAGE" value="version sans globale" />
+    <MESSAGE value="version clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="version clean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -388,66 +400,70 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/murDeBois.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/murDePierre.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/murDeGlace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/murDeBois.java" />
+    <entry file="file://$PROJECT_DIR$/src/murDePierre.java" />
+    <entry file="file://$PROJECT_DIR$/src/murDeGlace.java" />
+    <entry file="file://$PROJECT_DIR$/src/objetJeu.java" />
+    <entry file="file://$PROJECT_DIR$/src/vide.java" />
+    <entry file="file://$PROJECT_DIR$/src/Carte.java" />
     <entry file="file://$PROJECT_DIR$/src/jeu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="17">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1075">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        <state relative-caret-position="799">
+          <caret line="47" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP4_G1_EDINHO_DOSREIS/src/TP4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#1956#1957#0" expanded="true" />
-            <element signature="e#1994#1995#0" expanded="true" />
-            <element signature="e#2053#2054#0" expanded="true" />
-            <element signature="e#2107#2108#0" expanded="true" />
-            <element signature="e#2146#2147#0" expanded="true" />
-            <element signature="e#2184#2185#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-            <element signature="e#2297#2298#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2356#2357#0" expanded="true" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2433#2434#0" expanded="true" />
-            <element signature="e#4487#4488#0" expanded="true" />
-            <element signature="e#4576#4577#0" expanded="true" />
-            <element signature="e#4641#4642#0" expanded="true" />
-            <element signature="e#4730#4731#0" expanded="true" />
-            <element signature="e#4796#4797#0" expanded="true" />
-            <element signature="e#4887#4888#0" expanded="true" />
+            <element signature="method#initialisation#0;class#TP4#0" />
+            <element signature="method#creationFile#0;class#TP4#0" />
+            <element signature="method#deplacement#0;class#TP4#0" />
+            <element signature="method#main#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#triListe#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#isPalindrome#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#isPalindromeRec#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#menu#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#ajoutArtiste#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#ajoutAlbum#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#listerArtistes#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#listerAlbums#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#listerAlbumsPourArtiste#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#retirerArtiste#0;class#TP2#0;class#TP4#0" />
+            <element signature="method#retirerAlbum#0;class#TP2#0;class#TP4#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objetJeu.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vide.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Carte.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deck.java">
+    <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="1105">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="173" column="1" selection-start-line="173" selection-start-column="1" selection-end-line="173" selection-end-column="1" />
+          <folding>
+            <element signature="method#joyau#0;class#Cases#0" />
+          </folding>
         </state>
       </provider>
     </entry>

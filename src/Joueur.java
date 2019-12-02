@@ -11,6 +11,7 @@ public class Joueur {
     private List<String> defausse;
     private List<String> main;
 
+
     public Joueur( char pDriection, int pPositionX, int pPositionY)
     {
         System.out.println("Création d'un joueur avec des paramètres !");
