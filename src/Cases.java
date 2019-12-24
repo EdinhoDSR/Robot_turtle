@@ -12,7 +12,7 @@ public class Cases {
     private List<String> deck;
     private List<String> defausse;
     private List<String> main;
-    private ArrayList<Card> cards;
+    private Deck Deck;
 
     public int getPositionX() {
         return positionX;
@@ -20,6 +20,10 @@ public class Cases {
 
     public void setPositionX(int positionX) {
         this.positionX = positionX;
+    }
+
+    public void setDeck(Deck deck) {
+        Deck = deck;
     }
 
     public int getPositionY() {
@@ -121,6 +125,7 @@ public class Cases {
 
         direction = pDriection;
         numero = pNumero;
+        Deck = new Deck();
         type = 'J';
     }
 

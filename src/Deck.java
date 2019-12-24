@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
 
 public class Deck {
 
     // création de la liste Deck
 
-    private ArrayList<Card> cards;
+    private ArrayList<String> cards;
 
 
     public Deck() {
-        this.cards = new ArrayList<Card>();
+        this.cards = new ArrayList<String>();
     }
 
     // création des cartes du jeu
@@ -19,25 +20,25 @@ public class Deck {
         // création des cartes avancer
         for (int i =0; i<19 ; i++) {
             //
-            this.cards.add(new Card(Valeurs.TOUT_DROIT ));
+            this.cards.add("Avancer");
         }
 
         // création des cartes tourner à droite
 
         for(int j= 1; j<9; j++)
         {
-            this.cards.add(new Card(Valeurs.DROITE ));
+            this.cards.add("Droite");
 
 
             // création des cartes tourner à gauche
         }
         for(int k= 1; k<9; k++) {
-            this.cards.add(new Card(Valeurs.GAUCHE ));
+            this.cards.add("Gauche");
         }
 
         // creation des cartes laser
         for(int l= 1; l<4; l++) {
-            this.cards.add(new Card(Valeurs.LASER ));
+            this.cards.add("Laser");
         }
     }
 
@@ -46,32 +47,8 @@ public class Deck {
 
     public void shuffle() {
 
-        // création d'un deck temporaire
+        Collections.shuffle(this.cards);
 
-        ArrayList<Card> tmpDeck = new ArrayList<Card>();
-        Random random = new Random();
-        int randomCardIndex = 0;
-
-        int sizedeck = this.cards.size();
-        for (int i = 0; i<sizedeck; i++) {
-
-            // génération d'indice aléatoire
-
-            randomCardIndex = random.nextInt((this.cards.size()-1 -0 )+1)+ 0;
-
-            // on prends des cartes au hazard du deck pour les mettres dans le deck temporaire
-            tmpDeck.add(this.cards.get(randomCardIndex));
-
-            // enlèvement des cartes placées dans le deck temporaire
-
-            this.cards.remove(randomCardIndex);
-
-
-        }
-
-        // le deck temporaire devient le deck principal
-
-        this.cards= tmpDeck;
     }
 
     // création de la fonction pour enlever une carte d'un deck
@@ -86,7 +63,7 @@ public class Deck {
     }
 
     // fonction qui ajoute une carte dans un deck
-    public void addCard(Card addCard) {
+    public void addCard(String addCard) {
         this.cards.add(addCard);
     }
 
@@ -101,23 +78,6 @@ public class Deck {
 
     }
 
-
-
-    public String toString() {
-
-        String cardListOutput ="";
-        for (Card aCard: this.cards) {
-            cardListOutput += "\n-" + aCard.toString();		}
-
-        return cardListOutput;
-
-    }
-
-    public int cardsValur() {
-        int totalvalue=0;
-        return totalvalue;
-
-    }
 
 
 }

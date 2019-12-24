@@ -12,6 +12,7 @@ public class main {
         afficher();
 
 
+
     }
 
     private static void initialisation(int nombreJoueurs){
@@ -25,17 +26,20 @@ public class main {
             plateau[9][i].setType('O');
             plateau[i][0].setType('O');
             plateau[i][9].setType('O');
-            plateau[3][3].getType();
+
         }
         if (nombreJoueurs==2 || nombreJoueurs==3){// rajoute des bords s'il y a moins de 4 joueurs
             for (int y = 0; y < 10; y++){plateau[y][8].setType('M');}
         }
+
         //Initialise les joueurs, les joyaux et leurs positions
         if (nombreJoueurs==2){
             plateau[8][4].joyau(8,4);
 
             plateau[1][2].joueur('S',1,2,1);
             plateau[1][6].joueur('S',1,6,2);
+
+
         }
         else if (nombreJoueurs==3){
             plateau[8][1].joyau(8,4);

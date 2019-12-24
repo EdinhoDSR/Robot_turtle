@@ -4,6 +4,7 @@ public class jeu {
     public static String [][] plateau = new String[10][10];
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
+
     public static void main(String[] args) {
         System.out.println("Entrez le nombre de joueurs");
         int nombreDeJoueurs = Integer.parseInt(scanner.nextLine());
@@ -16,6 +17,7 @@ public class jeu {
         J1.tournerD();
         System.out.println("J"+1+"="+J1.getDirection());
         J1.tournerG();
+
         System.out.println("J"+1+"="+J1.getDirection());
 
     }

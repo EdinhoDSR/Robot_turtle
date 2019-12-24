@@ -7,7 +7,7 @@ public class Joueur {
     private int positionYDepart;
     private int numero;
     private char direction;
-    private List<String> deck;
+    private Deck deck;
     private List<String> defausse;
     private List<String> main;
 
