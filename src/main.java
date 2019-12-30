@@ -1,6 +1,70 @@
 import java.util.*;
 public class main {
-    //plateau[y][x]
+    public Cases[][] plateau = new Cases[10][10];
+    public static void main(String[] args) {
+    }
+    public void intitialisationTableau(){
+        //initialise le plateau en créant un objet de la classe Cases par case. Par défault, les cases n'ont pas de pions sur elles.
+        for (int i=0;i<10;i++){
+            for (int j=0;j<10;j++){
+                Cases caseBoucle = new Cases(j,i,false);
+                plateau[i][j] = caseBoucle;
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//plateau[y][x]
     public static Cases [][] plateau = new Cases[10][10];
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
@@ -9,6 +73,14 @@ public class main {
         System.out.println("Entrez le nombre de joueurs");
         int nombreDeJoueurs = Integer.parseInt(scanner.nextLine());
         initialisation(nombreDeJoueurs);
+        for(int i=0;i<10;i++){
+            for (int j=0;j<10;j++){
+                plateau[i][j]=
+
+
+            }
+
+        }
         afficher();
 
 
@@ -66,4 +138,17 @@ public class main {
 
 
 
-}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
