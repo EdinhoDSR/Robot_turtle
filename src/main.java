@@ -6,6 +6,7 @@ public class main {
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
 
+
     public static void main(String[] args) {
 
     }

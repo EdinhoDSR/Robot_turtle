@@ -47,22 +47,22 @@ public class Cases {
 
     public void pierre(){
         // méthode qui pose les murs de pierre et permet à la fonction initialisation d'être plus propre/courte
-        this.occupe = True;
+        this.occupe = true;
         this.type = 'P';
     }
     public void bois(){
         // méthode qui pose les murs de pierre et permet à la fonction initialisation d'être plus propre/courte
-        this.occupe = True;
+        this.occupe = true;
         this.type = 'B';
     }
     public void glace(){
         // méthode qui pose les murs de pierre et permet à la fonction initialisation d'être plus propre/courte
-        this.occupe = True;
+        this.occupe = true;
         this.type = 'G';
     }
     public void joyau(){//Pour s'assurer que la case est occupe et simplifier l'init
         this.type = 'j';
-        this.occupe = True;
+        this.occupe = true;
 
     }
 
