@@ -1,8 +1,8 @@
 public class Pion {
+
     protected Cases casePlateau;
     protected char type;
     //Joueur : J, joyau : j, Mur : M
-    public Pion(){}
 
     public Pion(Cases CasePlateau){
         //Constructeur
