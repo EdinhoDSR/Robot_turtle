@@ -1,5 +1,7 @@
 public class   Mur extends Cases {
+
     protected char typeDeMur;
+
     public Mur(Cases CasePlateau, char ){
 
         this.setType('M');//initialise le type de pion à 'M'

@@ -2,7 +2,7 @@ import java.util.*;
 
 public class main {
 
-    public Cases[][] plateau = new Cases[10][10];
+    public static Cases[][] plateau = new Cases[10][10];
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
 
@@ -19,23 +19,21 @@ public class main {
         }
 
         for (int i = 0; i < 10; i++) {// boucle qui fait les bords
-            // Indique juste que les cases sont occupe
-            plateau[0][i].setOccupe(True);
-            plateau[9][i].setOccupe(True);
-            plateau[i][0].setOccupe(True);
-            plateau[i][9].setOccupe(True);
-
+            plateau[0][i].pierre();
+            plateau[9][i].pierre();
+            plateau[i][0].pierre();
+            plateau[i][9].pierre();
         }
         if (nombreJoueurs==2 || nombreJoueurs==3){// rajoute des bords s'il y a moins de 4 joueurs
-            for (int y = 0; y < 10; y++){plateau[y][8].setType('M');}
+            for (int y = 0; y < 10; y++){plateau[y][8].pierre();}
         }
 
         //Initialise les joueurs, les joyaux et leurs positions
         if (nombreJoueurs==2){
-            plateau[8][4].joyau(8,4);
-
-            plateau[1][2].joueur('S',1,2,1);
-            plateau[1][6].joueur('S',1,6,2);
+            plateau[8][4].joyau();
+            Joueur J1 = new Joueur(1);
+            plateau[1][2].j
+            plateau[1][6].joueur(2);
 
 
         }

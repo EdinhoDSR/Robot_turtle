@@ -1,16 +1,18 @@
 import java.util.List;
 
 public class Joueur extends Cases{
-    private Cases caseDepart;
-    private int numero;
-    private char direction;
-    private Deck deck;
-    private List<String> defausse;
-    private List<String> main;
-    private Cases casePlateau;
 
-    public Joueur(){
-        this.setType('J'); //Initialise le type à 'J'
+    public int numero,positionXDepart,positionYDepart;
+    public char direction;
+    public List<String> defausse,main,deck;
+
+    public Joueur(int pNumero){
+
+        this.type = 'J'; //Initialise le type à 'J'
+        this.numero = pNumero;
+        this.direction = 'S';
+        this.positionXDepart = positionX;
+        this.positionYDepart = positionY;
     }
 
 
