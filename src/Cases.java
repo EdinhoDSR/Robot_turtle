@@ -2,8 +2,9 @@ import java.util.List;
 
 public class Cases {
     //test
-    private int positionX;
-    private int positionY;
+    private int positionX,positionY;
+    protected char type;
+    //Joueur : J, joyau : j, Mur de pierre : P, Mur de glace : G, Mur de bois : B
     private Boolean occupe; //true si une case est occupée par un pion, false si non
     // Liste des types : Joueur = j, vide = V, Mur = M, Joyeay *
 

@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Joueur extends Pion{
+public class Joueur extends Cases{
     private Cases caseDepart;
     private int numero;
     private char direction;
