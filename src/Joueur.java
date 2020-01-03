@@ -29,20 +29,31 @@ public class Joueur extends Cases{
                         break;
                     }
                     if (main.nombreDeJoueur >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
-                        joueur.setOccupe(false);
-                        joueur.setType('V');
+                        int X = joueur.getPositionX();
+                        int Y = joueur.getPositionY();
                         joueur.setPositionX(joueur.positionXDepart);
                         joueur.setPositionY(joueur.positionYDepart);
-                        joueur.setOccupe(true);
-                        joueur.setType('V');
-                        caseEnCours.setOccupe(false);
-                        caseEnCours.setType('V');
-                        caseEnCours.setPositionX(main.plateau[joueur.getPositionY()-i][joueur.getPositionX()].positionXDepart);
-                        caseEnCours.setPositionX(main.plateau[joueur.getPositionY()-i][joueur.getPositionX()].positionXDepart);
-                        caseEnCours.setOccupe(true);
-                        caseEnCours.setType('V');
+                        main.plateau[Y][X].setOccupe(false);
+                        main.plateau[Y][X].setType('V');
+                        main.plateau[joueur.positionYDepart][joueur.positionXDepart] = joueur;
+                        int X = caseEnCours.getPositionX();
+                        int Y = caseEnCours.getPositionY();
+                        caseEnCours.setPositionX(joueur.positionXDepart);
+                        caseEnCours.setPositionY(joueur.positionYDepart);
+                        main.plateau[Y][X].setOccupe(false);
+                        main.plateau[Y][X].setType('V');
+                        main.plateau[caseEnCours.positionYDepart][caseEnCours.positionXDepart] = joueur;
                         break;
                     }
+                }
+                if (caseEnCours.getType()=='j'){
+                    int X = joueur.getPositionX();
+                    int Y = joueur.getPositionY();
+                    joueur.setPositionX(joueur.positionXDepart);
+                    joueur.setPositionY(joueur.positionYDepart);
+                    main.plateau[Y][X].setOccupe(false);
+                    main.plateau[Y][X].setType('V');
+                    main.plateau[joueur.positionYDepart][joueur.positionXDepart] = joueur;
                 }
             }
         }
@@ -60,20 +71,31 @@ public class Joueur extends Cases{
                         break;
                     }
                     if (main.nombreDeJoueur >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
-                        joueur.setOccupe(false);
-                        joueur.setType('V');
+                        int X = joueur.getPositionX();
+                        int Y = joueur.getPositionY();
                         joueur.setPositionX(joueur.positionXDepart);
                         joueur.setPositionY(joueur.positionYDepart);
-                        joueur.setOccupe(true);
-                        joueur.setType('V');
-                        caseEnCours.setOccupe(false);
-                        caseEnCours.setType('V');
-                        caseEnCours.setPositionX(main.plateau[joueur.getPositionY()-i][joueur.getPositionX()].positionXDepart);
-                        caseEnCours.setPositionX(main.plateau[joueur.getPositionY()-i][joueur.getPositionX()].positionXDepart);
-                        caseEnCours.setOccupe(true);
-                        caseEnCours.setType('V');
+                        main.plateau[Y][X].setOccupe(false);
+                        main.plateau[Y][X].setType('V');
+                        main.plateau[joueur.positionYDepart][joueur.positionXDepart] = joueur;
+                        int X = caseEnCours.getPositionX();
+                        int Y = caseEnCours.getPositionY();
+                        caseEnCours.setPositionX(joueur.positionXDepart);
+                        caseEnCours.setPositionY(joueur.positionYDepart);
+                        main.plateau[Y][X].setOccupe(false);
+                        main.plateau[Y][X].setType('V');
+                        main.plateau[caseEnCours.positionYDepart][caseEnCours.positionXDepart] = joueur;
                         break;
                     }
+                }
+                if (caseEnCours.getType()=='j'){
+                    int X = joueur.getPositionX();
+                    int Y = joueur.getPositionY();
+                    joueur.setPositionX(joueur.positionXDepart);
+                    joueur.setPositionY(joueur.positionYDepart);
+                    main.plateau[Y][X].setOccupe(false);
+                    main.plateau[Y][X].setType('V');
+                    main.plateau[joueur.positionYDepart][joueur.positionXDepart] = joueur;
                 }
             }
             if (joueur.direction == 'E'){// Cas où le joueur regarde vers l'Est
@@ -90,20 +112,31 @@ public class Joueur extends Cases{
                             break;
                         }
                         if (main.nombreDeJoueur >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
-                            joueur.setOccupe(false);
-                            joueur.setType('V');
+                            int X = joueur.getPositionX();
+                            int Y = joueur.getPositionY();
                             joueur.setPositionX(joueur.positionXDepart);
                             joueur.setPositionY(joueur.positionYDepart);
-                            joueur.setOccupe(true);
-                            joueur.setType('V');
-                            caseEnCours.setOccupe(false);
-                            caseEnCours.setType('V');
-                            caseEnCours.setPositionX(main.plateau[joueur.getPositionY()-i][joueur.getPositionX()].positionXDepart);
-                            caseEnCours.setPositionX(main.plateau[joueur.getPositionY()-i][joueur.getPositionX()].positionXDepart);
-                            caseEnCours.setOccupe(true);
-                            caseEnCours.setType('V');
+                            main.plateau[Y][X].setOccupe(false);
+                            main.plateau[Y][X].setType('V');
+                            main.plateau[joueur.positionYDepart][joueur.positionXDepart] = joueur;
+                            int X = caseEnCours.getPositionX();
+                            int Y = caseEnCours.getPositionY();
+                            caseEnCours.setPositionX(joueur.positionXDepart);
+                            caseEnCours.setPositionY(joueur.positionYDepart);
+                            main.plateau[Y][X].setOccupe(false);
+                            main.plateau[Y][X].setType('V');
+                            main.plateau[caseEnCours.positionYDepart][caseEnCours.positionXDepart] = joueur;
                             break;
                         }
+                    }
+                    if (caseEnCours.getType()=='j'){
+                        int X = joueur.getPositionX();
+                        int Y = joueur.getPositionY();
+                        joueur.setPositionX(joueur.positionXDepart);
+                        joueur.setPositionY(joueur.positionYDepart);
+                        main.plateau[Y][X].setOccupe(false);
+                        main.plateau[Y][X].setType('V');
+                        main.plateau[joueur.positionYDepart][joueur.positionXDepart] = joueur;
                     }
                 }
                 if (joueur.direction == 'O'){// Cas où le joueur regarde vers l'ouest
@@ -120,20 +153,31 @@ public class Joueur extends Cases{
                                 break;
                             }
                             if (main.nombreDeJoueur >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
-                                joueur.setOccupe(false);
-                                joueur.setType('V');
+                                int X = joueur.getPositionX();
+                                int Y = joueur.getPositionY();
                                 joueur.setPositionX(joueur.positionXDepart);
                                 joueur.setPositionY(joueur.positionYDepart);
-                                joueur.setOccupe(true);
-                                joueur.setType('V');
-                                caseEnCours.setOccupe(false);
-                                caseEnCours.setType('V');
-                                caseEnCours.setPositionX(main.plateau[joueur.getPositionY()-i][joueur.getPositionX()].positionXDepart);
-                                caseEnCours.setPositionX(main.plateau[joueur.getPositionY()-i][joueur.getPositionX()].positionXDepart);
-                                caseEnCours.setOccupe(true);
-                                caseEnCours.setType('V');
+                                main.plateau[Y][X].setOccupe(false);
+                                main.plateau[Y][X].setType('V');
+                                main.plateau[joueur.positionYDepart][joueur.positionXDepart] = joueur;
+                                int X = caseEnCours.getPositionX();
+                                int Y = caseEnCours.getPositionY();
+                                caseEnCours.setPositionX(joueur.positionXDepart);
+                                caseEnCours.setPositionY(joueur.positionYDepart);
+                                main.plateau[Y][X].setOccupe(false);
+                                main.plateau[Y][X].setType('V');
+                                main.plateau[caseEnCours.positionYDepart][caseEnCours.positionXDepart] = joueur;
                                 break;
                             }
+                        }
+                        if (caseEnCours.getType()=='j'){
+                            int X = joueur.getPositionX();
+                            int Y = joueur.getPositionY();
+                            joueur.setPositionX(joueur.positionXDepart);
+                            joueur.setPositionY(joueur.positionYDepart);
+                            main.plateau[Y][X].setOccupe(false);
+                            main.plateau[Y][X].setType('V');
+                            main.plateau[joueur.positionYDepart][joueur.positionXDepart] = joueur;
                         }
                     }
                 }
