@@ -1,15 +1,20 @@
+package robotturtle;
+
 import java.util.*;
 
 public class main {
 
-    public static Cases[][] plateau = new Cases[10][10];
+
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
+    public static Cases[][] plateau = new Cases[10][10];
 
 
     public static void main(String[] args) {
 
     }
+
+
 
     private static void initialisation(int nombreJoueurs){
         for (int i=0;i<10;i++){// boucle qui fait les cases vides
@@ -111,11 +116,11 @@ public class main {
 
 /*
 //plateau[y][x]
-    public static Cases [][] plateau = new Cases[10][10];
+    public static robotturtle.Cases [][] plateau = new robotturtle.Cases[10][10];
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
 
-    public static void main(String[] args) {
+    public static void robotturtle.main(String[] args) {
         System.out.println("Entrez le nombre de joueurs");
         int nombreDeJoueurs = Integer.parseInt(scanner.nextLine());
         initialisation(nombreDeJoueurs);
