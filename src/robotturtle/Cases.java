@@ -1,16 +1,16 @@
-import java.util.List;
+package robotturtle;
 
 public class Cases {
 
-    public int positionX,positionY;
-    public char type; //Joueur : J, joyau : j, Mur de pierre : P, Mur de glace : G, Mur de bois : B, Vide : V
-    public Boolean occupe; //true si une case est occupée par un pion, false si non
+    protected int positionX,positionY;
+    protected char type; //robotturtle.Joueur : J, joyau : j, robotturtle.Mur de pierre : P, robotturtle.Mur de glace : G, robotturtle.Mur de bois : B, Vide : V
+    protected Joueur joueur;
+
 
     public Cases(){}
-    public Cases (int pX, int pY, Boolean pO){
+    public Cases (int pX, int pY){
         positionX = pX;
         positionY = pY;
-        occupe = pO;
         type = 'V';
     }
 
@@ -40,30 +40,29 @@ public class Cases {
         this.positionY = positionY;
     }
 
-    public Boolean getOccupe() {
-        return occupe;
+
+    public Joueur getJoueur() {
+        return(joueur);
     }
 
-    public void setOccupe(Boolean o) { this.occupe = o; }
+    public void setJoueur(Joueur j){
+        this.joueur = j;
+    }
 
     public void pierre(){
         // méthode qui pose les murs de pierre et permet à la fonction initialisation d'être plus propre/courte
-        this.occupe = true;
         this.type = 'P';
     }
     public void bois(){
         // méthode qui pose les murs de pierre et permet à la fonction initialisation d'être plus propre/courte
-        this.occupe = true;
         this.type = 'B';
     }
     public void glace(){
         // méthode qui pose les murs de pierre et permet à la fonction initialisation d'être plus propre/courte
-        this.occupe = true;
         this.type = 'G';
     }
     public void joyau(){//Pour s'assurer que la case est occupe et simplifier l'init
         this.type = 'j';
-        this.occupe = true;
 
     }
 

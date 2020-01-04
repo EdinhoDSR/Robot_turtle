@@ -1,10 +1,11 @@
+package robotturtle;
+
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Collections;
 
 public class Deck {
 
-    // création de la liste Deck
+    // création de la liste robotturtle.Deck
 
     private ArrayList<String> cards;
 
