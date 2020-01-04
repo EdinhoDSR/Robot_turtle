@@ -6,13 +6,15 @@ public class Joueur extends Cases{
     public char direction;
     public List<String> defausse,main,deck;
 
-    public Joueur(int pNumero){
-
+    public Joueur(int pNumero, int pPositionX, int pPositionY){
+        this.occupe = true;
         this.type = 'J'; //Initialise le type à 'J'
         this.numero = pNumero;
         this.direction = 'S';
-        this.positionXDepart = positionX;
-        this.positionYDepart = positionY;
+        this.positionXDepart = pPositionX;
+        this.positionYDepart = pPositionY;
+        this.positionY = pPositionY;
+        this.positionX = pPositionX;
     }
     private void laser(Joueur joueur){
         if (joueur.direction == 'N'){// Cas où le joueur regarde vers le nord

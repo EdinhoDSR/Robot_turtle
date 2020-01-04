@@ -14,6 +14,7 @@ public class Cases {
         type = 'V';
     }
 
+
     public char getType() {
         return type;
     }

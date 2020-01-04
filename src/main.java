@@ -32,8 +32,8 @@ public class main {
         //Initialise les joueurs, les joyaux et leurs positions
         if (nombreJoueurs==2){
             plateau[8][4].joyau();
-            Joueur J1 = new Joueur(1);
-            plateau[1][2].j
+            Joueur J1 = new Joueur(1,2,2);
+            plateau[1][2] = J1 ;
             plateau[1][6].joueur(2);
 
 
