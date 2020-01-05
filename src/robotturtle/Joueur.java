@@ -6,7 +6,7 @@ public class Joueur extends Cases{
 
     public int numero,positionXDepart,positionYDepart;
     public char direction;
-    public List<String> defausse,main,deck;
+    public List<String> defausse,mainDuJoueur,deck;
 
     public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart){
 
@@ -18,7 +18,7 @@ public class Joueur extends Cases{
     }
     private void laser(Cases[][] plateau,int nombreDeJoueur){
         if (this.direction == 'N'){// Cas où le joueur regarde vers le nord
-            for (int i = 0;i<plateau.length-this.getPositionY();i++){
+            for (int i = 0;plateau.length-this.getPositionY();i++){
                 Cases caseEnCours = plateau[this.getPositionY()-i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
@@ -143,6 +143,12 @@ public class Joueur extends Cases{
         plateau[joueur.positionYDepart][joueur.positionXDepart].joueur = this;
         plateau[joueur.positionYDepart][joueur.positionXDepart].type = 'J';
         plateau[Y][X].setType('V');
+    }
+
+    private void executionProgramme(Cases[][] plateau){
+        int A = main.plateau.length;
+
+
     }
 
 
@@ -457,5 +463,5 @@ public class Joueur extends Cases{
 
 
 */
-    }
+}
 

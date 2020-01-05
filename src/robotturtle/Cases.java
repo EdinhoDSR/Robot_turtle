@@ -66,6 +66,7 @@ public class Cases {
         this.type = 'j';
         main.plateau[1][2] = new Cases(2,3);
 
+
     }
 
 
