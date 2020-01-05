@@ -19,7 +19,7 @@ public class main {
     private static void initialisation(int nombreJoueurs){
         for (int i=0;i<10;i++){// boucle qui fait les cases vides
             for (int j=0;j<10;j++){
-                Cases caseBoucle = new Cases(j,i,false);
+                Cases caseBoucle = new Cases(j,i);
                 plateau[i][j] = caseBoucle;
             }
         }
@@ -36,18 +36,20 @@ public class main {
 
         //Initialise les joueurs, les joyaux et leurs positions
         if (nombreJoueurs==2){
-            plateau[8][4].joyau();
-            Joueur J1 = new Joueur(1,2,2);
-            plateau[1][2] = J1 ;
-            plateau[1][6].joueur(2);
 
+            plateau[8][4].joyau();
+            Joueur J1 = new Joueur(1,2,1);
+            plateau[1][2].setJoueur(J1);
+            Joueur J2 = new Joueur(1,6,1);
+            plateau[1][6].setJoueur(J2);
 
         }
         else if (nombreJoueurs==3){
-            plateau[8][1].joyau(8,4);
-            plateau[8][4].joyau(8,4);
-            plateau[8][7].joyau(8,7);
+            plateau[8][1].joyau();
+            plateau[8][4].joyau();
+            plateau[8][7].joyau();
 
+            Joueur J1 = new Joueur(1,2,1);
             plateau[1][1].joueur('S',1,1,1);
             plateau[1][4].joueur('S',1,4,2);
             plateau[1][7].joueur('S',1,7,3);
