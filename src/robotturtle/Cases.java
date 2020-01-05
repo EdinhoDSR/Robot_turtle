@@ -3,7 +3,7 @@ package robotturtle;
 public class Cases {
 
     protected int positionX,positionY;
-    private char type; //robotturtle.Joueur : J, joyau : j, robotturtle.Mur de pierre : P, robotturtle.Mur de glace : G, robotturtle.Mur de bois : B, Vide : V
+    protected char type; //robotturtle.Joueur : J, joyau : j, robotturtle.Mur de pierre : P, robotturtle.Mur de glace : G, robotturtle.Mur de bois : B, Vide : V
     protected Joueur joueur;
 
 
