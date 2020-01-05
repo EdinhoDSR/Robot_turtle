@@ -12,8 +12,9 @@ public class main {
 
     public static void main(String[] args) {
 
-        initialisation(4);
+        initialisation(2);
         afficher();
+
 
     }
 

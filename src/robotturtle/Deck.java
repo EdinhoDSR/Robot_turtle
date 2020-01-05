@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-
+/*
     // création de la liste robotturtle.Deck
 
     private ArrayList<String> cards;
@@ -79,7 +79,7 @@ public class Deck {
 
     }
 
-
+*/
 
 }
 
