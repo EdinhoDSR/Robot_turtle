@@ -141,6 +141,11 @@ public class Joueur extends Cases{
         this.tournerG();
         this.tournerG();
     }
+    public void est(){
+        main.plateau[this.positionY][this.positionX+1].setJoueur(this);
+        main.plateau[this.positionY][this.positionX].setType('V');
+        this.positionX=this.positionX+1;
+    }
     public void retourCaseDepart(){
         this.setDirection('S');
         main.plateau[this.positionYDepart][this.positionXDepart].setJoueur(this);
@@ -165,9 +170,7 @@ public class Joueur extends Cases{
                 retourCaseDepart();
             }
             else{
-                main.plateau[this.positionY][this.positionX+1].setJoueur(this);
-                main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionX=this.positionX+1;
+                est();
             }
         }
         else if(this.direction=='E'){
@@ -175,18 +178,28 @@ public class Joueur extends Cases{
                 retourCaseDepart();
             }
             else{
-                main.plateau[this.positionY][this.positionX+1].setJoueur(this);
-                main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionX=this.positionX+1;
+                est();
             }
         }
         else if(this.direction=='S'){
-            if(this.positionY==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionY=this.positionY+1;}
+            if(this.positionY==8){
+                retourCaseDepart();
+            }
+            else{
+                main.plateau[this.positionY+1][this.positionX].setJoueur(this);
+                main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionY=this.positionY+1;
+            }
         }
         else if(this.direction=='O'){
-            if(this.positionX==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionX=this.positionX-1;}
+            if(this.positionX==1){
+                retourCaseDepart();
+            }
+            else{
+                main.plateau[this.positionY][this.positionX-1].setJoueur(this);
+                main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionX=this.positionX-1;
+            }
         }
     }
     public void test(){

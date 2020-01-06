@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="176" column="17" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
+            <state relative-caret-position="821">
+              <caret line="197" column="17" selection-start-line="197" selection-start-column="17" selection-end-line="197" selection-end-column="17" />
               <folding>
                 <element signature="method#laser#0;class#Joueur#0" />
                 <element signature="method#tournerD#0;class#Joueur#0" />
@@ -185,7 +185,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578226206355" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578314374781" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -254,7 +254,7 @@
       <workItem from="1578221305178" duration="4800000" />
       <workItem from="1578242999283" duration="443000" />
       <workItem from="1578281110133" duration="588000" />
-      <workItem from="1578299122062" duration="2859000" />
+      <workItem from="1578299122062" duration="3491000" />
     </task>
     <task id="LOCAL-00001" summary="test 1">
       <created>1573297546198</created>
@@ -368,11 +368,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578223316427</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="avancer à moitié terminé">
+      <created>1578313763237</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1578313763237</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11821000" />
+    <option name="totallyTimeSpent" value="12453000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -395,17 +402,17 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49924242" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924242" weight="0.32973805" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32973805" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32973805" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924242" weight="0.32973805" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.49848485" visible="true" weight="0.32973805" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007576" side_tool="true" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151515" side_tool="true" visible="true" weight="0.32973805" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32973805" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -470,7 +477,8 @@
     <MESSAGE value="fonction laser 90%, fonction tourner droite tourner gauche et demi tour. true et false en minuscule" />
     <MESSAGE value="fonction laser 100% mais toujours l'erreur main.plateau et les méthodes joueurs qui ne s'appliquent pas aux cases" />
     <MESSAGE value="initialisation plus affichage fait" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialisation plus affichage fait" />
+    <MESSAGE value="avancer à moitié terminé" />
+    <option name="LAST_COMMIT_MESSAGE" value="avancer à moitié terminé" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -529,8 +537,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="176" column="17" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
+        <state relative-caret-position="821">
+          <caret line="197" column="17" selection-start-line="197" selection-start-column="17" selection-end-line="197" selection-end-column="17" />
           <folding>
             <element signature="method#laser#0;class#Joueur#0" />
             <element signature="method#tournerD#0;class#Joueur#0" />
