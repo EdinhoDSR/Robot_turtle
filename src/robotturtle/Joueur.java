@@ -7,7 +7,7 @@ public class Joueur extends Cases{
 
     public int numero,positionXDepart,positionYDepart;
     public char direction;
-    public List<String> defausse,mainDujoueur,deck,programme;
+    public Deck defausse,mainDujoueur,deck,programme;
 
     public void setDirection(char direction) {
         this.direction = direction;
@@ -374,5 +374,40 @@ public class Joueur extends Cases{
             }
         }
     }
+
+    public void Programme() {
+
+        ArrayList<Card> à_éxécuter = new ArrayList<Card>();
+        Card a;
+        int taille = this.programme.cards.size();
+
+        for(int i=0; i< taille ; i++) {
+            System.out.println("la carte traitée est " + this.programme.cards.get(i));
+            a= this.programme.cards.get(i);
+
+            switch (a.getvaleurs()) {
+
+                case avancer:
+                    this.avancer();
+                    break;
+                case tournerG:
+                    this.tournerG();
+                    break;
+                case tournerD:
+                    this.tournerD();
+                    break;
+                case LASER :
+                    this.laser();
+                    break;
+                /*
+                case BUG :
+                    à_éxécuter.add(new Card(Valeurs.BUG ));
+                    break;
+
+                 */
+            }
+        }
+    }
+
 }
 
