@@ -64,7 +64,7 @@ public class Cases {
     }
     public void joyau(){//Pour s'assurer que la case est occupe et simplifier l'init
         this.type = 'j';
-        main.plateau[1][2] = new Cases(2,3);
+        Main.plateau[1][2] = new Cases(2,3);
 
 
     }

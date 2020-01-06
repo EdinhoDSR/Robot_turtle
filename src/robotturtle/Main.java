@@ -2,12 +2,13 @@ package robotturtle;
 
 import java.util.*;
 
-public class main {
+public class Main {
 
 
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs;
     public static Cases[][] plateau = new Cases[10][10];
+    public static ArrayList<Joueur> listeDeJoueur = new ArrayList<>();
 
 
     public static void main(String[] args) {
