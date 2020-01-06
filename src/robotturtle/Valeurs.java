@@ -1,5 +1,5 @@
 package robotturtle;
 
 public enum Valeurs {
-    avancer, tournerD, tournerG, BUG, LASER;
+    avancer, tournerD, tournerG, BUG, LASER,Mdg,Mdp
 }

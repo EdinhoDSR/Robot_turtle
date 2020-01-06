@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="partie kévin">
+    <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Valeurs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Valeurs.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,15 +34,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>bord</find>
-      <find>joyau</find>
-      <find>avancer</find>
-      <find>jeu</find>
-      <find>main</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -134,6 +129,7 @@
       <workItem from="1578242999283" duration="443000" />
       <workItem from="1578281110133" duration="588000" />
       <workItem from="1578299122062" duration="6076000" />
+      <workItem from="1578323443774" duration="2197000" />
     </task>
     <task id="LOCAL-00001" summary="test 1">
       <created>1573297546198</created>
@@ -268,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578315813881</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Dernière partie avant qu'on attaque le programme principal">
+      <created>1578322720273</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1578322720273</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -322,7 +325,8 @@
     <MESSAGE value="avancer à moitié terminé" />
     <MESSAGE value="avancer terminé" />
     <MESSAGE value="init amélioré pour retourner une liste de joueur" />
-    <option name="LAST_COMMIT_MESSAGE" value="init amélioré pour retourner une liste de joueur" />
+    <MESSAGE value="Dernière partie avant qu'on attaque le programme principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dernière partie avant qu'on attaque le programme principal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

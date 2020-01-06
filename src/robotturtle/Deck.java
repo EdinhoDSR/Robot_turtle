@@ -133,6 +133,15 @@ public class Deck {
         }
     }
 
+    public void creerListeMurs(){
+        for(int i=0; i<3;i++){
+            this.addCard(new Card(Valeurs.Mdp));
+        }
+        for(int i=0; i<2;i++){
+            this.addCard(new Card(Valeurs.Mdg));
+        }
+    }
+
 
 
 

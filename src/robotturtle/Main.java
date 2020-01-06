@@ -105,6 +105,60 @@ public class Main {
         }
     }
 
+    public void run(){
+        while (nombreDeJoueurs >=1){
+            initialisation(nombreDeJoueurs);
+            tourDeJeu();
+        }
+        System.out.println("Fin de la partie");
+    }
+
+    public void tourDeJeu(Joueur joueur){
+        System.out.println("Mur?Programme?Execution?");
+        String choix = scanner.nextLine();
+        int flag =1;
+        while(flag == 1){
+            switch(choix){
+
+                case "Mur":
+                    if (joueur.listeMur[0].TailleDeck() == 0){
+                        System.out.println("Pas de murs");
+                        break;
+                    }
+                    else{
+                        int X;
+                        int Y;
+                        String typeMurPoser;
+                        do{
+                            System.out.println("X");
+                            X = scanner.nextInt();
+                            System.out.println("Y");
+                            Y = scanner.nextInt();
+                            System.out.println("Mdg?Mdc?");
+                            typeMurPoser = scanner.nextLine();
+                        } while(X>9 || Y>9 || plateau[Y][X].getType()!='V');
+                        if (typeMurPoser.equals("Mdg")){
+
+
+                        }
+
+
+                    }
+
+                case "Programme":
+                    flag=0;
+
+                case "Execution" :
+                    flag=0;
+
+                default : System.out.println("Trompé");
+            }
+
+        }
+
+
+    }
+
 
 
 

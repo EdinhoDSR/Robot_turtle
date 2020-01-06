@@ -8,6 +8,7 @@ public class Joueur extends Cases{
     public int numero,positionXDepart,positionYDepart;
     public char direction;
     public Deck defausse,mainDujoueur,deck,programme;
+    public Deck[] listeMurs; //Deck[0] : glaces, Deck[1] : pierre
 
     public void setDirection(char direction) {
         this.direction = direction;
@@ -21,6 +22,12 @@ public class Joueur extends Cases{
         this.positionYDepart = pPositionYDepart;
         this.numero = pNumero;
         this.direction = 'S';
+        this.listeMurs = new Deck[2];
+        this.listeMurs[0].creerListeMurs();
+        this.listeMurs[1].creerListeMurs();
+        this.deck.créerDeck();
+        this.defausse = new Deck();
+        this.mainDujoueur = new Deck();
 
     }
     private void laser(){
