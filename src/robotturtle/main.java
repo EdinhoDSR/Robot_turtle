@@ -12,15 +12,21 @@ public class main {
 
     public static void main(String[] args) {
 
-        initialisation(2);
+        ArrayList<Joueur>listeDeJoueur = initialisation(2);
         afficher();
 
+        for (Joueur joueur : listeDeJoueur) {
+            System.out.println(joueur.getNumero());
+        }
 
     }
 
 
 
-    private static void initialisation(int nombreJoueurs){
+    private static ArrayList<Joueur> initialisation(int nombreJoueurs){
+
+        ArrayList<Joueur> listeJoueur = new ArrayList<>();
+
         for (int i=0;i<10;i++){// boucle qui fait les cases vides
             for (int j=0;j<10;j++){
                 Cases caseBoucle = new Cases(j,i);
@@ -47,6 +53,9 @@ public class main {
             Joueur J2 = new Joueur(2,6,1);
             plateau[1][6].setJoueur(J2);
 
+            listeJoueur.add(J1);
+            listeJoueur.add(J2);
+
         }
         else if (nombreJoueurs==3){
             plateau[8][1].joyau();
@@ -60,6 +69,10 @@ public class main {
             plateau[1][1].setJoueur(J1);
             plateau[1][4].setJoueur(J2);
             plateau[1][7].setJoueur(J3);
+
+            listeJoueur.add(J1);
+            listeJoueur.add(J2);
+            listeJoueur.add(J3);
         }
         else if (nombreJoueurs==4){
             plateau[8][2].joyau();
@@ -74,8 +87,14 @@ public class main {
             plateau[1][3].setJoueur(J2);
             plateau[1][6].setJoueur(J3);
             plateau[1][8].setJoueur(J4);
-        }
 
+            listeJoueur.add(J1);
+            listeJoueur.add(J2);
+            listeJoueur.add(J3);
+            listeJoueur.add(J4);
+
+        }
+        return listeJoueur;
     }
 
     private static void afficher(){
