@@ -6,7 +6,7 @@ public class Joueur extends Cases{
 
     public int numero,positionXDepart,positionYDepart;
     public char direction;
-    public List<String> defausse,mainDujoueur,deck;
+    public List<String> defausse,mainDujoueur,deck,programme;
     public boolean gagnant;
 
     public void setDirection(char direction) {
@@ -22,99 +22,99 @@ public class Joueur extends Cases{
         this.gagnant = false;
 
     }
-    private void laser(Cases[][] plateau,int nombreDeJoueur){
+    private void laser(){
         if (this.direction == 'N'){// Cas où le joueur regarde vers le nord
-            for (int i = 0;i<plateau.length-this.getPositionY();i++){
-                Cases caseEnCours = plateau[this.getPositionY()-i][this.getPositionX()];
+            for (int i = 0;i<main.plateau.length-this.getPositionY();i++){
+                Cases caseEnCours = main.plateau[this.getPositionY()-i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (nombreDeJoueur == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (nombreDeJoueur >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
-                        this.retourCaseDepart(plateau);
-                        caseEnCours.joueur.retourCaseDepart(plateau);
+                    if (main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                        this.retourCaseDepart();
+                        caseEnCours.joueur.retourCaseDepart();
                         break;
                     }
                 }
                 if (caseEnCours.getType()=='j'){
-                    this.retourCaseDepart(plateau);
+                    this.retourCaseDepart();
                     break;
                 }
             }
         }
         if (this.direction == 'S'){// Cas où le joueur regarde vers le Sud
-            for (int i = joueur.getPositionY();i<plateau.length;i++){
-                Cases caseEnCours = plateau[i][joueur.getPositionX()];
+            for (int i = joueur.getPositionY();i<main.plateau.length;i++){
+                Cases caseEnCours = main.plateau[i][joueur.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (nombreDeJoueur == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (nombreDeJoueur >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
-                        this.retourCaseDepart(plateau);
-                        caseEnCours.joueur.retourCaseDepart(plateau);
+                    if (main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                        this.retourCaseDepart();
+                        caseEnCours.joueur.retourCaseDepart();
                         break;
                     }
                 }
                 if (caseEnCours.getType()=='j'){
-                    this.retourCaseDepart(plateau);
+                    this.retourCaseDepart();
                     break;
                 }
             }
         }
         if (joueur.direction == 'E'){// Cas où le joueur regarde vers l'Est
-            for (int i = joueur.getPositionX();i<plateau.length;i++){
-                Cases caseEnCours = plateau[joueur.getPositionY()][i];
+            for (int i = joueur.getPositionX();i<main.plateau.length;i++){
+                Cases caseEnCours = main.plateau[joueur.getPositionY()][i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (nombreDeJoueur == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (nombreDeJoueur >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
-                        this.retourCaseDepart(plateau);
-                        caseEnCours.joueur.retourCaseDepart(plateau);
+                    if (main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                        this.retourCaseDepart();
+                        caseEnCours.joueur.retourCaseDepart();
                         break;
                     }
                 }
                 if (caseEnCours.getType()=='j'){
-                    this.retourCaseDepart(plateau);
+                    this.retourCaseDepart();
                     break;
                 }
             }
         }
         if (joueur.direction == 'O'){// Cas où le joueur regarde vers l'ouest
-            for (int i = 0;i<plateau.length-joueur.getPositionX();i++){
-                Cases caseEnCours = plateau[joueur.getPositionY()][joueur.getPositionX()-i];
+            for (int i = 0;i<main.plateau.length-joueur.getPositionX();i++){
+                Cases caseEnCours = main.plateau[joueur.getPositionY()][joueur.getPositionX()-i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (nombreDeJoueur == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (nombreDeJoueur >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
-                        this.retourCaseDepart(plateau);
-                        caseEnCours.joueur.retourCaseDepart(plateau);
+                    if (main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                        this.retourCaseDepart();
+                        caseEnCours.joueur.retourCaseDepart();
                         break;
                     }
                 }
                 if (caseEnCours.getType()=='j'){
-                    this.retourCaseDepart(plateau);
+                    this.retourCaseDepart();
                     break;
                 }
             }
