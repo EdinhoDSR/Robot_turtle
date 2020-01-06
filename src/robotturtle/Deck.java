@@ -48,6 +48,9 @@ public class Deck {
         this.cards.add(new Card(Valeurs.BUG));
 
     }
+    public int TailleDeck() {
+        return this.cards.size();
+    }
 
     // fonction qui mélange le deck
 
@@ -111,6 +114,25 @@ public class Deck {
         return cardListOutput;
     }
 
+    public void créer_main(Deck main_joueur,Deck provenance) { //mainJoueuer est alors vide et provenance est le De k du jueuer
+
+
+        for (int i=0; i<5; i++) {
+            System.out.println(provenance.getCard(0));
+            main_joueur.draw(provenance);
+        }
+    }
+
+    public void Defausse(Deck provenance, Deck defausse) {
+        int taille = provenance.TailleDeck();
+        for (int i = 0; i < taille; i++) {
+            defausse.addCard(provenance.getCard(0));
+            provenance.removeCard(0);
+
+
+        }
+    }
+
 
 
 
@@ -170,6 +192,9 @@ public class Deck {
         }
 
         // creation des cartes laser
+
+
+
         for(int l= 1; l<4; l++) {
             this.cards.add("Laser");
         }
