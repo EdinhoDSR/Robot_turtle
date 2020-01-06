@@ -2,14 +2,12 @@ package robotturtle;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Joueur extends Cases{
 
     public int numero,positionXDepart,positionYDepart;
     public char direction;
-    public Deck defausse,mainDujoueur,programme,Deck;
-    public boolean gagnant;
+    public List<String> defausse,mainDujoueur,deck,programme;
 
     public void setDirection(char direction) {
         this.direction = direction;
@@ -23,7 +21,6 @@ public class Joueur extends Cases{
         this.positionYDepart = pPositionYDepart;
         this.numero = pNumero;
         this.direction = 'S';
-        this.gagnant = false;
 
     }
     private void laser(){
@@ -141,6 +138,7 @@ public class Joueur extends Cases{
     public void demiTour(){
         this.tournerG();
         this.tournerG();
+        System.out.println("Il se retourne");
     }
     public void est(){
         Main.plateau[this.positionY][this.positionX+1].setJoueur(this);
@@ -148,6 +146,10 @@ public class Joueur extends Cases{
         this.positionX=this.positionX+1;
     }
     public void retourCaseDepart(){
+        if(Main.plateau[this.positionYDepart][this.positionXDepart].getType() == 'J'){
+            Joueur autreJoueur = Main.plateau[this.positionYDepart][this.positionXDepart].getJoueur();
+            autreJoueur.retourCaseDepart();
+        }
         this.setDirection('S');
         Main.plateau[this.positionYDepart][this.positionXDepart].setJoueur(this);
         Main.plateau[this.positionY][this.positionX].setType('V');
@@ -207,371 +209,170 @@ public class Joueur extends Cases{
         // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
         //plateau[y][x]
         if(this.direction=='N'){
-            if(Main.plateau[this.positionY][this.positionX].equals(".")){}
-        }
-        else if(this.direction=='E'){}
-        else if(this.direction=='S'){}
-        else if(this.direction=='O'){}
-    }
-
-    public void Programme() {
-
-        ArrayList<Card> à_éxécuter = new ArrayList<Card>();
-        Card a;
-        int taille = this.programme.cards.size();
-
-        for(int i=0; i< taille ; i++) {
-            System.out.println("la carte traitée est " + this.programme.cards.get(i));
-            a= this.programme.cards.get(i);
-
-            switch (a.getvaleurs()) {
-
-                case avancer:
-                    this.avancer();
-                    break;
-                case tournerG:
-                    this.tournerG();
-                    break;
-                case tournerD:
-                    this.tournerD();
-                    break;
-                case LASER :
-                    this.laser();
-                    break;
-                /*
-                case BUG :
-                    à_éxécuter.add(new Card(Valeurs.BUG ));
-                    break;
-
-                 */
+            char typeCaseDirection = Main.plateau[this.positionY-1][this.positionX].getType();
+            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
+            Cases caseDirection = Main.plateau[this.positionY-1][this.positionX];
+            if(typeCaseDirection == 'j'){
+                caseDirection.setType('V');
+                casesJoueur.setType('V');
+                System.out.println("J"+this.numero+" a gagné");
+                Main.listeDeJoueur.remove(this);
             }
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-    public robotturtle.Joueur( char pDriection, int pPositionX, int pPositionY)
-    {
-        System.out.println("Création d'un joueur avec des paramètres !");
-        positionXDepart = pPositionX;
-        positionYDepart = pPositionY;
-        direction = pDriection;
-    }
-    public void avancer(){
-
-        //C'est fait en fonction du nombre de joueur reste plus qu'à changer la place du joueur dans le tableau
-        if(this.direction=='N'){
-            if(robotturtle.main.plateau[this.casePlateau.getPositionY()-1][this.casePlateau.getPositionX()].this.casePlateau.getType() == 'V'){
-                robotturtle.main.plateau[this.positionY][this.positionX].remove();
-                this.positionX=this.positionXDepart;
-                this.positionY=this.positionYDepart;
+            else if(typeCaseDirection == 'V'){
+                this.avancer();
+                System.out.println("J"+this.numero+" avance");
             }
-            else if(robotturtle.main.plateau[this.positionY-1][this.positionX].getType() == 'M'){
-                robotturtle.main.plateau[this.positionY][this.positionX].remove();
-                robotturtle.main.plateau[this.positionY][this.positionX].demiTour();
+            else if(typeCaseDirection == 'G'
+                    || Main.plateau[this.positionY-1][this.positionX].getType() == 'P'){
+                System.out.println("J"+this.numero+" se retourne");
+                this.demiTour();
             }
-            else if(robotturtle.main.plateau[this.positionY-1][this.positionX].getType() == 'J'){
-                robotturtle.main.plateau[this.positionY][this.positionX].remove();
-                robotturtle.main.plateau[this.positionY][this.positionX].demiTour();
-                robotturtle.main.plateau[this.positionY-1][this.positionX].demiTour();
+            else if(typeCaseDirection == 'J'){
+                Joueur autreJoueur = Main.plateau[this.positionY-1][this.positionX].getJoueur();
+                autreJoueur.retourCaseDepart();
+                this.retourCaseDepart();
             }
-        }
-        else if(this.direction=='E' && jeu.nombreDeJoueurs==4){
-            if(this.positionX==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionX=this.positionX+1;}
+            else if(typeCaseDirection == 'B'){
+                this.pousser();
+            }
         }
         else if(this.direction=='E'){
-            if(this.positionX==7){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionX=this.positionX+1;}
+            char typeCaseDirection = Main.plateau[this.positionY][this.positionX+1].getType();
+            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
+            Cases caseDirection = Main.plateau[this.positionY][this.positionX+1];
+            if(typeCaseDirection == 'j'){
+                caseDirection.setType('V');
+                casesJoueur.setType('V');
+                System.out.println("J"+this.numero+" a gagné");
+                Main.listeDeJoueur.remove(this);
+            }
+            else if(typeCaseDirection == 'V'){
+                this.avancer();
+                System.out.println("J"+this.numero+" avance");
+            }
+            else if(typeCaseDirection == 'G'
+                    || Main.plateau[this.positionY-1][this.positionX].getType() == 'P'){
+                System.out.println("J"+this.numero+" se retourne");
+                this.demiTour();
+            }
+            else if(typeCaseDirection == 'J'){
+                Joueur autreJoueur = Main.plateau[this.positionY-1][this.positionX].getJoueur();
+                autreJoueur.retourCaseDepart();
+                this.retourCaseDepart();
+            }
+            else if(typeCaseDirection == 'B'){
+                this.pousser();
+            }
         }
         else if(this.direction=='S'){
-            if(this.positionY==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionY=this.positionY+1;}
+            char typeCaseDirection = Main.plateau[this.positionY+1][this.positionX].getType();
+            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
+            Cases caseDirection = Main.plateau[this.positionY+1][this.positionX];
+            if(typeCaseDirection == 'j'){
+                caseDirection.setType('V');
+                casesJoueur.setType('V');
+                System.out.println("J"+this.numero+" a gagné");
+                Main.listeDeJoueur.remove(this);
+            }
+            else if(typeCaseDirection == 'V'){
+                this.avancer();
+                System.out.println("J"+this.numero+" avance");
+            }
+            else if(typeCaseDirection == 'G'
+                    || Main.plateau[this.positionY-1][this.positionX].getType() == 'P'){
+                System.out.println("J"+this.numero+" se retourne");
+                this.demiTour();
+            }
+            else if(typeCaseDirection == 'J'){
+                Joueur autreJoueur = Main.plateau[this.positionY-1][this.positionX].getJoueur();
+                autreJoueur.retourCaseDepart();
+                this.retourCaseDepart();
+            }
+            else if(typeCaseDirection == 'B'){
+                this.pousser();
+            }
         }
         else if(this.direction=='O'){
-            if(this.positionX==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
-            else{this.positionX=this.positionX-1;}
-        }
-    }
-
-    public int getPositionXDepart() {
-        return positionXDepart;
-    }
-
-    public void setPositionXDepart(int positionXDepart) {
-        this.positionXDepart = positionXDepart;
-    }
-
-    public int getPositionYDepart() {
-        return positionYDepart;
-    }
-
-    public void setPositionYDepart(int positionYDepart) {
-        this.positionYDepart = positionYDepart;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public void test(){
-        // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
-        //plateau[y][x]
-        if(this.direction=='N'){
-            if(jeu.plateau[this.positionY][this.positionX].equals(".")){}
-            if(Main.plateau[this.positionY-1][this.positionX].type == 'j'){
+            char typeCaseDirection = Main.plateau[this.positionY][this.positionX-1].getType();
+            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
+            Cases caseDirection = Main.plateau[this.positionY][this.positionX-1];
+            if(typeCaseDirection == 'j'){
+                caseDirection.setType('V');
+                casesJoueur.setType('V');
+                System.out.println("J"+this.numero+" a gagné");
                 Main.listeDeJoueur.remove(this);
-
+            }
+            else if(typeCaseDirection == 'V'){
+                this.avancer();
+                System.out.println("J"+this.numero+" avance");
+            }
+            else if(typeCaseDirection == 'G'
+                    || Main.plateau[this.positionY-1][this.positionX].getType() == 'P'){
+                System.out.println("J"+this.numero+" se retourne");
+                this.demiTour();
+            }
+            else if(typeCaseDirection == 'J'){
+                Joueur autreJoueur = Main.plateau[this.positionY-1][this.positionX].getJoueur();
+                autreJoueur.retourCaseDepart();
+                this.retourCaseDepart();
+            }
+            else if(typeCaseDirection == 'B'){
+                this.pousser();
             }
         }
-        else if(this.direction=='E'){}
-        else if(this.direction=='S'){}
-        else if(this.direction=='O'){}
+
     }
-    public void tournerD(){
+    public void pousser(){
+        //C'est fait en fonction du nombre de joueur reste plus qu'à changer la place du joueur dans le tableau
+        if(this.direction=='N'){
+            if(Main.plateau[this.positionY-2][this.positionX].getType() != 'V'){// test si la case en face du bois est vide
+                Main.plateau[this.positionY-2][this.positionX].setType('B');
+                Main.plateau[this.positionY-1][this.positionX].setJoueur(this);
+                Main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionY=this.positionY-1;
+                System.out.println("ça pousse");
+            }
+            else{
+                this.demiTour();
+            }
+        }
+        else if(this.direction=='E'){
+            if(Main.plateau[this.positionY][this.positionX+2].getType() != 'V'){
+                Main.plateau[this.positionY][this.positionX+2].setType('B');
+                Main.plateau[this.positionY][this.positionX+1].setJoueur(this);
+                Main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionX=this.positionX+1;
+                System.out.println("ça pousse");
+            }
+            else{
+                this.demiTour();
+            }
+        }
 
-        if(this.direction=='N'){this.direction='E';}
-        else if(this.direction=='E'){this.direction='S';}
-        else if(this.direction=='S'){this.direction='O';}
-        else if(this.direction=='O'){this.direction='N';}
-    }
-    public void tournerG(){
-
-        if(this.direction=='N'){this.direction='O';}
-        else if(this.direction=='O'){this.direction='S';}
-        else if(this.direction=='S'){this.direction='E';}
-        else if(this.direction=='E'){this.direction='N';}
-    }
-    public void initPositionDebut(int posX,int posY){
-        this.setPositionX(posX);
-        this.setPositionXDepart(posX);
-        this.setPositionY(posY);
-        this.setPositionYDepart(posY);
-        jeu.plateau[this.getPositionY()][this.getPositionX()] = "J1";
-    }
-
-    public void utiliserLaser(){
-        if (direction == 'E'){
-            for(int i=positionX;i<8;i++){
-                if (!jeu.plateau[positionY][i].equals(".")){
-                    if (jeu.plateau[positionY][i].equals("murDeGlace")){
-                        jeu.plateau[positionY][i] = ".";
-                    }
-                    if (jeu.plateau[positionY][i].substring(0,1).equals("j")){
-                        this.tournerD();
-                        this.tournerD();
-                    }
-                    if (jeu.plateau[positionY][i].substring(0,1).equals("J")){
-                        .tournerD();
-                        this.tournerD();
-                    }
-
-
-                }
-
+        else if(this.direction=='S'){
+            if(Main.plateau[this.positionY+2][this.positionX].getType() != 'V'){
+                Main.plateau[this.positionY+2][this.positionX].setType('B');
+                Main.plateau[this.positionY+1][this.positionX].setJoueur(this);
+                Main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionY=this.positionY+1;
+                System.out.println("ça pousse");
+            }
+            else{
+                this.demiTour();
+            }
+        }
+        else if(this.direction=='O'){
+            if(Main.plateau[this.positionY][this.positionX-2].getType() != 'V'){
+                Main.plateau[this.positionY][this.positionX-2].setType('B');
+                Main.plateau[this.positionY][this.positionX-1].setJoueur(this);
+                Main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionX=this.positionX-1;
+                System.out.println("ça pousse");
+            }
+            else{
+                this.demiTour();
             }
         }
     }
-
-    public void poserMur(String typeDeMur) {
-        //A remplir !!!!
-    }
-
-    public int getPositionX() {
-        return positionX;
-    }
-
-    public void setPositionX(int positionX) {
-        this.positionX = positionX;
-    }
-
-    public int getPositionY() {
-        return positionY;
-    }
-
-    public void setPositionY(int positionY) {
-        this.positionY = positionY;
-    }
-
-    public char getDirection() {
-        return direction;
-    }
-
-
-    public void setDirection(char direction) {
-        this.direction = direction;
-    }
-
-    public void utiliserCarte(String carte) {
-        if (carte.equals("avancer")) {
-            this.avancer();
-        }
-        if (carte.equals("reculer")) {
-            this.tournerD();
-            this.tournerD();
-            this.avancer();
-        }
-        if (carte.equals("tournerG")) {
-            this.tournerG();
-        }
-        if (carte.equals("tournerD")) {
-            this.tournerD();
-        }
-        if (carte.equals("tournerD")) {
-            this.utiliserLaser();
-        }
-        if (carte.equals("murDeGlace")) {
-            this.poserMur("murDeGlace");
-        }
-        if (carte.equals("murDeBois")) {
-            this.poserMur("murDeBois");
-        }
-        if (carte.equals("murEnPierre")) {
-            this.poserMur("murEnPierre");
-        }
-    }
-     public int getPositionX() {
-        return positionX;
-    }
-
-    public void setPositionX(int positionX) {
-        this.positionX = positionX;
-    }
-
-    public void setDeck(robotturtle.Deck deck) {
-        robotturtle.Deck = deck;
-    }
-
-    public int getPositionY() {
-        return positionY;
-    }
-
-    public void setPositionY(int positionY) {
-        this.positionY = positionY;
-    }
-
-    public int getPositionXDepart() {
-        return positionXDepart;
-    }
-
-    public void setPositionXDepart(int positionXDepart) {
-        this.positionXDepart = positionXDepart;
-    }
-
-    public int getPositionYDepart() {
-        return positionYDepart;
-    }
-
-    public void setPositionYDepart(int positionYDepart) {
-        this.positionYDepart = positionYDepart;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public char getType() {
-        return type;
-    }
-
-    public void setType(char type) {
-        this.type = type;
-    }
-
-    public char getDirection() {
-        return direction;
-    }
-
-    public void setDirection(char direction) {
-        this.direction = direction;
-    }
-
-    public List<String> getDeck() {
-        return deck;
-    }
-
-    public void setDeck(List<String> deck) {
-        this.deck = deck;
-    }
-
-    public List<String> getDefausse() {
-        return defausse;
-    }
-
-    public void setDefausse(List<String> defausse) {
-        this.defausse = defausse;
-    }
-
-    public List<String> getMain() {
-        return robotturtle.main;
-    }
-
-    public void setMain(List<String> robotturtle.main) {
-        this.robotturtle.main = robotturtle.main;
-    }
-
-    public ArrayList<Card> getCards() {
-        return cards;
-    }
-
-    public void setCards(ArrayList<Card> cards) {
-        this.cards = cards;
-    }
-
-    public robotturtle.Cases(char pDriection, int pPositionX, int pPositionY)
-    {
-        System.out.println("Création d'un joueur avec des paramètres !");
-        positionX = pPositionX;
-        positionY = pPositionY;
-        direction = pDriection;
-    }
-
-    public void joueur( char pDriection, int pPositionY, int pPositionX, int pNumero)
-    {
-        System.out.println("Création d'un joueur avec des paramètres !");
-
-        positionX = pPositionX;
-        positionXDepart = pPositionX;
-        positionY = pPositionY;
-        positionYDepart = pPositionY;
-
-        direction = pDriection;
-        numero = pNumero;
-        robotturtle.Deck = new robotturtle.Deck();
-        type = 'J';
-    }
-
-    public void joyau( int pPositionY, int pPositionX){
-        type = 'j';
-        positionY = pPositionY;
-        positionX = pPositionX;
-    }
-
-    public void remove(){
-        robotturtle.main.plateau[this.positionY][this.positionX].setType('V');
-
-    }
-
-
-
-*/
-    }
+}
 
