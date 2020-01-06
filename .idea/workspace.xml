@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="799">
               <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
               <folding>
                 <element signature="method#afficher#0;class#main#0" />
@@ -46,14 +42,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+            <state relative-caret-position="243">
+              <caret line="176" column="17" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
               <folding>
                 <element signature="method#laser#0;class#Joueur#0" />
                 <element signature="method#tournerD#0;class#Joueur#0" />
                 <element signature="method#tournerG#0;class#Joueur#0" />
                 <element signature="method#demiTour#0;class#Joueur#0" />
-                <element signature="method#retourCaseDepart#0;class#Joueur#0" />
+                <element signature="method#test#0;class#Joueur#0" />
               </folding>
             </state>
           </provider>
@@ -62,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Cases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="-327">
               <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
@@ -71,13 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
+            <state relative-caret-position="1360">
               <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
-              <folding>
-                <element signature="method#createFullDeck#0;class#Deck#0" />
-                <element signature="method#shuffle#0;class#Deck#0" />
-                <element signature="method#draw#0;class#Deck#0" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -114,6 +105,7 @@
       <find>bord</find>
       <find>joyau</find>
       <find>avancer</find>
+      <find>jeu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,6 +145,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,7 +179,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,6 +252,9 @@
       <workItem from="1577142884167" duration="2791000" />
       <workItem from="1577910622155" duration="12561000" />
       <workItem from="1578221305178" duration="4800000" />
+      <workItem from="1578242999283" duration="443000" />
+      <workItem from="1578281110133" duration="588000" />
+      <workItem from="1578299122062" duration="2859000" />
     </task>
     <task id="LOCAL-00001" summary="test 1">
       <created>1573297546198</created>
@@ -377,7 +372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7931000" />
+    <option name="totallyTimeSpent" value="11821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,7 +387,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2651515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -400,17 +395,17 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32973805" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49924242" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32973805" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32973805" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32973805" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924242" weight="0.32973805" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007576" side_tool="true" visible="true" weight="0.32973805" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32973805" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -494,6 +489,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Joyau.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -508,28 +510,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
-          <folding>
-            <element signature="method#createFullDeck#0;class#Deck#0" />
-            <element signature="method#shuffle#0;class#Deck#0" />
-            <element signature="method#draw#0;class#Deck#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Cases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="-327">
           <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="799">
           <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding>
             <element signature="method#afficher#0;class#main#0" />
@@ -539,14 +529,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+        <state relative-caret-position="243">
+          <caret line="176" column="17" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
           <folding>
             <element signature="method#laser#0;class#Joueur#0" />
             <element signature="method#tournerD#0;class#Joueur#0" />
             <element signature="method#tournerG#0;class#Joueur#0" />
             <element signature="method#demiTour#0;class#Joueur#0" />
-            <element signature="method#retourCaseDepart#0;class#Joueur#0" />
+            <element signature="method#test#0;class#Joueur#0" />
           </folding>
         </state>
       </provider>

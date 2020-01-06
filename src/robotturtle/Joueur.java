@@ -6,7 +6,12 @@ public class Joueur extends Cases{
 
     public int numero,positionXDepart,positionYDepart;
     public char direction;
-    public List<String> defausse,main,deck;
+    public List<String> defausse,mainDujoueur,deck;
+    public boolean gagnant;
+
+    public void setDirection(char direction) {
+        this.direction = direction;
+    }
 
     public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart){
 
@@ -14,6 +19,7 @@ public class Joueur extends Cases{
         this.positionYDepart = pPositionYDepart;
         this.numero = pNumero;
         this.direction = 'S';
+        this.gagnant = false;
 
     }
     private void laser(Cases[][] plateau,int nombreDeJoueur){
@@ -135,16 +141,64 @@ public class Joueur extends Cases{
         this.tournerG();
         this.tournerG();
     }
-    public void retourCaseDepart(Cases[][] plateau){
-        int X = this.getPositionX();
-        int Y = this.getPositionY();
-        this.setPositionX(this.positionXDepart);
-        this.setPositionY(this.positionYDepart);
-        plateau[joueur.positionYDepart][joueur.positionXDepart].joueur = this;
-        plateau[joueur.positionYDepart][joueur.positionXDepart].type = 'J';
-        plateau[Y][X].setType('V');
+    public void retourCaseDepart(){
+        this.setDirection('S');
+        main.plateau[this.positionYDepart][this.positionXDepart].setJoueur(this);
+        main.plateau[this.positionY][this.positionX].setType('V');
+        this.positionX=this.positionXDepart;
+        this.positionY=this.positionYDepart;
     }
-
+    public void avancer(){
+        //C'est fait en fonction du nombre de joueur reste plus qu'à changer la place du joueur dans le tableau
+        if(this.direction=='N'){
+            if(this.positionY==1){
+                retourCaseDepart();
+            }
+            else{
+                main.plateau[this.positionY-1][this.positionX].setJoueur(this);
+                main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionY=this.positionY-1;
+            }
+        }
+        else if(this.direction=='E' && main.nombreDeJoueurs==4){
+            if(this.positionX==8){
+                retourCaseDepart();
+            }
+            else{
+                main.plateau[this.positionY][this.positionX+1].setJoueur(this);
+                main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionX=this.positionX+1;
+            }
+        }
+        else if(this.direction=='E'){
+            if(this.positionX==7){
+                retourCaseDepart();
+            }
+            else{
+                main.plateau[this.positionY][this.positionX+1].setJoueur(this);
+                main.plateau[this.positionY][this.positionX].setType('V');
+                this.positionX=this.positionX+1;
+            }
+        }
+        else if(this.direction=='S'){
+            if(this.positionY==8){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionY=this.positionY+1;}
+        }
+        else if(this.direction=='O'){
+            if(this.positionX==1){this.positionX=this.positionXDepart;this.positionY=this.positionYDepart;}
+            else{this.positionX=this.positionX-1;}
+        }
+    }
+    public void test(){
+        // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
+        //plateau[y][x]
+        if(this.direction=='N'){
+            if(main.plateau[this.positionY][this.positionX].equals(".")){}
+        }
+        else if(this.direction=='E'){}
+        else if(this.direction=='S'){}
+        else if(this.direction=='O'){}
+    }
 
 /*
 
