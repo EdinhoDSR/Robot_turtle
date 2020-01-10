@@ -104,6 +104,7 @@ public class Main {
         while (listeDeJoueur.size() >1){
             for (Joueur joueur : listeDeJoueur) {
                 tourDeJeu(joueur);
+                if(listeDeJoueur.size() == 1){break;}
             }
         }
         System.out.println("Fin de la partie");
