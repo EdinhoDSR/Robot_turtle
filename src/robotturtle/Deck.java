@@ -123,8 +123,8 @@ public class Deck {
         }
     }
 
-    public void Defausse(Deck provenance, Deck defausse) {
-        int taille = provenance.TailleDeck();
+    public void Defausse(Deck provenance, Deck defausse, int i) {
+
         for (int i = 0; i < taille; i++) {
             defausse.addCard(provenance.getCard(0));
             provenance.removeCard(0);
@@ -140,6 +140,11 @@ public class Deck {
         for(int i=0; i<2;i++){
             this.addCard(new Card(Valeurs.Mdg));
         }
+    }
+
+    public void ajouter_programme(Deck provenance, int i) {
+        this.cards.add(provenance.getCard(i));
+        provenance.removeCard(i);
     }
 
 
@@ -241,9 +246,15 @@ public class Deck {
         // prends
         this.cards.add(provenance.getCard(0));
         provenance.removeCard(0);
-
-
     }
+
+    public void Ajouter_programme(Deck provenance,i){
+    this.cards.add(provenance.getCard(i));
+     provenance.removeCard(i);
+        }
+
+
+
 
 */
 

@@ -113,42 +113,108 @@ public class Main {
     public void tourDeJeu(Joueur joueur){
         System.out.println("Mur?Programme?Execution?");
         String choix = scanner.nextLine();
-        int flag =1;
-        while(flag == 1){
+        int flag =0;
+        while(flag == 0){
             switch(choix){
 
                 case "Mur":
-                    if (joueur.listeMur[0].TailleDeck() == 0){
-                        System.out.println("Pas de murs");
-                        break;
-                    }
-                    else{
-                        int X;
-                        int Y;
-                        String typeMurPoser;
-                        do{
-                            System.out.println("X");
-                            X = scanner.nextInt();
-                            System.out.println("Y");
-                            Y = scanner.nextInt();
-                            System.out.println("Mdg?Mdc?");
-                            typeMurPoser = scanner.nextLine();
-                        } while(X>9 || Y>9 || plateau[Y][X].getType()!='V');
-                        if (typeMurPoser.equals("Mdg")){
-
-
+                    flag =1;
+                    System.out.println("Quel type de mur? (Glace/Pierre)");
+                    String typeDeMur = scanner.nextLine();
+                    if (typeDeMur.equals("Pierre")){
+                        if (joueur.listeMurs[1].TailleDeck() == 0){
+                            System.out.println("Pas de murs");
+                            break;
                         }
-
-
                     }
-
+                    if (typeDeMur.equals("Glace")){
+                        if (joueur.listeMurs[0].TailleDeck() == 0){
+                            System.out.println("Pas de murs");
+                            break;
+                        }
+                    }
+                    int X;
+                    int Y;
+                    do{
+                        System.out.println("X");
+                        X = scanner.nextInt();
+                        System.out.println("Y");
+                        Y = scanner.nextInt();
+                    } while(X>9 || Y>9 || plateau[Y][X].getType()!='V');
+                    if (typeDeMur.equals("Glace")){
+                        plateau[Y][X].glace();
+                    }
+                    if (typeDeMur.equals("Pierre")){
+                        plateau[Y][X].pierre();
+                    }
                 case "Programme":
-                    flag=0;
+                    System.out.println("Voici les cartes dans votre programme");
+                    System.out.println((joueur.programme);
+                    int flag1=0;
+                    while (flag1==0) {
+                        System.out.println("Voulez vous ajouter une carte au programme");
+                        String choix1= scanner.nextLine();
+                        switch(choix1) {
+                            case "oui":
+                                System.out.println("Veuillez sélectionner la carte à ajouter au programme");
+                                System.out.println( joueur.programme);
+                                int i= scanner.nextInt();
+                                joueur.programme.ajouter_programme  (joueur.mainDujoueur,i);
+                                break;
+
+                            case "non":
+                                System.out.println("Voici les cartes dans votre programme");
+                                System.out.println((joueur.programme));
+                                flag1=1;
+                                flag=1;
+                                break
+
+                            default:
+                                System.out.println("Choix incorrect, veuillez taper oui ou non !!!!!");
+                                break;
+                        }
+                    }
 
                 case "Execution" :
-                    flag=0;
+                    joueur.Programme();
+                    flag=1;
 
                 default : System.out.println("Trompé");
+
+            }
+
+            System.out.println( "Souhaitez vous défausser des cartes ");
+            String choix2 =  scanner.nextLine();
+            int flag3=0;
+            while(flag3==0){
+                switch(choix2) {
+                    case "oui":
+                        System.out.println("Veuillez sélectionner les cartes à défausser ");
+                        System.out.println( joueur.programme);
+                        int i= scanner.nextInt();
+                        joueur.defausse.Defausse(joueur.mainDujoueur,i);
+                        break;
+
+                    case "non":
+                        flag3=1;
+                        break
+
+                    default:
+                        System.out.println("Choix incorrect, veuillez taper oui ou non !!!!!");
+                        break;
+
+
+                }
+            }
+            if (joueur.mainDujoueur.TailleDeck() < 5){
+                if (joueur.deck.TailleDeck()< 5-joueur.mainDujoueur.TailleDeck()){
+                    joueur.deck=joueur.defausse;
+                    joueur.deck.mélanger()
+                }
+
+                while (joueur.mainDujoueur.TailleDeck() <5){
+                    joueur.mainDujoueur.draw(joueur.deck);
+                }
             }
 
         }
