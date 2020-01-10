@@ -183,22 +183,21 @@ public class Main {
 
             }
 
-            System.out.println( "Souhaitez vous défausser des cartes ");
-            String choix2 =  scanner.nextLine();
             int flag3=0;
             while(flag3==0){
+                System.out.println( "Souhaitez vous défausser une carte ");
+                String choix2 =  scanner.nextLine();
                 switch(choix2) {
                     case "oui":
-                        System.out.println("Veuillez sélectionner les cartes à défausser ");
-                        System.out.println( joueur.programme);
+                        System.out.println("Veuillez sélectionner la carte à défausser ");
+                        System.out.println( joueur.mainDujoueur);
                         int i= scanner.nextInt();
-                        joueur.defausse.Defausse(joueur.mainDujoueur,i);
+                        joueur.defausse.Defausse(joueur.mainDujoueur,joueur.defausse,i);
                         break;
 
                     case "non":
                         flag3=1;
                         break
-
                     default:
                         System.out.println("Choix incorrect, veuillez taper oui ou non !!!!!");
                         break;
@@ -206,13 +205,13 @@ public class Main {
 
                 }
             }
-            if (joueur.mainDujoueur.TailleDeck() < 5){
-                if (joueur.deck.TailleDeck()< 5-joueur.mainDujoueur.TailleDeck()){
-                    joueur.deck=joueur.defausse;
-                    joueur.deck.mélanger()
-                }
-
                 while (joueur.mainDujoueur.TailleDeck() <5){
+                    if (joueur.deck.TailleDeck()==0){
+                        joueur.deck=joueur.defausse;
+                        joueur.defausse.vider();
+                        joueur.deck.mélanger();
+                    }
+                    else{
                     joueur.mainDujoueur.draw(joueur.deck);
                 }
             }

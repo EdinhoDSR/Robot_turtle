@@ -124,10 +124,8 @@ public class Deck {
     }
 
     public void Defausse(Deck provenance, Deck defausse, int i) {
-
-        for (int i = 0; i < taille; i++) {
-            defausse.addCard(provenance.getCard(0));
-            provenance.removeCard(0);
+            defausse.addCard(provenance.getCard(i));
+            provenance.removeCard(i);
 
 
         }
@@ -147,7 +145,9 @@ public class Deck {
         provenance.removeCard(i);
     }
 
-
+    public void vider() {
+        this.cards.clear();
+    }
 
 
 
