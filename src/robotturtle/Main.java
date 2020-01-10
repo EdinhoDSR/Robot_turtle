@@ -12,6 +12,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+        Fenetre fen = new Fenetre();
 
 
     }
@@ -149,7 +150,7 @@ public class Main {
                     }
                 case "Programme":
                     System.out.println("Voici les cartes dans votre programme");
-                    System.out.println((joueur.programme);
+                    System.out.println(joueur.programme);
                     int flag1=0;
                     while (flag1==0) {
                         System.out.println("Voulez vous ajouter une carte au programme");
@@ -167,7 +168,7 @@ public class Main {
                                 System.out.println((joueur.programme));
                                 flag1=1;
                                 flag=1;
-                                break
+                                break;
 
                             default:
                                 System.out.println("Choix incorrect, veuillez taper oui ou non !!!!!");
@@ -192,12 +193,12 @@ public class Main {
                         System.out.println("Veuillez sélectionner la carte à défausser ");
                         System.out.println( joueur.mainDujoueur);
                         int i= scanner.nextInt();
-                        joueur.defausse.Defausse(joueur.mainDujoueur,joueur.defausse,i);
+                        joueur.mainDujoueur.Defausse(joueur.defausse,i);
                         break;
 
                     case "non":
                         flag3=1;
-                        break
+                        break;
                     default:
                         System.out.println("Choix incorrect, veuillez taper oui ou non !!!!!");
                         break;

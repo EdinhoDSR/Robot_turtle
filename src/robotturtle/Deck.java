@@ -123,13 +123,13 @@ public class Deck {
         }
     }
 
-    public void Defausse(Deck provenance, Deck defausse, int i) {
-            defausse.addCard(provenance.getCard(i));
-            provenance.removeCard(i);
+    public void Defausse(Deck defausse, int i) {
+            defausse.addCard(this.getCard(i));
+            this.removeCard(i);
 
 
         }
-    }
+
 
     public void creerListeMurs(){
         for(int i=0; i<3;i++){
@@ -148,6 +148,7 @@ public class Deck {
     public void vider() {
         this.cards.clear();
     }
+}
 
 
 
@@ -254,8 +255,8 @@ public class Deck {
         }
 
 
+*/
 
-/**/
 
-}
+
 
