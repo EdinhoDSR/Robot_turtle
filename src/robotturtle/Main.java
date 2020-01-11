@@ -13,10 +13,11 @@ public class Main {
 
     public static void main(String[] args) {
         Fenetre fen = new Fenetre();
-
+        listeDeJoueur = initialisation(3);
+        listeDeJoueur.get(0).affichage();
+        tourDeJeu(listeDeJoueur.get(0));
 
     }
-
 
 
     private static ArrayList<Joueur> initialisation(int nombreJoueurs){
@@ -111,117 +112,79 @@ public class Main {
         System.out.println("Fin de la partie");
     }
 
-    public void tourDeJeu(Joueur joueur){
-        System.out.println("Mur?Programme?Execution?");
-        String choix = scanner.nextLine();
-        int flag =0;
-        while(flag == 0){
-            switch(choix){
-
+    public static void tourDeJeu(Joueur joueur){
+        boolean finie = false;
+        while(!finie){
+            System.out.println("Mur? Programme? Execution?");
+            String choix = scanner.nextLine();
+            switch (choix){
                 case "Mur":
-                    flag =1;
+                    System.out.println("Voulez vous mettre un mur ?");
+                    String choix2= scanner.nextLine();
+
                     System.out.println("Quel type de mur? (Glace/Pierre)");
                     String typeDeMur = scanner.nextLine();
-                    if (typeDeMur.equals("Pierre")){
-                        if (joueur.listeMurs[1].TailleDeck() == 0){
-                            System.out.println("Pas de murs");
-                            break;
-                        }
-                    }
-                    if (typeDeMur.equals("Glace")){
-                        if (joueur.listeMurs[0].TailleDeck() == 0){
-                            System.out.println("Pas de murs");
-                            break;
-                        }
-                    }
-                    int X;
-                    int Y;
-                    do{
-                        System.out.println("X");
-                        X = scanner.nextInt();
-                        System.out.println("Y");
-                        Y = scanner.nextInt();
-                    } while(X>9 || Y>9 || plateau[Y][X].getType()!='V');
-                    if (typeDeMur.equals("Glace")){
-                        plateau[Y][X].glace();
-                    }
-                    if (typeDeMur.equals("Pierre")){
-                        plateau[Y][X].pierre();
-                    }
-                case "Programme":
-                    System.out.println("Voici les cartes dans votre programme");
-                    System.out.println(joueur.programme);
-                    int flag1=0;
-                    while (flag1==0) {
-                        System.out.println("Voulez vous ajouter une carte au programme");
-                        String choix1= scanner.nextLine();
-                        switch(choix1) {
-                            case "oui":
-                                System.out.println("Veuillez sélectionner la carte à ajouter au programme");
-                                System.out.println( joueur.programme);
-                                int i= scanner.nextInt();
-                                joueur.programme.ajouter_programme  (joueur.mainDujoueur,i);
-                                break;
-
-                            case "non":
-                                System.out.println("Voici les cartes dans votre programme");
-                                System.out.println((joueur.programme));
-                                flag1=1;
-                                flag=1;
-                                break;
-
-                            default:
-                                System.out.println("Choix incorrect, veuillez taper oui ou non !!!!!");
-                                break;
-                        }
-                    }
-
+                    if (typeDeMur.equals("Pierre")) {
+                                if (joueur.mursPierre.TailleDeck() == 0) {
+                                    System.out.println("Pas de murs");
+                                    break;
+                                }
+                            }
+                    if (typeDeMur.equals("Glace")) {
+                                if (joueur.mursGlace.TailleDeck() == 0) {
+                                    System.out.println("Pas de murs");
+                                    break;
+                                }
+                            }
+                    poserMur(typeDeMur);
+                    finie = true;
+                    break;
                 case "Execution" :
-                    joueur.Programme();
-                    flag=1;
+                    joueur.executionProgramme();
+                    System.out.println("programme execute");
+                    finie=true;
+                    break;
+                case "Programme":
 
-                default : System.out.println("Trompé");
-
-            }
-
-            int flag3=0;
-            while(flag3==0){
-                System.out.println( "Souhaitez vous défausser une carte ");
-                String choix2 =  scanner.nextLine();
-                switch(choix2) {
-                    case "oui":
-                        System.out.println("Veuillez sélectionner la carte à défausser ");
-                        System.out.println( joueur.mainDujoueur);
-                        int i= scanner.nextInt();
-                        joueur.mainDujoueur.Defausse(joueur.defausse,i);
-                        break;
-
-                    case "non":
-                        flag3=1;
-                        break;
-                    default:
-                        System.out.println("Choix incorrect, veuillez taper oui ou non !!!!!");
-                        break;
-
-
+                    System.out.println("Veuillez sélectionner la carte à ajouter au programme");
+                    joueur.affichage();
+                    int i = Integer.parseInt(scanner.nextLine());
+                    joueur.programme.ajouter_programme(joueur.mainDujoueur, i);
+                    finie = true;
+                    break;
                 }
-            }
-                while (joueur.mainDujoueur.TailleDeck() <5){
-                    if (joueur.deck.TailleDeck()==0){
-                        joueur.deck=joueur.defausse;
-                        joueur.defausse.vider();
-                        joueur.deck.mélanger();
-                    }
-                    else{
-                    joueur.mainDujoueur.draw(joueur.deck);
-                }
-            }
-
         }
-
-
+        remplissageMain(joueur);
     }
+    public static void remplissageMain(Joueur joueur) {
+        while (joueur.mainDujoueur.TailleDeck() < 5) {
+            if (joueur.deck.TailleDeck() == 0) {
+                joueur.deck = joueur.defausse;
+                joueur.defausse.vider();
+                joueur.deck.mélanger();
+                joueur.mainDujoueur.draw(joueur.deck);
+            } else {
+                joueur.mainDujoueur.draw(joueur.deck);
+            }
+        }
+    }
+    public static void poserMur(String typeMur){
+        int X;
+        int Y;
+        do{
+            System.out.println("Entrez X");
+            X = Integer.parseInt(scanner.nextLine());
+            System.out.println("Entrez Y");
+            Y = Integer.parseInt(scanner.nextLine());
 
+        } while(X>9 || Y>9 || plateau[Y][X].getType()!='V');
+        if (typeMur.equals("Glace")){
+            plateau[Y][X].glace();
+        }
+        if (typeMur.equals("Pierre")){
+            plateau[Y][X].pierre();
+        }
+    }
 
 }
 

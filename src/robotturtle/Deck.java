@@ -11,7 +11,7 @@ public class Deck {
 
 
     public Deck() {
-        this.cards = new ArrayList<Card>();
+        this.cards = new ArrayList<>();
     }
 
     // création des cartes du jeu
@@ -19,7 +19,7 @@ public class Deck {
     public void créerDeck() {
 
         // création des cartes avancer
-        for (int i =0; i<19 ; i++) {
+        for (int i =0; i<18 ; i++) {
             //
             this.cards.add(new Card(Valeurs.avancer ));
         }
@@ -42,17 +42,15 @@ public class Deck {
             this.cards.add(new Card(Valeurs.LASER ));
         }
 
-        // creation des cartes laser
+        // creation des cartes bugs
 
-        this.cards.add(new Card(Valeurs.BUG));
-        this.cards.add(new Card(Valeurs.BUG));
+        /*this.cards.add(new Card(Valeurs.BUG));
+        this.cards.add(new Card(Valeurs.BUG));*/
 
     }
     public int TailleDeck() {
         return this.cards.size();
     }
-
-    // fonction qui mélange le deck
 
     public void mélanger() {
 
@@ -60,7 +58,7 @@ public class Deck {
 
         ArrayList<Card> tmpDeck = new ArrayList<Card>();
         Random random = new Random();
-        int randomCardIndex = 0;
+        int randomCardIndex ;
 
         int sizedeck = this.cards.size();
         for (int i = 0; i<sizedeck; i++) {
@@ -123,18 +121,18 @@ public class Deck {
         }
     }
 
-    public void Defausse(Deck defausse, int i) {
-            defausse.addCard(this.getCard(i));
-            this.removeCard(i);
+    public void Defausse(Deck provenance, Deck defausse, int i) {
+        defausse.addCard(provenance.getCard(i));
+        provenance.removeCard(i);
+    }
 
-
-        }
-
-
-    public void creerListeMurs(){
+    public void creerListeMursPierre(){
         for(int i=0; i<3;i++){
             this.addCard(new Card(Valeurs.Mdp));
         }
+
+    }
+    public void creerListeMursGlace(){
         for(int i=0; i<2;i++){
             this.addCard(new Card(Valeurs.Mdg));
         }
@@ -151,112 +149,6 @@ public class Deck {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    // création de la liste robotturtle.Deck
-
-    private ArrayList<String> cards;
-
-
-    public Deck() {
-        this.cards = new ArrayList<String>();
-    }
-
-    // création des cartes du jeu
-    public void createFullDeck() {
-
-
-        // création des cartes avancer
-        for (int i =0; i<19 ; i++) {
-            //
-            this.cards.add("Avancer");
-        }
-
-        // création des cartes tourner à droite
-
-        for(int j= 1; j<9; j++)
-        {
-            this.cards.add("Droite");
-
-
-            // création des cartes tourner à gauche
-        }
-        for(int k= 1; k<9; k++) {
-            this.cards.add("Gauche");
-        }
-
-        // creation des cartes laser
-
-
-
-        for(int l= 1; l<4; l++) {
-            this.cards.add("Laser");
-        }
-    }
-
-
-    // fonction qui mélange le deck
-
-    public void shuffle() {
-
-        Collections.shuffle(this.cards);
-
-    }
-
-    // création de la fonction pour enlever une carte d'un deck
-
-    public void removeCard(int i) {
-        this.cards.remove(i);
-    }
-
-    // fonction qui retourne une carte d'un deck
-    public Card getCard(int i) {
-        return this.cards.get(i);
-    }
-
-    // fonction qui ajoute une carte dans un deck
-    public void addCard(String addCard) {
-        this.cards.add(addCard);
-    }
-
-
-
-    //  Fonction qui pioche les cartes
-    public void draw (Deck provenance) {
-        // prends
-        this.cards.add(provenance.getCard(0));
-        provenance.removeCard(0);
-    }
-
-    public void Ajouter_programme(Deck provenance,i){
-    this.cards.add(provenance.getCard(i));
-     provenance.removeCard(i);
-        }
-
-
-*/
-
-
+}
 
 

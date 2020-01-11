@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="161.0" y="756.0">org</node>
+    <node x="247.0" y="0.0">Deck</node>
+    <node x="251.36363636363632" y="0.9090909090909065">main</node>
+    <node x="9.5" y="454.0">Joueur</node>
+    <node x="673.0" y="682.0">META-INF</node>
+    <node x="464.0" y="682.0">groovyjarjarasm</node>
+    <node x="0.0" y="756.0">groovy</node>
+    <node x="0.0" y="682.0">groovyjarjarcommonscli</node>
+    <node x="253.0" y="682.0">groovyjarjarantlr</node>
+    <node x="0.0" y="0.0">Cases</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Joueur" target="Cases">
+      <point x="0.0" y="-91.5" />
+      <point x="0.0" y="202.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.1" x="314.3131313131313" y="169.8181818181818" />
+  <SelectedNodes>
+    <node>main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

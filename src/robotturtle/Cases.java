@@ -7,6 +7,7 @@ public class Cases {
     protected Joueur joueur;
 
 
+
     public Cases(){}
     public Cases (int pX, int pY){
         positionX = pX;

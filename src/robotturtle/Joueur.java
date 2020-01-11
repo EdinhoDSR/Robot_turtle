@@ -7,8 +7,8 @@ public class Joueur extends Cases{
 
     public int numero,positionXDepart,positionYDepart;
     public char direction;
-    public Deck defausse,mainDujoueur,deck,programme;
-    public Deck[] listeMurs; //Deck[0] : glaces, Deck[1] : pierre
+    public Deck defausse,mainDujoueur,deck,programme,mursGlace,mursPierre;
+     //Deck[0] : glaces, Deck[1] : pierre
 
     public void setDirection(char direction) {
         this.direction = direction;
@@ -16,18 +16,31 @@ public class Joueur extends Cases{
     public int getNumero() {
         return numero;
     }
+
     public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart){
 
+        this.type = 'J';
         this.positionXDepart = pPositionXDepart;
         this.positionYDepart = pPositionYDepart;
+        this.positionX = pPositionXDepart;
+        this.positionY = pPositionYDepart;
         this.numero = pNumero;
         this.direction = 'S';
-        this.listeMurs = new Deck[2];
-        this.listeMurs[0].creerListeMurs();
-        this.listeMurs[1].creerListeMurs();
+
+        this.mursGlace = new Deck();
+        this.mursPierre = new Deck();
+        this.mursGlace.creerListeMursGlace();
+        this.mursPierre.creerListeMursPierre();
+
+        this.deck = new Deck();
         this.deck.créerDeck();
+        deck.mélanger();
         this.defausse = new Deck();
         this.mainDujoueur = new Deck();
+        this.programme = new Deck();
+
+        Main.remplissageMain(this);
+
 
     }
     private void laser(){
@@ -145,17 +158,33 @@ public class Joueur extends Cases{
     public void demiTour(){
         this.tournerG();
         this.tournerG();
-        System.out.println("Il se retourne");
     }
     public void est(){
         Main.plateau[this.positionY][this.positionX+1].setJoueur(this);
         Main.plateau[this.positionY][this.positionX].setType('V');
         this.positionX=this.positionX+1;
     }
+    public void nord(){
+        Main.plateau[this.positionY-1][this.positionX].setJoueur(this);
+        Main.plateau[this.positionY][this.positionX].setType('V');
+        this.positionY=this.positionY-1;
+    }
+    public void sud(){
+        Main.plateau[this.positionY+1][this.positionX].setJoueur(this);
+        Main.plateau[this.positionY][this.positionX].setType('V');
+        this.positionY=this.positionY+1;
+    }
+    public void ouest(){
+        Main.plateau[this.positionY][this.positionX-1].setJoueur(this);
+        Main.plateau[this.positionY][this.positionX].setType('V');
+        this.positionX=this.positionX-1;
+    }
     public void retourCaseDepart(){
         if(Main.plateau[this.positionYDepart][this.positionXDepart].getType() == 'J'){
+
             Joueur autreJoueur = Main.plateau[this.positionYDepart][this.positionXDepart].getJoueur();
-            autreJoueur.retourCaseDepart();
+            Main.plateau[this.positionYDepart][this.positionXDepart].setType('V');
+            Main.plateau[this.positionYDepart][this.positionXDepart].setJoueur(autreJoueur);
         }
         this.setDirection('S');
         Main.plateau[this.positionYDepart][this.positionXDepart].setJoueur(this);
@@ -164,179 +193,75 @@ public class Joueur extends Cases{
         this.positionY=this.positionYDepart;
     }
     public void avancer(){
-        //C'est fait en fonction du nombre de joueur reste plus qu'à changer la place du joueur dans le tableau
         if(this.direction=='N'){
-            if(this.positionY==1){
-                retourCaseDepart();
-            }
-            else{
-                Main.plateau[this.positionY-1][this.positionX].setJoueur(this);
-                Main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionY=this.positionY-1;
-            }
-        }
-        else if(this.direction=='E' && Main.nombreDeJoueurs==4){
-            if(this.positionX==8){
-                retourCaseDepart();
-            }
-            else{
-                est();
-            }
-        }
-        else if(this.direction=='E'){
-            if(this.positionX==7){
-                retourCaseDepart();
-            }
-            else{
-                est();
-            }
+            nord();
         }
         else if(this.direction=='S'){
-            if(this.positionY==8){
-                retourCaseDepart();
-            }
-            else{
-                Main.plateau[this.positionY+1][this.positionX].setJoueur(this);
-                Main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionY=this.positionY+1;
-            }
-        }
-        else if(this.direction=='O'){
-            if(this.positionX==1){
-                retourCaseDepart();
-            }
-            else{
-                Main.plateau[this.positionY][this.positionX-1].setJoueur(this);
-                Main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionX=this.positionX-1;
-            }
-        }
-    }
-    public void test(){
-        // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
-        //plateau[y][x]
-        if(this.direction=='N'){
-            char typeCaseDirection = Main.plateau[this.positionY-1][this.positionX].getType();
-            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
-            Cases caseDirection = Main.plateau[this.positionY-1][this.positionX];
-            if(typeCaseDirection == 'j'){
-                caseDirection.setType('V');
-                casesJoueur.setType('V');
-                System.out.println("J"+this.numero+" a gagné");
-                Main.listeDeJoueur.remove(this);
-            }
-            else if(typeCaseDirection == 'V'){
-                this.avancer();
-                System.out.println("J"+this.numero+" avance");
-            }
-            else if(typeCaseDirection == 'G'
-                    || Main.plateau[this.positionY-1][this.positionX].getType() == 'P'){
-                System.out.println("J"+this.numero+" se retourne");
-                this.demiTour();
-            }
-            else if(typeCaseDirection == 'J'){
-                Joueur autreJoueur = Main.plateau[this.positionY-1][this.positionX].getJoueur();
-                autreJoueur.retourCaseDepart();
-                this.retourCaseDepart();
-            }
-            else if(typeCaseDirection == 'B'){
-                this.pousser();
-            }
+            sud();
         }
         else if(this.direction=='E'){
-            char typeCaseDirection = Main.plateau[this.positionY][this.positionX+1].getType();
-            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
-            Cases caseDirection = Main.plateau[this.positionY][this.positionX+1];
-            if(typeCaseDirection == 'j'){
-                caseDirection.setType('V');
-                casesJoueur.setType('V');
-                System.out.println("J"+this.numero+" a gagné");
-                Main.listeDeJoueur.remove(this);
-            }
-            else if(typeCaseDirection == 'V'){
-                this.avancer();
-                System.out.println("J"+this.numero+" avance");
-            }
-            else if(typeCaseDirection == 'G'
-                    || Main.plateau[this.positionY-1][this.positionX].getType() == 'P'){
-                System.out.println("J"+this.numero+" se retourne");
-                this.demiTour();
-            }
-            else if(typeCaseDirection == 'J'){
-                Joueur autreJoueur = Main.plateau[this.positionY-1][this.positionX].getJoueur();
-                autreJoueur.retourCaseDepart();
-                this.retourCaseDepart();
-            }
-            else if(typeCaseDirection == 'B'){
-                this.pousser();
-            }
-        }
-        else if(this.direction=='S'){
-            char typeCaseDirection = Main.plateau[this.positionY+1][this.positionX].getType();
-            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
-            Cases caseDirection = Main.plateau[this.positionY+1][this.positionX];
-            if(typeCaseDirection == 'j'){
-                caseDirection.setType('V');
-                casesJoueur.setType('V');
-                System.out.println("J"+this.numero+" a gagné");
-                Main.listeDeJoueur.remove(this);
-            }
-            else if(typeCaseDirection == 'V'){
-                this.avancer();
-                System.out.println("J"+this.numero+" avance");
-            }
-            else if(typeCaseDirection == 'G'
-                    || Main.plateau[this.positionY-1][this.positionX].getType() == 'P'){
-                System.out.println("J"+this.numero+" se retourne");
-                this.demiTour();
-            }
-            else if(typeCaseDirection == 'J'){
-                Joueur autreJoueur = Main.plateau[this.positionY-1][this.positionX].getJoueur();
-                autreJoueur.retourCaseDepart();
-                this.retourCaseDepart();
-            }
-            else if(typeCaseDirection == 'B'){
-                this.pousser();
-            }
+            est();
         }
         else if(this.direction=='O'){
-            char typeCaseDirection = Main.plateau[this.positionY][this.positionX-1].getType();
-            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
-            Cases caseDirection = Main.plateau[this.positionY][this.positionX-1];
-            if(typeCaseDirection == 'j'){
-                caseDirection.setType('V');
-                casesJoueur.setType('V');
-                System.out.println("J"+this.numero+" a gagné");
-                Main.listeDeJoueur.remove(this);
-            }
-            else if(typeCaseDirection == 'V'){
-                this.avancer();
-                System.out.println("J"+this.numero+" avance");
-            }
-            else if(typeCaseDirection == 'G'
-                    || Main.plateau[this.positionY-1][this.positionX].getType() == 'P'){
-                System.out.println("J"+this.numero+" se retourne");
-                this.demiTour();
-            }
-            else if(typeCaseDirection == 'J'){
-                Joueur autreJoueur = Main.plateau[this.positionY-1][this.positionX].getJoueur();
-                autreJoueur.retourCaseDepart();
-                this.retourCaseDepart();
-            }
-            else if(typeCaseDirection == 'B'){
-                this.pousser();
-            }
+            ouest();
         }
 
+    }
+    public void jaipasdenom(char typeCaseDirection,Cases casesJoueur,Cases caseDirection){
+        if(typeCaseDirection == 'j'){
+            caseDirection.setType('V');
+            casesJoueur.setType('V');
+            System.out.println("J"+this.numero+" a gagné");
+            Main.listeDeJoueur.remove(this);
+        }
+        else if(typeCaseDirection == 'V'){
+            this.avancer();
+            System.out.println("J"+this.numero+" avance");
+        }
+        else if(typeCaseDirection == 'G' || typeCaseDirection == 'P'){
+            System.out.println("J"+this.numero+" se retourne");
+            this.demiTour();
+        }
+        else if(typeCaseDirection == 'J'){
+            caseDirection.joueur.retourCaseDepart();
+            System.out.println("J"+caseDirection.joueur.numero+" retourne au départ");
+            this.retourCaseDepart();
+            System.out.println("J"+this.numero+" retourne au départ");
+        }
+    }
+    public void test() {
+        // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
+        //plateau[y][x]
+        if (this.direction == 'N') {
+            char typeCaseDirection = Main.plateau[this.positionY - 1][this.positionX].getType();
+            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
+            Cases caseDirection = Main.plateau[this.positionY - 1][this.positionX];
+            jaipasdenom(typeCaseDirection, casesJoueur, caseDirection);
+
+        } else if (this.direction == 'E') {
+            char typeCaseDirection = Main.plateau[this.positionY][this.positionX + 1].getType();
+            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
+            Cases caseDirection = Main.plateau[this.positionY][this.positionX + 1];
+            jaipasdenom(typeCaseDirection, casesJoueur, caseDirection);
+        } else if (this.direction == 'S') {
+            char typeCaseDirection = Main.plateau[this.positionY + 1][this.positionX].getType();
+            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
+            Cases caseDirection = Main.plateau[this.positionY + 1][this.positionX];
+            jaipasdenom(typeCaseDirection, casesJoueur, caseDirection);
+
+        } else if (this.direction == 'O') {
+            char typeCaseDirection = Main.plateau[this.positionY][this.positionX - 1].getType();
+            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
+            Cases caseDirection = Main.plateau[this.positionY][this.positionX - 1];
+            jaipasdenom(typeCaseDirection, casesJoueur, caseDirection);
+        }
     }
     public void pousser(){
         //C'est fait en fonction du nombre de joueur reste plus qu'à changer la place du joueur dans le tableau
         if(this.direction=='N'){
             if(Main.plateau[this.positionY-2][this.positionX].getType() != 'V'){// test si la case en face du bois est vide
                 Main.plateau[this.positionY-2][this.positionX].setType('B');
-                Main.plateau[this.positionY-1][this.positionX].setJoueur(this);
-                Main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionY=this.positionY-1;
+                nord();
                 System.out.println("ça pousse");
             }
             else{
@@ -346,9 +271,7 @@ public class Joueur extends Cases{
         else if(this.direction=='E'){
             if(Main.plateau[this.positionY][this.positionX+2].getType() != 'V'){
                 Main.plateau[this.positionY][this.positionX+2].setType('B');
-                Main.plateau[this.positionY][this.positionX+1].setJoueur(this);
-                Main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionX=this.positionX+1;
+                est();
                 System.out.println("ça pousse");
             }
             else{
@@ -359,9 +282,7 @@ public class Joueur extends Cases{
         else if(this.direction=='S'){
             if(Main.plateau[this.positionY+2][this.positionX].getType() != 'V'){
                 Main.plateau[this.positionY+2][this.positionX].setType('B');
-                Main.plateau[this.positionY+1][this.positionX].setJoueur(this);
-                Main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionY=this.positionY+1;
+                sud();
                 System.out.println("ça pousse");
             }
             else{
@@ -371,9 +292,7 @@ public class Joueur extends Cases{
         else if(this.direction=='O'){
             if(Main.plateau[this.positionY][this.positionX-2].getType() != 'V'){
                 Main.plateau[this.positionY][this.positionX-2].setType('B');
-                Main.plateau[this.positionY][this.positionX-1].setJoueur(this);
-                Main.plateau[this.positionY][this.positionX].setType('V');
-                this.positionX=this.positionX-1;
+                ouest();
                 System.out.println("ça pousse");
             }
             else{
@@ -381,10 +300,20 @@ public class Joueur extends Cases{
             }
         }
     }
+    public void affichage(){
+        this.mainDujoueur.TailleDeck();
+        if(this.mainDujoueur.TailleDeck()==0){System.out.println("Il n'y a pas de cartes dans votre main");}
+        else{
+            for(int i=0; i<this.mainDujoueur.TailleDeck(); i++){
+                System.out.println(this.mainDujoueur.getCard(i).toString());
+            }
+        }
 
-    public void Programme() {
 
-        ArrayList<Card> à_éxécuter = new ArrayList<Card>();
+    }
+    public void executionProgramme() {
+
+        ArrayList<Card> à_éxécuter = new ArrayList<>();
         Card a;
         int taille = this.programme.cards.size();
 
