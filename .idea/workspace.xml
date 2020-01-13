@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DOS-REIS_COTTEROT_BISSILA_G1_G7.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Robot_turtle.eml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Robot_turtle.userlibraries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Robot_turtle/META-INF/Robot_turtle.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,12 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Cases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-142">
+            <state relative-caret-position="578">
               <caret line="48" column="25" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="25" />
-              <folding>
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#903#904#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -51,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-463">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="532">
+              <caret line="150" selection-start-line="150" selection-end-line="150" />
               <folding>
                 <element signature="e#214#215#0" expanded="true" />
                 <element signature="e#260#261#0" expanded="true" />
@@ -61,33 +53,16 @@
                 <element signature="method#draw#0;class#Deck#0" />
                 <element signature="method#toString#0;class#Deck#0" />
                 <element signature="method#créer_main#0;class#Deck#0" />
-                <element signature="method#creerListeMurs#0;class#Deck#0" />
-                <element signature="method#creerListeMursGlace#1;class#Deck#0" />
-                <element signature="e#3658#3659#0" expanded="true" />
-                <element signature="e#3692#3693#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/robotturtle/Card.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#107#108#0" expanded="true" />
-                <element signature="e#145#146#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/robotturtle/Valeurs.java">
+        <entry file="file://$PROJECT_DIR$/src/robotturtle/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="51" />
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -95,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-190">
-              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+            <state relative-caret-position="183">
+              <caret line="345" column="51" selection-start-line="345" selection-start-column="51" selection-end-line="345" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#laser#0;class#Joueur#0" />
@@ -119,13 +94,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="264">
+              <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
               <folding>
                 <element signature="method#initialisation#0;class#Main#0" />
                 <element signature="method#afficher#0;class#Main#0" />
-                <element signature="method#run#0;class#Main#0" />
-                <element signature="e#4247#4459#1" />
                 <element signature="method#remplissageMain#0;class#Main#0" />
                 <element signature="method#poserMur#0;class#Main#0" />
               </folding>
@@ -166,9 +139,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/robotturtle/Valeurs.java" />
-        <option value="$PROJECT_DIR$/src/robotturtle/Deck.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/robotturtle/Cases.java" />
+        <option value="$PROJECT_DIR$/src/robotturtle/Deck.java" />
         <option value="$PROJECT_DIR$/src/robotturtle/Joueur.java" />
         <option value="$PROJECT_DIR$/src/robotturtle/Main.java" />
       </list>
@@ -194,8 +167,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,18 +205,17 @@
               <item name="Robot_turtle" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="Robot_turtle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578698653152" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP2_G1D_EDINHO_DOSREIS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -296,13 +266,15 @@
       <workItem from="1578281110133" duration="588000" />
       <workItem from="1578299122062" duration="6076000" />
       <workItem from="1578658420953" duration="29317000" />
+      <workItem from="1578916052910" duration="6089000" />
+      <workItem from="1578936662278" duration="3326000" />
     </task>
-    <task id="LOCAL-00001" summary="test 1">
-      <created>1573297546198</created>
+    <task id="LOCAL-00001" summary="la vie est belle">
+      <created>1578707692115</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1573297546198</updated>
+      <updated>1578707692115</updated>
     </task>
     <task id="LOCAL-00002" summary="test 1">
       <created>1573298460369</created>
@@ -444,10 +416,11 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24730000" />
+    <option name="totallyTimeSpent" value="35218000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,7 +434,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11666667" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11969697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -523,6 +496,9 @@
       <window_info anchor="right" id="Maven" order="8" weight="0.32954547" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -577,7 +553,8 @@
     <MESSAGE value="init amélioré pour retourner une liste de joueur" />
     <MESSAGE value="run() fait sans le break" />
     <MESSAGE value="run() fait avec le break" />
-    <option name="LAST_COMMIT_MESSAGE" value="run() fait avec le break" />
+    <MESSAGE value="la vie est belle" />
+    <option name="LAST_COMMIT_MESSAGE" value="la vie est belle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -628,10 +605,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Cases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-463">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="532">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
           <folding>
             <element signature="e#214#215#0" expanded="true" />
             <element signature="e#260#261#0" expanded="true" />
@@ -640,29 +631,14 @@
             <element signature="method#draw#0;class#Deck#0" />
             <element signature="method#toString#0;class#Deck#0" />
             <element signature="method#créer_main#0;class#Deck#0" />
-            <element signature="method#creerListeMurs#0;class#Deck#0" />
-            <element signature="method#creerListeMursGlace#1;class#Deck#0" />
-            <element signature="e#3658#3659#0" expanded="true" />
-            <element signature="e#3692#3693#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/robotturtle/Cases.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="25" />
-          <folding>
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        <state relative-caret-position="183">
+          <caret line="345" column="51" selection-start-line="345" selection-start-column="51" selection-end-line="345" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#laser#0;class#Joueur#0" />
@@ -683,13 +659,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="264">
+          <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
           <folding>
             <element signature="method#initialisation#0;class#Main#0" />
             <element signature="method#afficher#0;class#Main#0" />
-            <element signature="method#run#0;class#Main#0" />
-            <element signature="e#4247#4459#1" />
             <element signature="method#remplissageMain#0;class#Main#0" />
             <element signature="method#poserMur#0;class#Main#0" />
           </folding>

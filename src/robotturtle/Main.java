@@ -12,10 +12,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Fenetre fen = new Fenetre();
-        listeDeJoueur = initialisation(3);
-        listeDeJoueur.get(0).affichage();
-        tourDeJeu(listeDeJoueur.get(0));
+        run();
 
     }
 
@@ -101,11 +98,14 @@ public class Main {
         }
     }
 
-    public void run(){
+    public static void run(){
         ArrayList<Joueur>listeDeJoueur = initialisation(2);
         while (listeDeJoueur.size() >1){
             for (Joueur joueur : listeDeJoueur) {
+                System.out.println("tour du joueur "+joueur.getNumero());
+                afficher();
                 tourDeJeu(joueur);
+                afficher();
                 if(listeDeJoueur.size() == 1){break;}
             }
         }
