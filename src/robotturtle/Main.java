@@ -12,7 +12,9 @@ public class Main {
 
 
     public static void main(String[] args) {
+
         run();
+
 
     }
 
@@ -99,7 +101,11 @@ public class Main {
     }
 
     public static void run(){
-        ArrayList<Joueur>listeDeJoueur = initialisation(2);
+        Fenetre fenetre = new Fenetre();
+        fenetre.fenterePlateau();
+        System.out.println("Combien de joueurs?");
+        nombreDeJoueurs = scanner.nextInt();
+        ArrayList<Joueur>listeDeJoueur = initialisation(nombreDeJoueurs);
         while (listeDeJoueur.size() >1){
             for (Joueur joueur : listeDeJoueur) {
                 System.out.println("tour du joueur "+joueur.getNumero());
@@ -115,12 +121,12 @@ public class Main {
     public static void tourDeJeu(Joueur joueur){
         boolean finie = false;
         while(!finie){
+            System.out.println("hey");
             System.out.println("Mur? Programme? Execution?");
             String choix = scanner.nextLine();
             switch (choix){
                 case "Mur":
-                    System.out.println("Voulez vous mettre un mur ?");
-                    String choix2= scanner.nextLine();
+
 
                     System.out.println("Quel type de mur? (Glace/Pierre)");
                     String typeDeMur = scanner.nextLine();
