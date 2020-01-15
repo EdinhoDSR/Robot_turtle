@@ -1,14 +1,17 @@
 package robotturtle;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Joueur extends Cases{
 
+
     public int numero,positionXDepart,positionYDepart;
     public char direction;
     public Deck defausse,mainDujoueur,deck,programme,mursGlace,mursPierre;
      //Deck[0] : glaces, Deck[1] : pierre
+    public JLabel imageJoueur;
 
     public void setDirection(char direction) {
         this.direction = direction;
@@ -17,7 +20,7 @@ public class Joueur extends Cases{
         return numero;
     }
 
-    public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart){
+    public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart, String nomFichierImage){
 
         this.type = 'J';
         this.positionXDepart = pPositionXDepart;
@@ -40,6 +43,7 @@ public class Joueur extends Cases{
         this.programme = new Deck();
 
         Main.remplissageMain(this);
+        this.imageJoueur = new JLabel(new ImageIcon(nomFichierImage));
 
 
     }

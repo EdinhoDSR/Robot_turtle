@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.Toolkit;
 
 public class Fenetre extends JFrame{
+
     public Fenetre(){
 
 
@@ -15,11 +16,18 @@ public class Fenetre extends JFrame{
         //this.setUndecorated(true);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        JLabel plateau = new JLabel(new ImageIcon("plateau.png"));
-        plateau.setBounds(350,350,700,700);
-        this.add(plateau);
-        JPanel contentPane =  (JPanel) this.getContentPane();
+
+
+
+        //JPanel contentPane =  (JPanel) this.getContentPane();
         //this.setContentPane(new Panneau());
         this.setVisible(true);
     }
+
+    public void deplacerJoueur(Joueur joueur, int X, int Y){
+        joueur.imageJoueur.setBounds(13+82*X,82*Y,82,82);
+        this.repaint();
+    }
+
+
 }
