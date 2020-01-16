@@ -209,6 +209,7 @@ public class Joueur extends Cases{
         else if(this.direction=='O'){
             ouest();
         }
+        Main.fenetre.deplacerJoueur(this,this.getPositionX(),this.getPositionY());
 
     }
     public void jaipasdenom(char typeCaseDirection,Cases casesJoueur,Cases caseDirection){

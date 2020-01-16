@@ -12,8 +12,8 @@ public class Fenetre extends JFrame{
     public void fenterePlateau(){
 
         this.setTitle("Robot Turtle");
-        this.setSize(700, 700);
-        //this.setUndecorated(true);
+        this.setSize(600, 600);
+        this.setUndecorated(true);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
@@ -25,7 +25,7 @@ public class Fenetre extends JFrame{
     }
 
     public void deplacerJoueur(Joueur joueur, int X, int Y){
-        joueur.imageJoueur.setBounds(13+82*X,82*Y,82,82);
+        joueur.imageJoueur.setBounds(16+71*(X-1),15+71*(Y-1),71,71);
         this.repaint();
     }
 

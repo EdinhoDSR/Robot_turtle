@@ -25,6 +25,8 @@ public class Main {
     private static ArrayList<Joueur> initialisation(int nombreJoueurs){
 
         ArrayList<Joueur> listeJoueur = new ArrayList<>();
+        JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
+        plateauVisu.setBounds(0,0,600,600);
 
         for (int i=0;i<10;i++){// boucle qui fait les cases vides
             for (int j=0;j<10;j++){
@@ -55,18 +57,12 @@ public class Main {
             listeJoueur.add(J1);
             listeJoueur.add(J2);
 
-            JLabel plateau = new JLabel(new ImageIcon("plateau.png"));
-
-            plateau.setBounds(0,0,700,700);
-
-
 
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
-
-
-
+            fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
             fenetre.add(J1.imageJoueur);
-            fenetre.add(plateau);
+            fenetre.add(J2.imageJoueur);
+            fenetre.add(plateauVisu);
             fenetre.repaint();
 
 
@@ -87,6 +83,15 @@ public class Main {
             listeJoueur.add(J1);
             listeJoueur.add(J2);
             listeJoueur.add(J3);
+
+            fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
+            fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
+            fenetre.deplacerJoueur(J3,J3.getPositionX(),J3.getPositionY());
+            fenetre.add(J1.imageJoueur);
+            fenetre.add(J2.imageJoueur);
+            fenetre.add(J3.imageJoueur);
+            fenetre.add(plateauVisu);
+            fenetre.repaint();
         }
         else if (nombreJoueurs==4){
             plateau[8][2].joyau();
