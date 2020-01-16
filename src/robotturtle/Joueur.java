@@ -59,6 +59,7 @@ public class Joueur extends Cases{
                     break;
                 }
                 if (caseEnCours.type == 'J'){
+
                     if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
@@ -76,8 +77,8 @@ public class Joueur extends Cases{
             }
         }
         if (this.direction == 'S'){// Cas où le joueur regarde vers le Sud
-            for (int i = joueur.getPositionY()+1;i<Main.plateau.length;i++){
-                Cases caseEnCours = Main.plateau[i][joueur.getPositionX()];
+            for (int i = this.getPositionY()+1;i<Main.plateau.length;i++){
+                Cases caseEnCours = Main.plateau[i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     Main.fenetre.remove(caseEnCours.imageGlace);
@@ -100,9 +101,9 @@ public class Joueur extends Cases{
                 }
             }
         }
-        if (joueur.direction == 'E'){// Cas où le joueur regarde vers l'Est
-            for (int i = joueur.getPositionX()+1;i<Main.plateau.length;i++){
-                Cases caseEnCours = Main.plateau[joueur.getPositionY()][i];
+        if (this.direction == 'E'){// Cas où le joueur regarde vers l'Est
+            for (int i = this.getPositionX()+1;i<Main.plateau.length;i++){
+                Cases caseEnCours = Main.plateau[this.getPositionY()][i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     Main.fenetre.remove(caseEnCours.imageGlace);
@@ -125,9 +126,9 @@ public class Joueur extends Cases{
                 }
             }
         }
-        if (joueur.direction == 'O'){// Cas où le joueur regarde vers l'ouest
+        if (this.direction == 'O'){// Cas où le joueur regarde vers l'ouest
             for (int i = 1;i<this.getPositionX();i++){
-                Cases caseEnCours = Main.plateau[joueur.getPositionY()][joueur.getPositionX()-i];
+                Cases caseEnCours = Main.plateau[this.getPositionY()][this.getPositionX()-i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     Main.fenetre.remove(caseEnCours.imageGlace);
