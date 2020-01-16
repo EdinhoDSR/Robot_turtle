@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,17 +64,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="979">
-              <caret line="365" lean-forward="true" selection-start-line="365" selection-end-line="365" />
+            <state relative-caret-position="35">
+              <caret line="124" column="17" lean-forward="true" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
               <folding>
                 <element signature="e#412#413#0" expanded="true" />
                 <element signature="e#454#455#0" expanded="true" />
                 <element signature="e#483#484#0" expanded="true" />
                 <element signature="e#512#513#0" expanded="true" />
-                <element signature="method#laser#0;class#Joueur#0" />
                 <element signature="method#tournerD#0;class#Joueur#0" />
                 <element signature="method#tournerG#0;class#Joueur#0" />
                 <element signature="method#demiTour#0;class#Joueur#0" />
@@ -89,16 +86,18 @@
                 <element signature="method#jaipasdenom#0;class#Joueur#0" />
                 <element signature="method#test#0;class#Joueur#0" />
                 <element signature="method#pousser#0;class#Joueur#0" />
+                <element signature="method#affichage#0;class#Joueur#0" />
+                <element signature="method#executionProgramme#0;class#Joueur#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="205" column="80" selection-start-line="205" selection-start-column="80" selection-end-line="205" selection-end-column="80" />
+            <state relative-caret-position="113">
+              <caret line="206" column="59" selection-start-line="206" selection-start-column="59" selection-end-line="206" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#main#0;class#Main#0" />
@@ -146,8 +145,8 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/robotturtle/Cases.java" />
         <option value="$PROJECT_DIR$/src/robotturtle/Deck.java" />
-        <option value="$PROJECT_DIR$/src/robotturtle/Joueur.java" />
         <option value="$PROJECT_DIR$/src/robotturtle/Main.java" />
+        <option value="$PROJECT_DIR$/src/robotturtle/Joueur.java" />
       </list>
     </option>
   </component>
@@ -261,12 +260,12 @@
       <option name="project" value="LOCAL" />
       <updated>1578707692115</updated>
     </task>
-    <task id="LOCAL-00002" summary="test 1">
-      <created>1573298460369</created>
+    <task id="LOCAL-00002" summary="pasdenom transformé en actionjoueur, fonction defausse faite">
+      <created>1579195634805</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1573298460369</updated>
+      <updated>1579195634805</updated>
     </task>
     <task id="LOCAL-00003" summary="test 1">
       <created>1573299878820</created>
@@ -401,11 +400,11 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38237000" />
+    <option name="totallyTimeSpent" value="39315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,7 +539,8 @@
     <MESSAGE value="run() fait sans le break" />
     <MESSAGE value="run() fait avec le break" />
     <MESSAGE value="la vie est belle" />
-    <option name="LAST_COMMIT_MESSAGE" value="la vie est belle" />
+    <MESSAGE value="pasdenom transformé en actionjoueur, fonction defausse faite" />
+    <option name="LAST_COMMIT_MESSAGE" value="pasdenom transformé en actionjoueur, fonction defausse faite" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -621,16 +621,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="206" column="59" selection-start-line="206" selection-start-column="59" selection-end-line="206" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Main#0" />
+            <element signature="method#initialisation#0;class#Main#0" />
+            <element signature="e#4668#6749#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="979">
-          <caret line="365" lean-forward="true" selection-start-line="365" selection-end-line="365" />
+        <state relative-caret-position="35">
+          <caret line="124" column="17" lean-forward="true" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
           <folding>
             <element signature="e#412#413#0" expanded="true" />
             <element signature="e#454#455#0" expanded="true" />
             <element signature="e#483#484#0" expanded="true" />
             <element signature="e#512#513#0" expanded="true" />
-            <element signature="method#laser#0;class#Joueur#0" />
             <element signature="method#tournerD#0;class#Joueur#0" />
             <element signature="method#tournerG#0;class#Joueur#0" />
             <element signature="method#demiTour#0;class#Joueur#0" />
@@ -643,19 +655,8 @@
             <element signature="method#jaipasdenom#0;class#Joueur#0" />
             <element signature="method#test#0;class#Joueur#0" />
             <element signature="method#pousser#0;class#Joueur#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/robotturtle/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="205" column="80" selection-start-line="205" selection-start-column="80" selection-end-line="205" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" />
-            <element signature="method#initialisation#0;class#Main#0" />
-            <element signature="e#4668#6749#1" />
+            <element signature="method#affichage#0;class#Joueur#0" />
+            <element signature="method#executionProgramme#0;class#Joueur#0" />
           </folding>
         </state>
       </provider>

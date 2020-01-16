@@ -51,7 +51,7 @@ public class Joueur extends Cases{
     }
     private void laser(){
         if (this.direction == 'N'){// Cas où le joueur regarde vers le nord
-            for (int i = 0;i<Main.plateau.length-this.getPositionY();i++){
+            for (int i = 1;i<this.getPositionY();i++){
                 Cases caseEnCours = Main.plateau[this.getPositionY()-i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
@@ -76,7 +76,7 @@ public class Joueur extends Cases{
             }
         }
         if (this.direction == 'S'){// Cas où le joueur regarde vers le Sud
-            for (int i = joueur.getPositionY();i<Main.plateau.length;i++){
+            for (int i = joueur.getPositionY()+1;i<Main.plateau.length;i++){
                 Cases caseEnCours = Main.plateau[i][joueur.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
@@ -101,7 +101,7 @@ public class Joueur extends Cases{
             }
         }
         if (joueur.direction == 'E'){// Cas où le joueur regarde vers l'Est
-            for (int i = joueur.getPositionX();i<Main.plateau.length;i++){
+            for (int i = joueur.getPositionX()+1;i<Main.plateau.length;i++){
                 Cases caseEnCours = Main.plateau[joueur.getPositionY()][i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
@@ -126,7 +126,7 @@ public class Joueur extends Cases{
             }
         }
         if (joueur.direction == 'O'){// Cas où le joueur regarde vers l'ouest
-            for (int i = 0;i<Main.plateau.length-joueur.getPositionX();i++){
+            for (int i = 1;i<this.getPositionX();i++){
                 Cases caseEnCours = Main.plateau[joueur.getPositionY()][joueur.getPositionX()-i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
