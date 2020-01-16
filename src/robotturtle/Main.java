@@ -137,7 +137,9 @@ public class Main {
                 System.out.println("tour du joueur "+joueur.getNumero());
                 afficher();
                 tourDeJeu(joueur);
-                afficher();
+                defausseJoueur(joueur);
+                remplissageMain(joueur);
+                joueur.affichage();
                 if(listeDeJoueur.size() == 1){break;}
             }
         }
@@ -192,7 +194,26 @@ public class Main {
                     break;
                 }
         }
-        remplissageMain(joueur);
+
+    }
+    public static void defausseJoueur(Joueur joueur){
+        System.out.println("Souhaitez vous vous défausser de cartes");
+        String choix = scanner.nextLine();
+        if (choix.equals("oui")){
+            joueur.affichage();
+            System.out.println("Combien de cartes voulez vous défausser");
+            ArrayList<Integer> tableNumeroCarteADefausser = new ArrayList<>();
+            int nombreDeCartesADefausser = Integer.parseInt(scanner.nextLine());
+            System.out.println("Entrez le numéro des cartes");
+            for(int j=0; j<nombreDeCartesADefausser; j++){
+                int numeroDesCartesADefausser = Integer.parseInt(scanner.nextLine());
+                tableNumeroCarteADefausser.add(numeroDesCartesADefausser);
+            }
+            Collections.sort(tableNumeroCarteADefausser,Collections.reverseOrder());
+            for (Integer i : tableNumeroCarteADefausser) {
+                joueur.programme.Defausse(joueur.mainDujoueur,joueur.defausse,i);
+            }
+        }
     }
     public static void remplissageMain(Joueur joueur) {
         while (joueur.mainDujoueur.TailleDeck() < 5) {

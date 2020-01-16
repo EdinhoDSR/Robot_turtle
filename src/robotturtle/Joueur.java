@@ -221,7 +221,7 @@ public class Joueur extends Cases{
     }
 
 
-    public void jaipasdenom(char typeCaseDirection,Cases casesJoueur,Cases caseDirection){
+    public void actionJoueur(char typeCaseDirection,Cases casesJoueur,Cases caseDirection){
         if(typeCaseDirection == 'j'){
             caseDirection.setType('V');
             casesJoueur.setType('V');
@@ -250,24 +250,24 @@ public class Joueur extends Cases{
             char typeCaseDirection = Main.plateau[this.positionY - 1][this.positionX].getType();
             Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
             Cases caseDirection = Main.plateau[this.positionY - 1][this.positionX];
-            jaipasdenom(typeCaseDirection, casesJoueur, caseDirection);
+            actionJoueur(typeCaseDirection, casesJoueur, caseDirection);
 
         } else if (this.direction == 'E') {
             char typeCaseDirection = Main.plateau[this.positionY][this.positionX + 1].getType();
             Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
             Cases caseDirection = Main.plateau[this.positionY][this.positionX + 1];
-            jaipasdenom(typeCaseDirection, casesJoueur, caseDirection);
+            actionJoueur(typeCaseDirection, casesJoueur, caseDirection);
         } else if (this.direction == 'S') {
             char typeCaseDirection = Main.plateau[this.positionY + 1][this.positionX].getType();
             Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
             Cases caseDirection = Main.plateau[this.positionY + 1][this.positionX];
-            jaipasdenom(typeCaseDirection, casesJoueur, caseDirection);
+            actionJoueur(typeCaseDirection, casesJoueur, caseDirection);
 
         } else if (this.direction == 'O') {
             char typeCaseDirection = Main.plateau[this.positionY][this.positionX - 1].getType();
             Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
             Cases caseDirection = Main.plateau[this.positionY][this.positionX - 1];
-            jaipasdenom(typeCaseDirection, casesJoueur, caseDirection);
+            actionJoueur(typeCaseDirection, casesJoueur, caseDirection);
         }
     }
     public void pousser(){
