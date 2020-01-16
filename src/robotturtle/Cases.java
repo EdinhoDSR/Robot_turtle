@@ -7,7 +7,7 @@ public class Cases {
     protected int positionX,positionY;
     protected char type; //robotturtle.Joueur : J, joyau : j, robotturtle.Mur de pierre : P, robotturtle.Mur de glace : G, robotturtle.Mur de bois : B, Vide : V
     protected Joueur joueur;
-    public JLabel imageElement;
+    protected JLabel imageGlace;
 
 
 
@@ -80,6 +80,7 @@ public class Cases {
         this.type = 'G';
         JLabel imageMurDeGlace = new JLabel(new ImageIcon("murDeGlace.png"));
         imageMurDeGlace.setBounds(16+71*(this.getPositionX()-1),15+71*(this.getPositionY()-1),71,71);
+        this.imageGlace = imageMurDeGlace;
         Main.fenetre.remove(Main.plateauVisu);
         Main.fenetre.add(imageMurDeGlace);
         Main.fenetre.add(Main.plateauVisu);

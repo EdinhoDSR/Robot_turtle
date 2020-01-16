@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
+    <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="Affichage 1.1">
+      <change afterPath="$PROJECT_DIR$/src/robotturtle/donatello.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/robotturtle/leonardo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/robotturtle/murDeBois.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/robotturtle/murDeGlace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/robotturtle/murDePierre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/robotturtle/plateau.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/robotturtle/raphael.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,8 +71,11 @@
     <servers />
   </component>
   <component name="ProjectId" id="1WR1Hphlc6djqldYzsoQm8zVv3h" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578698653152" />
@@ -126,7 +134,7 @@
       <workItem from="1578916052910" duration="6089000" />
       <workItem from="1578936662278" duration="3326000" />
       <workItem from="1579097512647" duration="735000" />
-      <workItem from="1579179205067" duration="9294000" />
+      <workItem from="1579179205067" duration="10671000" />
     </task>
     <task id="LOCAL-00001" summary="la vie est belle">
       <created>1578707692115</created>
@@ -163,12 +171,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579182755298</updated>
     </task>
-    <task id="LOCAL-00006" summary="test 1">
-      <created>1574516730547</created>
+    <task id="LOCAL-00006" summary="Affichage 1.1">
+      <created>1579192130443</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1574516730547</updated>
+      <updated>1579192130443</updated>
     </task>
     <task id="LOCAL-00007" summary="test 1">
       <created>1574517200941</created>
@@ -275,7 +283,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -318,6 +326,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="test 1" />
     <MESSAGE value="version sans globale" />
     <MESSAGE value="version clean" />
@@ -334,7 +343,8 @@
     <MESSAGE value="la vie est belle" />
     <MESSAGE value="affichage très très brouillon" />
     <MESSAGE value="déplacement des tortues ok&#10;Attention à ne pas modifier la taille de la fenêtre de jeu!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="déplacement des tortues ok&#10;Attention à ne pas modifier la taille de la fenêtre de jeu!!" />
+    <MESSAGE value="Affichage 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Affichage 1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

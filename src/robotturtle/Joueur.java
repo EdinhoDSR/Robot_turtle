@@ -10,6 +10,7 @@ public class Joueur extends Cases{
     public int numero,positionXDepart,positionYDepart;
     public char direction;
     public Deck defausse,mainDujoueur,deck,programme,mursGlace,mursPierre;
+    public JLabel imageElement;
      //Deck[0] : glaces, Deck[1] : pierre
 
 
@@ -54,6 +55,7 @@ public class Joueur extends Cases{
                 Cases caseEnCours = Main.plateau[this.getPositionY()-i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
+                    Main.fenetre.remove(caseEnCours.imageGlace);
                     break;
                 }
                 if (caseEnCours.type == 'J'){
@@ -78,6 +80,7 @@ public class Joueur extends Cases{
                 Cases caseEnCours = Main.plateau[i][joueur.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
+                    Main.fenetre.remove(caseEnCours.imageGlace);
                     break;
                 }
                 if (caseEnCours.type == 'J'){
@@ -102,6 +105,7 @@ public class Joueur extends Cases{
                 Cases caseEnCours = Main.plateau[joueur.getPositionY()][i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
+                    Main.fenetre.remove(caseEnCours.imageGlace);
                     break;
                 }
                 if (caseEnCours.type == 'J'){
@@ -126,6 +130,7 @@ public class Joueur extends Cases{
                 Cases caseEnCours = Main.plateau[joueur.getPositionY()][joueur.getPositionX()-i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
+                    Main.fenetre.remove(caseEnCours.imageGlace);
                     break;
                 }
                 if (caseEnCours.type == 'J'){
