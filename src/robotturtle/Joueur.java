@@ -43,7 +43,13 @@ public class Joueur extends Cases{
         this.defausse = new Deck();
         this.mainDujoueur = new Deck();
         this.programme = new Deck();
-        Card A = new Card(Valeurs.LASER);
+        Card A = new Card(Valeurs.avancer);
+        this.programme.addCard(A);
+        this.programme.addCard(A);
+        this.programme.addCard(A);
+        this.programme.addCard(A);
+        this.programme.addCard(A);
+        this.programme.addCard(A);
         this.programme.addCard(A);
 
         Main.remplissageMain(this);
@@ -235,6 +241,9 @@ public class Joueur extends Cases{
             casesJoueur.setType('V');
             System.out.println("J"+this.numero+" a gagné");
             Main.listeDeJoueur.remove(this);
+            Main.fenetre.remove(caseDirection.imageJoyau);
+            Main.fenetre.remove(this.imageElement);
+            Main.fenetre.repaint();
         }
         else if(typeCaseDirection == 'V'){
             this.avancer();

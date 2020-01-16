@@ -113,6 +113,17 @@ public class Main {
             listeJoueur.add(J3);
             listeJoueur.add(J4);
 
+            fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
+            fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
+            fenetre.deplacerJoueur(J3,J3.getPositionX(),J3.getPositionY());
+            fenetre.deplacerJoueur(J4,J4.getPositionX(),J4.getPositionY());
+            fenetre.add(J1.imageElement);
+            fenetre.add(J2.imageElement);
+            fenetre.add(J3.imageElement);
+            fenetre.add(J4.imageElement);
+            fenetre.add(plateauVisu);
+            fenetre.repaint();
+
         }
         return listeJoueur;
     }
