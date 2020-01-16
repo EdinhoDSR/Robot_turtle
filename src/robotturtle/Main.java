@@ -11,6 +11,7 @@ public class Main {
     public static Cases[][] plateau = new Cases[10][10];
     public static ArrayList<Joueur> listeDeJoueur = new ArrayList<>();
     public static Fenetre fenetre = new Fenetre();
+    public static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
 
 
     public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class Main {
     private static ArrayList<Joueur> initialisation(int nombreJoueurs){
 
         ArrayList<Joueur> listeJoueur = new ArrayList<>();
-        JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
+
         plateauVisu.setBounds(0,0,600,600);
 
         for (int i=0;i<10;i++){// boucle qui fait les cases vides
@@ -60,8 +61,8 @@ public class Main {
 
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
             fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
-            fenetre.add(J1.imageJoueur);
-            fenetre.add(J2.imageJoueur);
+            fenetre.add(J1.imageElement);
+            fenetre.add(J2.imageElement);
             fenetre.add(plateauVisu);
             fenetre.repaint();
 
@@ -87,9 +88,9 @@ public class Main {
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
             fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
             fenetre.deplacerJoueur(J3,J3.getPositionX(),J3.getPositionY());
-            fenetre.add(J1.imageJoueur);
-            fenetre.add(J2.imageJoueur);
-            fenetre.add(J3.imageJoueur);
+            fenetre.add(J1.imageElement);
+            fenetre.add(J2.imageElement);
+            fenetre.add(J3.imageElement);
             fenetre.add(plateauVisu);
             fenetre.repaint();
         }
@@ -145,8 +146,7 @@ public class Main {
 
     public static void tourDeJeu(Joueur joueur){
         boolean finie = false;
-        while(!finie){
-            System.out.println("hey");
+        while(finie== false){
             System.out.println("Mur? Programme? Execution?");
             String choix = scanner.nextLine();
             switch (choix){
@@ -176,11 +176,18 @@ public class Main {
                     finie=true;
                     break;
                 case "Programme":
-
-                    System.out.println("Veuillez sélectionner la carte à ajouter au programme");
-                    joueur.affichage();
-                    int i = Integer.parseInt(scanner.nextLine());
-                    joueur.programme.ajouter_programme(joueur.mainDujoueur, i);
+                    boolean continuer = true;
+                    while (continuer == true && joueur.mainDujoueur.TailleDeck()>0) {
+                        System.out.println("Veuillez sélectionner la carte à ajouter au programme");
+                        joueur.affichage();
+                        int i = Integer.parseInt(scanner.nextLine());
+                        joueur.programme.ajouter_programme(joueur.mainDujoueur, i);
+                        System.out.println("Voulez-vous prendre une autre carte? (oui/non)");
+                        String choixMain = scanner.nextLine();
+                        if (choixMain.equals("non")){
+                            continuer = false;
+                        }
+                    }
                     finie = true;
                     break;
                 }
@@ -211,6 +218,7 @@ public class Main {
         } while(X>9 || Y>9 || plateau[Y][X].getType()!='V');
         if (typeMur.equals("Glace")){
             plateau[Y][X].glace();
+            System.out.println("oui?");
         }
         if (typeMur.equals("Pierre")){
             plateau[Y][X].pierre();

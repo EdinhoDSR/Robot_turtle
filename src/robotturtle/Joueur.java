@@ -11,7 +11,8 @@ public class Joueur extends Cases{
     public char direction;
     public Deck defausse,mainDujoueur,deck,programme,mursGlace,mursPierre;
      //Deck[0] : glaces, Deck[1] : pierre
-    public JLabel imageJoueur;
+
+
 
     public void setDirection(char direction) {
         this.direction = direction;
@@ -43,7 +44,7 @@ public class Joueur extends Cases{
         this.programme = new Deck();
 
         Main.remplissageMain(this);
-        this.imageJoueur = new JLabel(new ImageIcon(nomFichierImage));
+        this.imageElement = new JLabel(new ImageIcon(nomFichierImage));
 
 
     }
@@ -196,6 +197,7 @@ public class Joueur extends Cases{
         this.positionX=this.positionXDepart;
         this.positionY=this.positionYDepart;
     }
+
     public void avancer(){
         if(this.direction=='N'){
             nord();
@@ -212,6 +214,8 @@ public class Joueur extends Cases{
         Main.fenetre.deplacerJoueur(this,this.getPositionX(),this.getPositionY());
 
     }
+
+
     public void jaipasdenom(char typeCaseDirection,Cases casesJoueur,Cases caseDirection){
         if(typeCaseDirection == 'j'){
             caseDirection.setType('V');
@@ -328,7 +332,7 @@ public class Joueur extends Cases{
             switch (a.getvaleurs()) {
 
                 case avancer:
-                    this.avancer();
+                    this.test();
                     break;
                 case tournerG:
                     this.tournerG();

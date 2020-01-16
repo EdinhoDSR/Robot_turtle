@@ -25,9 +25,11 @@ public class Fenetre extends JFrame{
     }
 
     public void deplacerJoueur(Joueur joueur, int X, int Y){
-        joueur.imageJoueur.setBounds(16+71*(X-1),15+71*(Y-1),71,71);
+        joueur.imageElement.setBounds(16+71*(X-1),15+71*(Y-1),71,71);
         this.repaint();
     }
+
+
 
 
 }
