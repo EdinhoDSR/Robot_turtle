@@ -7,7 +7,7 @@ public class Cases {
     protected int positionX,positionY;
     protected char type; //robotturtle.Joueur : J, joyau : j, robotturtle.Mur de pierre : P, robotturtle.Mur de glace : G, robotturtle.Mur de bois : B, Vide : V
     protected Joueur joueur;
-    protected JLabel imageGlace;
+    public JLabel imageGlace;
 
 
 
@@ -78,11 +78,11 @@ public class Cases {
     public void glace(){
         // méthode qui pose les murs de pierre et permet à la fonction initialisation d'être plus propre/courte
         this.type = 'G';
-        JLabel imageMurDeGlace = new JLabel(new ImageIcon("murDeGlace.png"));
-        imageMurDeGlace.setBounds(16+71*(this.getPositionX()-1),15+71*(this.getPositionY()-1),71,71);
-        this.imageGlace = imageMurDeGlace;
+        this.imageGlace  = new JLabel(new ImageIcon("murDeGlace.png"));
+        imageGlace.setBounds(16+71*(this.getPositionX()-1),15+71*(this.getPositionY()-1),71,71);
+
         Main.fenetre.remove(Main.plateauVisu);
-        Main.fenetre.add(imageMurDeGlace);
+        Main.fenetre.add(this.imageGlace);
         Main.fenetre.add(Main.plateauVisu);
         Main.fenetre.repaint();
     }

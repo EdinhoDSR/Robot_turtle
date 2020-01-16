@@ -43,19 +43,22 @@ public class Joueur extends Cases{
         this.defausse = new Deck();
         this.mainDujoueur = new Deck();
         this.programme = new Deck();
+        Card A = new Card(Valeurs.LASER);
+        this.programme.addCard(A);
 
         Main.remplissageMain(this);
         this.imageElement = new JLabel(new ImageIcon(nomFichierImage));
 
 
     }
-    private void laser(){
+    public void laser(){
         if (this.direction == 'N'){// Cas où le joueur regarde vers le nord
             for (int i = 1;i<this.getPositionY();i++){
                 Cases caseEnCours = Main.plateau[this.getPositionY()-i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     Main.fenetre.remove(caseEnCours.imageGlace);
+                    Main.fenetre.repaint();
                     break;
                 }
                 if (caseEnCours.type == 'J'){
@@ -80,8 +83,10 @@ public class Joueur extends Cases{
             for (int i = this.getPositionY()+1;i<Main.plateau.length;i++){
                 Cases caseEnCours = Main.plateau[i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
+                    System.out.println("coucou");
                     caseEnCours.setType('V');
                     Main.fenetre.remove(caseEnCours.imageGlace);
+                    Main.fenetre.repaint();
                     break;
                 }
                 if (caseEnCours.type == 'J'){
@@ -107,6 +112,7 @@ public class Joueur extends Cases{
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     Main.fenetre.remove(caseEnCours.imageGlace);
+                    Main.fenetre.repaint();
                     break;
                 }
                 if (caseEnCours.type == 'J'){
@@ -132,6 +138,7 @@ public class Joueur extends Cases{
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
                     Main.fenetre.remove(caseEnCours.imageGlace);
+                    Main.fenetre.repaint();
                     break;
                 }
                 if (caseEnCours.type == 'J'){
