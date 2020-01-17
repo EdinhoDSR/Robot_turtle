@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/joyau.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diplome.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diplome.jpg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joyau.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +60,7 @@
   <component name="PhpServers">
     <servers />
   </component>
+  <component name="ProjectId" id="1WWZ5IioHBB1Ga3GTqDSGKvsGnv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -121,6 +123,8 @@
       <workItem from="1578658420953" duration="29317000" />
       <workItem from="1578916052910" duration="6089000" />
       <workItem from="1578936662278" duration="3326000" />
+      <workItem from="1579267131295" duration="1039000" />
+      <workItem from="1579268565969" duration="1323000" />
     </task>
     <task id="LOCAL-00001" summary="la vie est belle">
       <created>1578707692115</created>
@@ -143,12 +147,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579198978070</updated>
     </task>
-    <task id="LOCAL-00004" summary="test 1">
-      <created>1574436976589</created>
+    <task id="LOCAL-00004" summary="Joyau marche et mur de glace marche">
+      <created>1579200297578</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1574436976589</updated>
+      <updated>1579200297578</updated>
     </task>
     <task id="LOCAL-00005" summary="test 1">
       <created>1574515105670</created>
@@ -269,7 +273,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -329,7 +333,8 @@
     <MESSAGE value="la vie est belle" />
     <MESSAGE value="pasdenom transformé en actionjoueur, fonction defausse faite" />
     <MESSAGE value="laser se suppriment" />
-    <option name="LAST_COMMIT_MESSAGE" value="laser se suppriment" />
+    <MESSAGE value="Joyau marche et mur de glace marche" />
+    <option name="LAST_COMMIT_MESSAGE" value="Joyau marche et mur de glace marche" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

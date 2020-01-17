@@ -90,7 +90,7 @@ public class Cases {
     public void joyau(){//Pour s'assurer que la case est occupe et simplifier l'init
         this.type = 'j';
         Main.plateau[1][2] = new Cases(2,3);
-        this.imageJoyau = new JLabel(new ImageIcon("joyau.png"));
+        this.imageJoyau = new JLabel(new ImageIcon("diplome.jpg.png"));
         Main.fenetre.remove(Main.plateauVisu);
         this.imageJoyau.setBounds(16+71*(this.getPositionX()-1),15+71*(this.getPositionY()-1),71,71);
         Main.fenetre.add(this.imageJoyau);
