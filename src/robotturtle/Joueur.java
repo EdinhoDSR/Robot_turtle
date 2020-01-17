@@ -13,14 +13,13 @@ public class Joueur extends Cases{
     public JLabel imageElement;
      //Deck[0] : glaces, Deck[1] : pierre
 
-
-
     public void setDirection(char direction) {
         this.direction = direction;
     }
     public int getNumero() {
         return numero;
     }
+
 
     public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart, String nomFichierImage){
 
@@ -44,13 +43,6 @@ public class Joueur extends Cases{
         this.mainDujoueur = new Deck();
         this.programme = new Deck();
         Card A = new Card(Valeurs.avancer);
-        this.programme.addCard(A);
-        this.programme.addCard(A);
-        this.programme.addCard(A);
-        this.programme.addCard(A);
-        this.programme.addCard(A);
-        this.programme.addCard(A);
-        this.programme.addCard(A);
 
         Main.remplissageMain(this);
         this.imageElement = new JLabel(new ImageIcon(nomFichierImage));
@@ -167,10 +159,19 @@ public class Joueur extends Cases{
     }
     public void tournerD(){
 
-        if(this.direction=='N'){this.direction='E';}
-        else if(this.direction=='E'){this.direction='S';}
-        else if(this.direction=='S'){this.direction='O';}
-        else if(this.direction=='O'){this.direction='N';}
+        if(this.direction=='N'){
+            this.direction='E';
+
+        }
+        else if(
+                this.direction=='E'){this.direction='S';
+        }
+        else if(
+                this.direction=='S'){this.direction='O';
+        }
+        else if(this.direction=='O'){
+            this.direction='N';
+        }
     }
     public void tournerG(){
 
@@ -377,6 +378,5 @@ public class Joueur extends Cases{
             this.programme.Defausse(this.programme,this.defausse,0);
         }
     }
-
 }
 

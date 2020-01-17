@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/joyau.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,18 +59,11 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectId" id="1WVyJQQlVDicqyG4SgaEmyFILEm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578698653152" />
@@ -75,6 +73,18 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="test" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="robotturtle.Main" />
@@ -83,18 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -145,33 +143,33 @@
       <option name="project" value="LOCAL" />
       <updated>1579198978070</updated>
     </task>
-    <task id="LOCAL-00004" summary="c'est kev">
-      <created>1579249030728</created>
+    <task id="LOCAL-00004" summary="test 1">
+      <created>1574436976589</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1579249030728</updated>
+      <updated>1574436976589</updated>
     </task>
-    <task id="LOCAL-00005" summary="c'est kev">
-      <created>1579249102787</created>
+    <task id="LOCAL-00005" summary="test 1">
+      <created>1574515105670</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1579249102787</updated>
+      <updated>1574515105670</updated>
     </task>
-    <task id="LOCAL-00006" summary="c'est kev">
-      <created>1579249291057</created>
+    <task id="LOCAL-00006" summary="test 1">
+      <created>1574516730547</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1579249291057</updated>
+      <updated>1574516730547</updated>
     </task>
-    <task id="LOCAL-00007" summary="c'est kev">
-      <created>1579249306325</created>
+    <task id="LOCAL-00007" summary="test 1">
+      <created>1574517200941</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1579249306325</updated>
+      <updated>1574517200941</updated>
     </task>
     <task id="LOCAL-00008" summary="test 1">
       <created>1574517649421</created>
@@ -271,7 +269,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -331,35 +329,7 @@
     <MESSAGE value="la vie est belle" />
     <MESSAGE value="pasdenom transformé en actionjoueur, fonction defausse faite" />
     <MESSAGE value="laser se suppriment" />
-    <MESSAGE value="c'est kev" />
-    <MESSAGE value="ça ne push pas" />
-    <option name="LAST_COMMIT_MESSAGE" value="ça ne push pas" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="590" y="312" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579249937684">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="590" y="312" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.827@0.23.1440.827" timestamp="1579249937684" />
-    <state x="328" y="67" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1579249933171">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="328" y="67" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.23.1440.827@0.23.1440.827" timestamp="1579249933171" />
-    <state x="373" y="23" key="CommitChangelistDialog2" timestamp="1579249364187">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="373" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579249364187" />
-    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579249315070">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1579249315070" />
-    <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579249537363">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.827@0.23.1440.827" timestamp="1579249537363" />
-    <state x="134" y="39" key="new project wizard" timestamp="1579249685264">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="134" y="39" key="new project wizard/0.23.1440.827@0.23.1440.827" timestamp="1579249685264" />
+    <option name="LAST_COMMIT_MESSAGE" value="laser se suppriment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
