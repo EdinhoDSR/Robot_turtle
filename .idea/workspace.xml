@@ -333,6 +333,16 @@
     <MESSAGE value="laser se suppriment" />
     <option name="LAST_COMMIT_MESSAGE" value="laser se suppriment" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="373" y="23" key="CommitChangelistDialog2" timestamp="1579249030009">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="373" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579249030009" />
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579249037947">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1579249037947" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
