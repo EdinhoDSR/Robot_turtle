@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/joyau.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Robot_turtle/META-INF/Robot_turtle.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,11 +56,18 @@
   <component name="PhpServers">
     <servers />
   </component>
+  <component name="ProjectId" id="1WVyJQQlVDicqyG4SgaEmyFILEm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578698653152" />
@@ -73,26 +77,28 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="test" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="robotturtle.Main" />
       <module name="Robot_turtle" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -143,40 +149,40 @@
       <option name="project" value="LOCAL" />
       <updated>1579198978070</updated>
     </task>
-    <task id="LOCAL-00004" summary="test 1">
-      <created>1574436976589</created>
+    <task id="LOCAL-00004" summary="c'est kev">
+      <created>1579249030728</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1574436976589</updated>
+      <updated>1579249030728</updated>
     </task>
-    <task id="LOCAL-00005" summary="test 1">
-      <created>1574515105670</created>
+    <task id="LOCAL-00005" summary="c'est kev">
+      <created>1579249102787</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1574515105670</updated>
+      <updated>1579249102787</updated>
     </task>
-    <task id="LOCAL-00006" summary="test 1">
-      <created>1574516730547</created>
+    <task id="LOCAL-00006" summary="c'est kev">
+      <created>1579249291057</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1574516730547</updated>
+      <updated>1579249291057</updated>
     </task>
-    <task id="LOCAL-00007" summary="test 1">
-      <created>1574517200941</created>
+    <task id="LOCAL-00007" summary="c'est kev">
+      <created>1579249306325</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1574517200941</updated>
+      <updated>1579249306325</updated>
     </task>
-    <task id="LOCAL-00008" summary="test 1">
-      <created>1574517649421</created>
+    <task id="LOCAL-00008" summary="test">
+      <created>1579250146950</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1574517649421</updated>
+      <updated>1579250146950</updated>
     </task>
     <task id="LOCAL-00009" summary="version clean">
       <created>1574699123545</created>
@@ -269,17 +275,8 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -329,7 +326,56 @@
     <MESSAGE value="la vie est belle" />
     <MESSAGE value="pasdenom transformé en actionjoueur, fonction defausse faite" />
     <MESSAGE value="laser se suppriment" />
-    <option name="LAST_COMMIT_MESSAGE" value="laser se suppriment" />
+    <MESSAGE value="c'est kev" />
+    <MESSAGE value="ça ne push pas" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="315" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579273205212">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="315" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.827@0.23.1440.827" timestamp="1579273205212" />
+    <state x="590" y="312" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579249937684">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="590" y="312" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.827@0.23.1440.827" timestamp="1579249937684" />
+    <state x="328" y="67" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1579249933171">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="328" y="67" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.23.1440.827@0.23.1440.827" timestamp="1579249933171" />
+    <state x="373" y="23" key="CommitChangelistDialog2" timestamp="1579250146741">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="373" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579250146741" />
+    <state x="275" y="114" key="MergeDialog" timestamp="1579273157045">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="275" y="114" key="MergeDialog/0.23.1440.827@0.23.1440.827" timestamp="1579273157045" />
+    <state x="564" y="178" key="MultipleFileMergeDialog" timestamp="1579273163291">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="564" y="178" key="MultipleFileMergeDialog/0.23.1440.827@0.23.1440.827" timestamp="1579273163291" />
+    <state x="338" y="23" width="1024" height="827" key="SettingsEditor" timestamp="1579273256701">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="338" y="23" width="1024" height="827" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1579273256701" />
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579250153882">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1579250153882" />
+    <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579249537363">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.827@0.23.1440.827" timestamp="1579249537363" />
+    <state x="640" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579273135047">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="640" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.827@0.23.1440.827" timestamp="1579273135047" />
+    <state x="134" y="39" key="new project wizard" timestamp="1579249685264">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="134" y="39" key="new project wizard/0.23.1440.827@0.23.1440.827" timestamp="1579249685264" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
