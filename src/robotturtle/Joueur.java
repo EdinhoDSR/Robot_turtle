@@ -11,6 +11,7 @@ public class Joueur extends Cases{
     public char direction;
     public Deck defausse,mainDujoueur,deck,programme,mursGlace,mursPierre;
     public JLabel imageElement;
+    public String[] listeImages;
      //Deck[0] : glaces, Deck[1] : pierre
 
     public void setDirection(char direction) {
@@ -21,7 +22,7 @@ public class Joueur extends Cases{
     }
 
 
-    public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart, String nomFichierImage){
+    public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart, String[] nomsFichiersImages){
 
         this.type = 'J';
         this.positionXDepart = pPositionXDepart;
@@ -42,10 +43,9 @@ public class Joueur extends Cases{
         this.defausse = new Deck();
         this.mainDujoueur = new Deck();
         this.programme = new Deck();
-        Card A = new Card(Valeurs.avancer);
-
         Main.remplissageMain(this);
-        this.imageElement = new JLabel(new ImageIcon(nomFichierImage));
+        this.imageElement = new JLabel(new ImageIcon(nomsFichiersImages[3]));
+        this.listeImages = nomsFichiersImages;
 
 
     }
@@ -161,24 +161,88 @@ public class Joueur extends Cases{
 
         if(this.direction=='N'){
             this.direction='E';
+            Main.fenetre.remove(this.imageElement);
+            this.imageElement = new JLabel(new ImageIcon(this.listeImages[2]));
+            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
+            Main.fenetre.remove(Main.plateauVisu);
+            Main.fenetre.add(this.imageElement);
+            Main.fenetre.add(Main.plateauVisu);
+            Main.fenetre.repaint();
 
         }
         else if(
                 this.direction=='E'){this.direction='S';
+            Main.fenetre.remove(this.imageElement);
+            this.imageElement = new JLabel(new ImageIcon(this.listeImages[3]));
+            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
+            Main.fenetre.remove(Main.plateauVisu);
+            Main.fenetre.add(this.imageElement);
+            Main.fenetre.add(Main.plateauVisu);
+            Main.fenetre.repaint();
         }
         else if(
                 this.direction=='S'){this.direction='O';
+            Main.fenetre.remove(this.imageElement);
+            this.imageElement = new JLabel(new ImageIcon(this.listeImages[1]));
+            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
+            Main.fenetre.remove(Main.plateauVisu);
+            Main.fenetre.add(this.imageElement);
+            Main.fenetre.add(Main.plateauVisu);
+            Main.fenetre.repaint();
         }
         else if(this.direction=='O'){
             this.direction='N';
+            Main.fenetre.remove(this.imageElement);
+            this.imageElement = new JLabel(new ImageIcon(this.listeImages[0]));
+            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
+            Main.fenetre.remove(Main.plateauVisu);
+            Main.fenetre.add(this.imageElement);
+            Main.fenetre.add(Main.plateauVisu);
+            Main.fenetre.repaint();
         }
     }
     public void tournerG(){
 
-        if(this.direction=='N'){this.direction='O';}
-        else if(this.direction=='O'){this.direction='S';}
-        else if(this.direction=='S'){this.direction='E';}
-        else if(this.direction=='E'){this.direction='N';}
+        if(this.direction=='N'){
+            this.direction='O';
+            Main.fenetre.remove(this.imageElement);
+            this.imageElement = new JLabel(new ImageIcon(this.listeImages[1]));
+            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
+            Main.fenetre.remove(Main.plateauVisu);
+            Main.fenetre.add(this.imageElement);
+            Main.fenetre.add(Main.plateauVisu);
+            Main.fenetre.repaint();
+        }
+        else if(this.direction=='O'){
+            this.direction='S';
+            Main.fenetre.remove(this.imageElement);
+            this.imageElement = new JLabel(new ImageIcon(this.listeImages[3]));
+            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
+            Main.fenetre.remove(Main.plateauVisu);
+            Main.fenetre.add(this.imageElement);
+            Main.fenetre.add(Main.plateauVisu);
+            Main.fenetre.repaint();
+        }
+        else if(this.direction=='S'){
+            this.direction='E';
+            Main.fenetre.remove(this.imageElement);
+            this.imageElement = new JLabel(new ImageIcon(this.listeImages[2]));
+            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
+            Main.fenetre.remove(Main.plateauVisu);
+            Main.fenetre.add(this.imageElement);
+            Main.fenetre.add(Main.plateauVisu);
+            Main.fenetre.repaint();
+        }
+        else if(this.direction=='E'){
+            this.direction='N';
+            Main.fenetre.remove(this.imageElement);
+            this.imageElement = new JLabel(new ImageIcon(this.listeImages[0]));
+            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
+            Main.fenetre.remove(Main.plateauVisu);
+            Main.fenetre.add(this.imageElement);
+            Main.fenetre.add(Main.plateauVisu);
+            Main.fenetre.repaint();
+        }
     }
     public void demiTour(){
         this.tournerG();

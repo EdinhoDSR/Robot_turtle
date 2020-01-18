@@ -47,10 +47,12 @@ public class Main {
         //Initialise les joueurs, les joyaux et leurs positions
         if (nombreJoueurs==2){
 
+            String[] imagesJ1 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
+            String[] imagesJ2 = {"raphaelN.png","raphaelO.png","raphaelE.png","raphaelS.png"};
             plateau[8][4].joyau();
-            Joueur J1 = new Joueur(1,2,1,"leonardo.png");
+            Joueur J1 = new Joueur(1,2,1,imagesJ1);
             plateau[1][2].setJoueur(J1);
-            Joueur J2 = new Joueur(2,6,1,"raphael.png");
+            Joueur J2 = new Joueur(2,6,1,imagesJ2);
             plateau[1][6].setJoueur(J2);
 
             listeJoueur.add(J1);
@@ -71,9 +73,13 @@ public class Main {
             plateau[8][4].joyau();
             plateau[8][7].joyau();
 
-            Joueur J1 = new Joueur(1,1,1,"leonardo.png");
-            Joueur J2 = new Joueur(2,4,1,"raphael.png");
-            Joueur J3 = new Joueur(3,7,1,"donatello.png");
+            String[] imagesJ1 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
+            String[] imagesJ2 = {"raphaelN.png","raphaelO.png","raphaelE.png","raphaelS.png"};
+            String[] imagesJ3 = {"donatelloN.png","donatelloO.png","donatelloE.png","donatelloS.png"};
+
+            Joueur J1 = new Joueur(1,1,1,imagesJ1);
+            Joueur J2 = new Joueur(2,4,1,imagesJ2);
+            Joueur J3 = new Joueur(3,7,1,imagesJ3);
 
             plateau[1][1].setJoueur(J1);
             plateau[1][4].setJoueur(J2);
@@ -96,10 +102,15 @@ public class Main {
             plateau[8][2].joyau();
             plateau[8][7].joyau();
 
-            Joueur J1 = new Joueur(1,1,1,"leonardo.png");
-            Joueur J2 = new Joueur(2,3,1,"raphael.png");
-            Joueur J3 = new Joueur(3,6,1,"donatello.png");
-            Joueur J4 = new Joueur(4,8,1,"leonardo.png");
+            String[] imagesJ1 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
+            String[] imagesJ2 = {"raphaelN.png","raphaelO.png","raphaelE.png","raphaelS.png"};
+            String[] imagesJ3 = {"donatelloN.png","donatelloO.png","donatelloE.png","donatelloS.png"};
+            String[] imagesJ4 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
+
+            Joueur J1 = new Joueur(1,1,1,imagesJ1);
+            Joueur J2 = new Joueur(2,3,1,imagesJ2);
+            Joueur J3 = new Joueur(3,6,1,imagesJ3);
+            Joueur J4 = new Joueur(4,8,1,imagesJ4);
 
             plateau[1][1].setJoueur(J1);
             plateau[1][3].setJoueur(J2);
