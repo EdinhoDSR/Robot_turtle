@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Menu">
+  <component name="RunManager" selected="Application.test">
     <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="robotturtle.Menu" />
       <module name="Robot_turtle" />
@@ -266,12 +264,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579349756978</updated>
     </task>
-    <task id="LOCAL-00017" summary="avancer à moitié terminé">
-      <created>1578313763237</created>
+    <task id="LOCAL-00017" summary="avancement du menu">
+      <created>1579384952399</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1578313763237</updated>
+      <updated>1579384952399</updated>
     </task>
     <task id="LOCAL-00018" summary="avancer terminé">
       <created>1578314395232</created>
@@ -301,7 +299,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +366,8 @@
     <MESSAGE value="création du menu mais je n'arrive pas à import l'image tmnt.jpg et quand on choisi un joueur la fênêtre du plateau n'affiche rien" />
     <MESSAGE value="modificationde la classe Card une carte à un Jlabel et unev aleur" />
     <MESSAGE value="je commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="je commit" />
+    <MESSAGE value="avancement du menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="avancement du menu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="315" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579273205212">
@@ -383,41 +382,42 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="328" y="67" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.23.1440.827@0.23.1440.827" timestamp="1579249933171" />
-    <state x="208" y="23" key="CommitChangelistDialog2" timestamp="1579349756632">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="208" y="23" key="CommitChangelistDialog2" timestamp="1579384951665">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="208" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579349756632" />
+    <state x="208" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1579384951665" />
     <state x="78" y="126" width="1200" height="587" key="DiffContextDialog" timestamp="1579299515457">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="78" y="126" width="1200" height="587" key="DiffContextDialog/0.23.1440.827@0.23.1440.827" timestamp="1579299515457" />
-    <state width="679" height="198" key="GridCell.Tab.0.bottom" timestamp="1579382553782">
+    <state width="679" height="198" key="GridCell.Tab.0.bottom" timestamp="1579385522186">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1579379283370" />
     <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1579375346555" />
-    <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1579382553782" />
+    <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1579385522186" />
     <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1579381174775" />
-    <state width="679" height="198" key="GridCell.Tab.0.center" timestamp="1579382553781">
+    <state width="679" height="198" key="GridCell.Tab.0.center" timestamp="1579385522185">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1579379283369" />
     <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1579375346553" />
-    <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1579382553781" />
+    <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1579385522185" />
     <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1579381174772" />
-    <state width="679" height="198" key="GridCell.Tab.0.left" timestamp="1579382553780">
+    <state width="679" height="198" key="GridCell.Tab.0.left" timestamp="1579385522184">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1579379283368" />
     <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1579375346553" />
-    <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1579382553780" />
+    <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1579385522184" />
     <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1579381174770" />
-    <state width="679" height="198" key="GridCell.Tab.0.right" timestamp="1579382553781">
+    <state width="679" height="198" key="GridCell.Tab.0.right" timestamp="1579385522185">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1579379283370" />
     <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1579375346554" />
-    <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1579382553781" />
+    <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1579385522185" />
     <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1579381174774" />
     <state x="275" y="114" key="MergeDialog" timestamp="1579273157045">
       <screen x="0" y="23" width="1440" height="827" />
@@ -440,11 +440,12 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="270" y="131" key="VCS.ChangeListViewerDialog/0.23.1440.827@0.23.1440.827" timestamp="1579299431218" />
-    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579349759421">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579384959180">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1579349759421" />
     <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1579345791473" />
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1579384959180" />
     <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579299515458">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
@@ -493,7 +494,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/robotturtle/Main.java</url>
-          <line>221</line>
+          <line>225</line>
           <properties class="robotturtle.Main" method="defausseJoueur">
             <option name="EMULATED" value="true" />
           </properties>
@@ -501,7 +502,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/robotturtle/Main.java</url>
-          <line>252</line>
+          <line>256</line>
           <properties class="robotturtle.Main" method="poserMur">
             <option name="EMULATED" value="true" />
           </properties>
@@ -514,6 +515,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/robotturtle/Main.java</url>
+          <line>17</line>
+          <properties class="robotturtle.Main" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

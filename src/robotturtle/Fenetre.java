@@ -48,7 +48,7 @@ public class Fenetre extends JFrame{
                     Main.fenetre.add(i);
            //         Main.fenetre.updateUI();
     //                Main.fenetre.removeAll();
-                    Main.fenetre.updateUI();
+  //                  Main.fenetre.updateUI();
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }

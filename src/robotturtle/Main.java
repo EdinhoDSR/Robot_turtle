@@ -16,8 +16,8 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
- //      run();
-        Main.fenetre.CreationDuMenu();
+       run();
+
    }
 
 
@@ -153,8 +153,8 @@ public class Main {
     public static void run() throws IOException {
 
         fenetre.fenterePlateau();
-//       System.out.println("Veuillez saisir le nombre de joueur ");
-//        nombreDeJoueurs = scanner.nextInt();
+        System.out.println("Veuillez saisir le nombre de joueur ");
+        nombreDeJoueurs = scanner.nextInt();
         Main.fenetre.CreationDuMenu();
         ArrayList<Joueur>listeDeJoueur = initialisation(nombreDeJoueurs);
         while (listeDeJoueur.size() >1){
@@ -209,12 +209,16 @@ public class Main {
                         joueur.programme.ajouter_programme(joueur.mainDujoueur, i);
                         System.out.println("Voulez-vous prendre une autre carte? (oui/non)");
                         String choixMain = scanner.nextLine();
-                        if (choixMain.equals("non")){
+                        if (choixMain.equals("non")) {
                             continuer = false;
                         }
+                        finie = true;
                     }
-                    finie = true;
                     break;
+                default:
+                    System.out.println("Veuillez recommencer");
+                    break;
+
                 }
         }
 
