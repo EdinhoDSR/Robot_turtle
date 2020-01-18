@@ -127,6 +127,7 @@ public  class Menu extends JFrame {
     private void quatre_joueurs (ActionEvent event) throws IOException {
         System.out.println("Vous avez sélectionner 4 joueurs ");
         Main.nombreDeJoueurs=4;
+        System.out.println(Main.nombreDeJoueurs);
         Main.run();
 
     }

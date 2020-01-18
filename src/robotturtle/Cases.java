@@ -97,7 +97,6 @@ public class Cases {
         Main.fenetre.add(Main.plateauVisu);
 
 
-
     }
 
 

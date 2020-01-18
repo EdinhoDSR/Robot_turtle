@@ -8,18 +8,17 @@ public class Main {
 
 
     private static Scanner scanner = new Scanner(System.in);
-    public static int nombreDeJoueurs;
+    public static int nombreDeJoueurs ;
     public static Cases[][] plateau = new Cases[10][10];
     public static ArrayList<Joueur> listeDeJoueur = new ArrayList<>();
     public static Fenetre fenetre = new Fenetre();
     public static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
 
 
-//    public static void main(String[] args) {
-//        run();
-
-
-//    }
+    public static void main(String[] args) throws IOException {
+ //      run();
+        Main.fenetre.CreationDuMenu();
+   }
 
 
     private static ArrayList<Joueur> initialisation(int nombreJoueurs) throws IOException {
@@ -59,7 +58,7 @@ public class Main {
             listeJoueur.add(J1);
             listeJoueur.add(J2);
 
-
+            // Initialisation de la fenêtre joueur
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
             fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
             fenetre.add(J1.imageElement);
@@ -89,6 +88,8 @@ public class Main {
             listeJoueur.add(J1);
             listeJoueur.add(J2);
             listeJoueur.add(J3);
+
+            // Initialisation de la fenêtre joueur
 
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
             fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
@@ -123,6 +124,8 @@ public class Main {
             listeJoueur.add(J3);
             listeJoueur.add(J4);
 
+            // Initialisation de la fenêtre joueur
+
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
             fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
             fenetre.deplacerJoueur(J3,J3.getPositionX(),J3.getPositionY());
@@ -138,6 +141,8 @@ public class Main {
         return listeJoueur;
     }
 
+
+
     private static void afficher(){
         for(int i=0; i<10; i++){
             for(int j=0; j<10; j++){System.out.print(plateau[i][j].getType());}// on a une ligne
@@ -148,8 +153,9 @@ public class Main {
     public static void run() throws IOException {
 
         fenetre.fenterePlateau();
-
-
+//       System.out.println("Veuillez saisir le nombre de joueur ");
+//        nombreDeJoueurs = scanner.nextInt();
+        Main.fenetre.CreationDuMenu();
         ArrayList<Joueur>listeDeJoueur = initialisation(nombreDeJoueurs);
         while (listeDeJoueur.size() >1){
             for (Joueur joueur : listeDeJoueur) {
