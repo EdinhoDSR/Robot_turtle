@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/robotturtle/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmnt.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Avancer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TournerD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tournerG.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,12 +76,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578698653152" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP2_G1D_EDINHO_DOSREIS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Menu">
     <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -227,12 +234,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579273674290</updated>
     </task>
-    <task id="LOCAL-00012" summary="Fusion pion et cases et début fonction d'initialisation">
-      <created>1577962416630</created>
+    <task id="LOCAL-00012" summary="création du menu mais je n'arrive pas à import l'image tmnt.jpg et quand on choisi un joueur la fênêtre du plateau n'affiche rien">
+      <created>1579299349613</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1577962416630</updated>
+      <updated>1579299349614</updated>
     </task>
     <task id="LOCAL-00013" summary="fonction laser 90%, fonction tourner droite tourner gauche et demi tour. true et false en minuscule">
       <created>1578007833034</created>
@@ -297,11 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -351,7 +368,8 @@
     <MESSAGE value="c'est kev" />
     <MESSAGE value="ça ne push pas" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="création du menu mais je n'arrive pas à import l'image tmnt.jpg et quand on choisi un joueur la fênêtre du plateau n'affiche rien" />
+    <option name="LAST_COMMIT_MESSAGE" value="création du menu mais je n'arrive pas à import l'image tmnt.jpg et quand on choisi un joueur la fênêtre du plateau n'affiche rien" />
   </component>
   <component name="WindowStateProjectService">
     <state x="315" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579273205212">
@@ -366,26 +384,34 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="328" y="67" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.23.1440.827@0.23.1440.827" timestamp="1579249933171" />
-    <state x="373" y="23" key="CommitChangelistDialog2" timestamp="1579273674050">
+    <state x="373" y="23" key="CommitChangelistDialog2" timestamp="1579299349295">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="373" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579273674050" />
-    <state width="1358" height="198" key="GridCell.Tab.0.bottom" timestamp="1579299210900">
+    <state x="373" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579299349295" />
+    <state x="78" y="126" width="1200" height="587" key="DiffContextDialog" timestamp="1579299515457">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="1358" height="198" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1579299210900" />
-    <state width="1358" height="198" key="GridCell.Tab.0.center" timestamp="1579299210898">
+    <state x="78" y="126" width="1200" height="587" key="DiffContextDialog/0.23.1440.827@0.23.1440.827" timestamp="1579299515457" />
+    <state width="679" height="198" key="GridCell.Tab.0.bottom" timestamp="1579344787134">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="1358" height="198" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1579299210898" />
-    <state width="1358" height="198" key="GridCell.Tab.0.left" timestamp="1579299210897">
+    <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1579344787134" />
+    <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1579342244437" />
+    <state width="679" height="198" key="GridCell.Tab.0.center" timestamp="1579344787133">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="1358" height="198" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1579299210897" />
-    <state width="1358" height="198" key="GridCell.Tab.0.right" timestamp="1579299210899">
+    <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1579344787133" />
+    <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1579342244436" />
+    <state width="679" height="198" key="GridCell.Tab.0.left" timestamp="1579344787132">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="1358" height="198" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1579299210899" />
+    <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1579344787132" />
+    <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1579342244435" />
+    <state width="679" height="198" key="GridCell.Tab.0.right" timestamp="1579344787133">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1579344787133" />
+    <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1579342244436" />
     <state x="275" y="114" key="MergeDialog" timestamp="1579273157045">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
@@ -402,18 +428,23 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="338" y="23" width="1024" height="827" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1579296911829" />
-    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579273675900">
+    <state x="270" y="131" key="VCS.ChangeListViewerDialog" timestamp="1579299431218">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1579273675900" />
-    <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579249537363">
+    <state x="270" y="131" key="VCS.ChangeListViewerDialog/0.23.1440.827@0.23.1440.827" timestamp="1579299431218" />
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579299359194">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.827@0.23.1440.827" timestamp="1579249537363" />
-    <state x="640" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579297023336">
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1579299359194" />
+    <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579299515458">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="640" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.827@0.23.1440.827" timestamp="1579297023336" />
+    <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.827@0.23.1440.827" timestamp="1579299515458" />
+    <state x="640" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579342236783">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="640" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.827@0.23.1440.827" timestamp="1579299369246" />
+    <state x="640" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.829@0.23.1440.829" timestamp="1579342236783" />
     <state x="134" y="39" key="new project wizard" timestamp="1579249685264">
       <screen x="0" y="23" width="1440" height="827" />
     </state>

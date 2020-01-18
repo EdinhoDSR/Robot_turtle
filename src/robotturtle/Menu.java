@@ -26,33 +26,34 @@ public  class Menu extends JFrame {
         // centre par rapport un objet
         this.setLocationRelativeTo(null);
 
+    }
 
+        public void creerfenêtre() {
+            // conmposant graphique qui va contenir d'autres élements graphiques
+            JPanel contentPane = (JPanel) this.getContentPane();
+            //aligne les élements de la fenêtre
+            contentPane.setLayout(new FlowLayout(FlowLayout.LEFT));
+//            f2.setLayout(new FlowLayout(FlowLayout.LEFT));
 
-        // conmposant graphique qui va contenir d'autres élements graphiques
-        JPanel contentPane = (JPanel) this.getContentPane();
-        //aligne les élements de la fenêtre
-       contentPane.setLayout(new FlowLayout(FlowLayout.LEFT));
-
-        // alignement en colonne
+            // alignement en colonne
 //        contentPane.setLayout(new GridLayout(5, 1, 0, 0));
 
-        //alignement selon N S E O C
+            //alignement selon N S E O C
 //        contentPane.setLayout(new BorderLayout());
 
 
-        JLabel image =  new JLabel(new ImageIcon("tmnt.jpg"));
-        contentPane.add(image);
+//        JLabel image =  new JLabel(new ImageIcon("tmnt.jpg"));
+//        contentPane.add(image);
 
+            // créationde labanière d'acueille
 
-        JLabel info = new JLabel("Bienvenue dans robot Turtle. Veuillez sélectionner le nombre de joueurs participants.");
-        info.setPreferredSize(new Dimension(5000, 100));
-        contentPane.add(info);
-
+            JLabel info = new JLabel("Bienvenue dans robot Turtle. Veuillez sélectionner le nombre de joueurs participants.");
+            info.setPreferredSize(new Dimension(5000, 100));
+            contentPane.add(info);
 
 //        JScrollPanel
-        // controle dela taillepréféreée
-        // setPrefferedSize(new dimension(x,y);
-
+            // controle dela taillepréféreée
+            // setPrefferedSize(new dimension(x,y);
 
 
         // case à cocher 2 joueurs
@@ -72,7 +73,9 @@ public  class Menu extends JFrame {
         j3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                contentPane.removeAll();
                 trois_joueurs(e);
+
             }
         });
         contentPane.add(j3);
@@ -89,10 +92,12 @@ public  class Menu extends JFrame {
         contentPane.add(j4);
 
     }
+
     private void deux_joueurs (ActionEvent event){
         System.out.println("Vous avez sélectionner 2 joueurs ");
         Main.nombreDeJoueurs=2;
         Main.run();
+
 
     }
 
@@ -100,6 +105,8 @@ public  class Menu extends JFrame {
         System.out.println("Vous avez sélectionner 3 joueurs ");
         Main.nombreDeJoueurs=3;
         Main.run();
+
+
 
     }
     private void quatre_joueurs (ActionEvent event){
@@ -115,6 +122,9 @@ public  class Menu extends JFrame {
 
         // création de la fenetre
         Menu myWindow= new Menu();
+        myWindow.creerfenêtre();
+
+
         // aficher la fenêtre
         myWindow.setVisible(true);
 
