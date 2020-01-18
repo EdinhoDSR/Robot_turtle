@@ -5,8 +5,6 @@ import java.awt.Toolkit;
 public class Fenetre extends JFrame{
 
     public Fenetre(){
-
-
     }
 
     public void fenterePlateau(){
@@ -16,11 +14,6 @@ public class Fenetre extends JFrame{
         this.setUndecorated(true);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-
-
-        //JPanel contentPane =  (JPanel) this.getContentPane();
-        //this.setContentPane(new Panneau());
         this.setVisible(true);
     }
 

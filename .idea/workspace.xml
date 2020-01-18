@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/diplome.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diplome.jpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/donatelloE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/donatelloN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/donatelloO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/donatelloS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leonardoE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leonardoN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leonardoO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leonardoS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raphaelE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raphaelN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raphaelO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raphaelS.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joyau.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donatello.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leonardo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raphael.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,6 +138,8 @@
       <workItem from="1578936662278" duration="3326000" />
       <workItem from="1579267131295" duration="1039000" />
       <workItem from="1579268565969" duration="1323000" />
+      <workItem from="1579270652861" duration="1554000" />
+      <workItem from="1579272828874" duration="3093000" />
     </task>
     <task id="LOCAL-00001" summary="la vie est belle">
       <created>1578707692115</created>
@@ -154,12 +169,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579200297578</updated>
     </task>
-    <task id="LOCAL-00005" summary="test 1">
-      <created>1574515105670</created>
+    <task id="LOCAL-00005" summary="version sans bug">
+      <created>1579270759725</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1574515105670</updated>
+      <updated>1579270759725</updated>
     </task>
     <task id="LOCAL-00006" summary="test 1">
       <created>1574516730547</created>
@@ -273,7 +288,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -334,7 +349,8 @@
     <MESSAGE value="pasdenom transformé en actionjoueur, fonction defausse faite" />
     <MESSAGE value="laser se suppriment" />
     <MESSAGE value="Joyau marche et mur de glace marche" />
-    <option name="LAST_COMMIT_MESSAGE" value="Joyau marche et mur de glace marche" />
+    <MESSAGE value="version sans bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="version sans bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
