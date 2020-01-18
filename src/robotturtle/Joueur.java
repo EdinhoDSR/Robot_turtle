@@ -1,6 +1,7 @@
 package robotturtle;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class Joueur extends Cases{
     }
 
 
-    public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart, String[] nomsFichiersImages){
+    public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart, String[] nomsFichiersImages) throws IOException {
 
         this.type = 'J';
         this.positionXDepart = pPositionXDepart;

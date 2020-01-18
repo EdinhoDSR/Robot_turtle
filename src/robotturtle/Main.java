@@ -1,6 +1,7 @@
 package robotturtle;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.*;
 
 public class Main {
@@ -21,7 +22,7 @@ public class Main {
 //    }
 
 
-    private static ArrayList<Joueur> initialisation(int nombreJoueurs){
+    private static ArrayList<Joueur> initialisation(int nombreJoueurs) throws IOException {
 
         ArrayList<Joueur> listeJoueur = new ArrayList<>();
 
@@ -144,7 +145,7 @@ public class Main {
         }
     }
 
-    public static void run(){
+    public static void run() throws IOException {
 
         fenetre.fenterePlateau();
 

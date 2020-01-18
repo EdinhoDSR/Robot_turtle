@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Avancer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laser.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TournerD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tournerG.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,19 +239,19 @@
       <option name="project" value="LOCAL" />
       <updated>1579299349614</updated>
     </task>
-    <task id="LOCAL-00013" summary="fonction laser 90%, fonction tourner droite tourner gauche et demi tour. true et false en minuscule">
-      <created>1578007833034</created>
+    <task id="LOCAL-00013" summary="modificationde la classe Card une carte à un Jlabel et unev aleur">
+      <created>1579345748773</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1578007833034</updated>
+      <updated>1579345748773</updated>
     </task>
-    <task id="LOCAL-00014" summary="fonction laser 100% mais toujours l'erreur main.plateau et les méthodes joueurs qui ne s'appliquent pas aux cases">
-      <created>1578067767072</created>
+    <task id="LOCAL-00014" summary="modificationde la classe Card une carte à un Jlabel et unev aleur">
+      <created>1579345789096</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1578067767072</updated>
+      <updated>1579345789096</updated>
     </task>
     <task id="LOCAL-00015" summary="fonction laser 100% mais toujours l'erreur main.plateau et les méthodes joueurs qui ne s'appliquent pas aux cases">
       <created>1578222430073</created>
@@ -304,7 +302,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +367,8 @@
     <MESSAGE value="ça ne push pas" />
     <MESSAGE value="test" />
     <MESSAGE value="création du menu mais je n'arrive pas à import l'image tmnt.jpg et quand on choisi un joueur la fênêtre du plateau n'affiche rien" />
-    <option name="LAST_COMMIT_MESSAGE" value="création du menu mais je n'arrive pas à import l'image tmnt.jpg et quand on choisi un joueur la fênêtre du plateau n'affiche rien" />
+    <MESSAGE value="modificationde la classe Card une carte à un Jlabel et unev aleur" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificationde la classe Card une carte à un Jlabel et unev aleur" />
   </component>
   <component name="WindowStateProjectService">
     <state x="315" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579273205212">
@@ -384,33 +383,33 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="328" y="67" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.23.1440.827@0.23.1440.827" timestamp="1579249933171" />
-    <state x="208" y="23" key="CommitChangelistDialog2" timestamp="1579345748529">
+    <state x="208" y="23" key="CommitChangelistDialog2" timestamp="1579345788892">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="208" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579345748529" />
+    <state x="208" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579345788892" />
     <state x="78" y="126" width="1200" height="587" key="DiffContextDialog" timestamp="1579299515457">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="78" y="126" width="1200" height="587" key="DiffContextDialog/0.23.1440.827@0.23.1440.827" timestamp="1579299515457" />
-    <state width="679" height="198" key="GridCell.Tab.0.bottom" timestamp="1579344787134">
+    <state width="679" height="198" key="GridCell.Tab.0.bottom" timestamp="1579348842623">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1579344787134" />
+    <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1579348842623" />
     <state width="679" height="198" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1579342244437" />
-    <state width="679" height="198" key="GridCell.Tab.0.center" timestamp="1579344787133">
+    <state width="679" height="198" key="GridCell.Tab.0.center" timestamp="1579348842621">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1579344787133" />
+    <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1579348842621" />
     <state width="679" height="198" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1579342244436" />
-    <state width="679" height="198" key="GridCell.Tab.0.left" timestamp="1579344787132">
+    <state width="679" height="198" key="GridCell.Tab.0.left" timestamp="1579348842617">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1579344787132" />
+    <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1579348842617" />
     <state width="679" height="198" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1579342244435" />
-    <state width="679" height="198" key="GridCell.Tab.0.right" timestamp="1579344787133">
+    <state width="679" height="198" key="GridCell.Tab.0.right" timestamp="1579348842622">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1579344787133" />
+    <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1579348842622" />
     <state width="679" height="198" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1579342244436" />
     <state x="275" y="114" key="MergeDialog" timestamp="1579273157045">
       <screen x="0" y="23" width="1440" height="827" />
@@ -432,10 +431,11 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="270" y="131" key="VCS.ChangeListViewerDialog/0.23.1440.827@0.23.1440.827" timestamp="1579299431218" />
-    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579345754086">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2" timestamp="1579345791473">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1579345754086" />
+    <state x="340" y="156" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1579345791473" />
     <state x="140" y="123" width="1200" height="587" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579299515458">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
@@ -449,6 +449,10 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="134" y="39" key="new project wizard/0.23.1440.827@0.23.1440.827" timestamp="1579249685264" />
+    <state x="462" y="39" key="refactoring.ChangeSignatureDialog" timestamp="1579346211018">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="462" y="39" key="refactoring.ChangeSignatureDialog/0.23.1440.827@0.23.1440.827" timestamp="1579346211018" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

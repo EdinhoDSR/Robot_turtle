@@ -1,5 +1,7 @@
 package robotturtle;
 
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -21,14 +23,14 @@ public class Deck {
         // création des cartes avancer
         for (int i =0; i<18 ; i++) {
             //
-            this.cards.add(new Card(Valeurs.avancer ));
+            this.cards.add(new Card(Valeurs.avancer));
         }
 
         // création des cartes tourner à droite
 
         for(int j= 1; j<9; j++)
         {
-            this.cards.add(new Card(Valeurs.tournerD ));
+            this.cards.add(new Card(Valeurs.tournerD));
         }
 
 
@@ -126,13 +128,13 @@ public class Deck {
         provenance.removeCard(i);
     }
 
-    public void creerListeMursPierre(){
+    public void creerListeMursPierre() throws IOException {
         for(int i=0; i<3;i++){
             this.addCard(new Card(Valeurs.Mdp));
         }
 
     }
-    public void creerListeMursGlace(){
+    public void creerListeMursGlace() throws IOException {
         for(int i=0; i<2;i++){
             this.addCard(new Card(Valeurs.Mdg));
         }

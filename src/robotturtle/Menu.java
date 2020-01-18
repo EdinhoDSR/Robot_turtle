@@ -1,9 +1,12 @@
 package robotturtle;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -42,8 +45,8 @@ public  class Menu extends JFrame {
 //        contentPane.setLayout(new BorderLayout());
 
 
-//        JLabel image =  new JLabel(new ImageIcon("tmnt.jpg"));
-//        contentPane.add(image);
+        JLabel image =  new JLabel(new ImageIcon("\"TournerG.png\""));
+        contentPane.add(image);
 
             // créationde labanière d'acueille
 
@@ -60,7 +63,11 @@ public  class Menu extends JFrame {
         j2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                deux_joueurs(e);
+                try {
+                    deux_joueurs(e);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
 
                 ;
             }
@@ -74,7 +81,11 @@ public  class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 contentPane.removeAll();
-                trois_joueurs(e);
+                try {
+                    trois_joueurs(e);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
 
             }
         });
@@ -85,7 +96,11 @@ public  class Menu extends JFrame {
         j4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quatre_joueurs(e);
+                try {
+                    quatre_joueurs(e);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
         ;
@@ -93,7 +108,7 @@ public  class Menu extends JFrame {
 
     }
 
-    private void deux_joueurs (ActionEvent event){
+    private void deux_joueurs (ActionEvent event) throws IOException {
         System.out.println("Vous avez sélectionner 2 joueurs ");
         Main.nombreDeJoueurs=2;
         Main.run();
@@ -101,7 +116,7 @@ public  class Menu extends JFrame {
 
     }
 
-    private void trois_joueurs (ActionEvent event){
+    private void trois_joueurs (ActionEvent event) throws IOException {
         System.out.println("Vous avez sélectionner 3 joueurs ");
         Main.nombreDeJoueurs=3;
         Main.run();
@@ -109,7 +124,7 @@ public  class Menu extends JFrame {
 
 
     }
-    private void quatre_joueurs (ActionEvent event){
+    private void quatre_joueurs (ActionEvent event) throws IOException {
         System.out.println("Vous avez sélectionner 4 joueurs ");
         Main.nombreDeJoueurs=4;
         Main.run();
