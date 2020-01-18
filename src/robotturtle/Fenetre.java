@@ -10,7 +10,7 @@ public class Fenetre extends JFrame{
     public void fenterePlateau(){
 
         this.setTitle("Robot Turtle");
-        this.setSize(600, 600);
+        this.setSize(1000, 1000);
         this.setUndecorated(true);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

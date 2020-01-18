@@ -14,13 +14,11 @@ public class Main {
     public static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
 
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//        run();
 
 
-        run();
-
-
-    }
+//    }
 
 
     private static ArrayList<Joueur> initialisation(int nombreJoueurs){
@@ -151,13 +149,11 @@ public class Main {
         fenetre.fenterePlateau();
 
 
-        System.out.println("Combien de joueurs?");
-        nombreDeJoueurs = scanner.nextInt();
         ArrayList<Joueur>listeDeJoueur = initialisation(nombreDeJoueurs);
         while (listeDeJoueur.size() >1){
             for (Joueur joueur : listeDeJoueur) {
                 System.out.println("tour du joueur "+joueur.getNumero());
-                afficher();
+//                afficher();
                 tourDeJeu(joueur);
                 defausseJoueur(joueur);
                 remplissageMain(joueur);
@@ -175,8 +171,6 @@ public class Main {
             String choix = scanner.nextLine();
             switch (choix){
                 case "Mur":
-
-
                     System.out.println("Quel type de mur? (Glace/Pierre)");
                     String typeDeMur = scanner.nextLine();
                     if (typeDeMur.equals("Pierre")) {
