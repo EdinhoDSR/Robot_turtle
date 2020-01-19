@@ -51,7 +51,7 @@ public class Main {
             String[] imagesJ1 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
             String[] imagesJ2 = {"raphaelN.png","raphaelO.png","raphaelE.png","raphaelS.png"};
             plateau[8][4].joyau();
-            Joueur J1 = new Joueur(1,2,1,imagesJ1);
+            Joueur J1 = new Joueur(1,4,7,imagesJ1);
             plateau[1][2].setJoueur(J1);
             Joueur J2 = new Joueur(2,6,1,imagesJ2);
             plateau[1][6].setJoueur(J2);
@@ -61,7 +61,7 @@ public class Main {
 
             // Initialisation de la fenêtre joueur
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
-            fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
+            fenetre.deplacerJoueur(J2,J2.getPositionX(),J2.getPositionY());
             fenetre.add(J1.imageElement);
             fenetre.add(J2.imageElement);
             fenetre.add(plateauVisu);
@@ -93,7 +93,7 @@ public class Main {
             // Initialisation de la fenêtre joueur
 
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
-            fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
+            fenetre.deplacerJoueur(J2,J2.getPositionX(),J2.getPositionY());
             fenetre.deplacerJoueur(J3,J3.getPositionX(),J3.getPositionY());
             fenetre.add(J1.imageElement);
             fenetre.add(J2.imageElement);
@@ -128,7 +128,7 @@ public class Main {
             // Initialisation de la fenêtre joueur
 
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
-            fenetre.deplacerJoueur(J2,J2.getPositionX(),J1.getPositionY());
+            fenetre.deplacerJoueur(J2,J2.getPositionX(),J2.getPositionY());
             fenetre.deplacerJoueur(J3,J3.getPositionX(),J3.getPositionY());
             fenetre.deplacerJoueur(J4,J4.getPositionX(),J4.getPositionY());
             fenetre.add(J1.imageElement);
@@ -165,6 +165,7 @@ public class Main {
                 defausseJoueur(joueur);
                 remplissageMain(joueur);
                 joueur.affichage();
+                System.out.println(listeDeJoueur.size());
                 if(listeDeJoueur.size() == 1){break;}
             }
         }
@@ -218,7 +219,6 @@ public class Main {
                 default:
                     System.out.println("Veuillez recommencer");
                     break;
-
                 }
         }
 

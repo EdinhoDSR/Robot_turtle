@@ -467,8 +467,10 @@ public class Joueur extends Cases{
             }
         }
         for (int i=0;i<programme.TailleDeck();i++){
-            this.programme.Defausse(this.programme,this.defausse,0);
+            this.defausse.addCard(this.programme.getCard(i));
         }
+        this.programme.vider();
+
     }
 }
 

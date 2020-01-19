@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Menu.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,6 +124,7 @@
       <workItem from="1579268565969" duration="1323000" />
       <workItem from="1579270652861" duration="1554000" />
       <workItem from="1579272828874" duration="3093000" />
+      <workItem from="1579438000545" duration="1799000" />
     </task>
     <task id="LOCAL-00001" summary="la vie est belle">
       <created>1578707692115</created>
@@ -169,12 +168,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579432284394</updated>
     </task>
-    <task id="LOCAL-00007" summary="test 1">
-      <created>1574517200941</created>
+    <task id="LOCAL-00007" summary="version clean">
+      <created>1579433022158</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1574517200941</updated>
+      <updated>1579433022158</updated>
     </task>
     <task id="LOCAL-00008" summary="test 1">
       <created>1574517649421</created>
@@ -274,7 +273,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +310,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="test 1" />
     <MESSAGE value="version sans globale" />
-    <MESSAGE value="version clean" />
     <MESSAGE value="J'ai rajouté de quoi faire un tableau d'objet" />
     <MESSAGE value="Fusion pion et cases et début fonction d'initialisation" />
     <MESSAGE value="fonction laser 90%, fonction tourner droite tourner gauche et demi tour. true et false en minuscule" />
@@ -328,7 +326,8 @@
     <MESSAGE value="Joyau marche et mur de glace marche" />
     <MESSAGE value="version sans bug" />
     <MESSAGE value="affichage avec Delay" />
-    <option name="LAST_COMMIT_MESSAGE" value="affichage avec Delay" />
+    <MESSAGE value="version clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="version clean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
