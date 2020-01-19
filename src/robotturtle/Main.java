@@ -156,7 +156,6 @@ public class Main {
         fenetre.fenterePlateau();
         System.out.println("Veuillez saisir le nombre de joueur ");
         nombreDeJoueurs = scanner.nextInt();
-        Main.fenetre.CreationDuMenu();
         ArrayList<Joueur>listeDeJoueur = initialisation(nombreDeJoueurs);
         while (listeDeJoueur.size() >1){
             for (Joueur joueur : listeDeJoueur) {

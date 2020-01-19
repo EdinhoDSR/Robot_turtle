@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/joyau.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/joyau.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/michelangeloE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/michelangeloN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/michelangeloO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/michelangeloS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Menu.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +54,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpServers">
     <servers />
@@ -166,12 +162,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579270759725</updated>
     </task>
-    <task id="LOCAL-00006" summary="test 1">
-      <created>1574516730547</created>
+    <task id="LOCAL-00006" summary="affichage avec Delay">
+      <created>1579432284394</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1574516730547</updated>
+      <updated>1579432284394</updated>
     </task>
     <task id="LOCAL-00007" summary="test 1">
       <created>1574517200941</created>
@@ -278,7 +274,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +327,8 @@
     <MESSAGE value="laser se suppriment" />
     <MESSAGE value="Joyau marche et mur de glace marche" />
     <MESSAGE value="version sans bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="version sans bug" />
+    <MESSAGE value="affichage avec Delay" />
+    <option name="LAST_COMMIT_MESSAGE" value="affichage avec Delay" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
