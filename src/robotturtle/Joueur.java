@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Joueur extends Cases{
 
@@ -201,6 +202,11 @@ public class Joueur extends Cases{
             Main.fenetre.add(Main.plateauVisu);
             Main.fenetre.repaint();
         }
+        try {
+            TimeUnit.MILLISECONDS.sleep(500);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
     }
     public void tournerG(){
 
@@ -244,6 +250,11 @@ public class Joueur extends Cases{
             Main.fenetre.add(Main.plateauVisu);
             Main.fenetre.repaint();
         }
+        try {
+            TimeUnit.MILLISECONDS.sleep(500);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
     }
     public void demiTour(){
         this.tournerG();
@@ -281,6 +292,12 @@ public class Joueur extends Cases{
         Main.plateau[this.positionY][this.positionX].setType('V');
         this.positionX=this.positionXDepart;
         this.positionY=this.positionYDepart;
+        Main.fenetre.remove(this.imageElement);
+        this.imageElement = new JLabel(new ImageIcon(this.listeImages[3]));
+        Main.fenetre.remove(Main.plateauVisu);
+        Main.fenetre.add(this.imageElement);
+        Main.fenetre.add(Main.plateauVisu);
+        Main.fenetre.repaint();
     }
 
     public void avancer(){
@@ -297,6 +314,11 @@ public class Joueur extends Cases{
             ouest();
         }
         Main.fenetre.deplacerJoueur(this,this.getPositionX(),this.getPositionY());
+        try {
+            TimeUnit.MILLISECONDS.sleep(500);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
 
     }
 
@@ -323,6 +345,11 @@ public class Joueur extends Cases{
             caseDirection.joueur.retourCaseDepart();
             System.out.println("J"+caseDirection.joueur.numero+" retourne au départ");
             this.retourCaseDepart();
+            System.out.println("J"+this.numero+" retourne au départ");
+        }
+        else if(typeCaseDirection == 'H'){
+            this.retourCaseDepart();
+            System.out.println("Le joueur sort du plateau."+"J"+this.numero+" retourne au départ");
             System.out.println("J"+this.numero+" retourne au départ");
         }
     }

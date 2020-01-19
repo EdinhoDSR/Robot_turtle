@@ -35,10 +35,11 @@ public class Main {
         }
 
         for (int i = 0; i < 10; i++) {// boucle qui fait les bords
-            plateau[0][i].pierre();
-            plateau[9][i].pierre();
-            plateau[i][0].pierre();
-            plateau[i][9].pierre();
+            plateau[0][i].setType('H');
+            plateau[9][i].setType('H');
+            plateau[i][0].setType('H');
+            plateau[i][9].setType('H');
+
         }
         if (nombreJoueurs==2 || nombreJoueurs==3){// rajoute des bords s'il y a moins de 4 joueurs
             for (int y = 0; y < 10; y++){plateau[y][8].pierre();}
@@ -107,7 +108,7 @@ public class Main {
             String[] imagesJ1 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
             String[] imagesJ2 = {"raphaelN.png","raphaelO.png","raphaelE.png","raphaelS.png"};
             String[] imagesJ3 = {"donatelloN.png","donatelloO.png","donatelloE.png","donatelloS.png"};
-            String[] imagesJ4 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
+            String[] imagesJ4 = {"michelangeloN.png","michelangeloO.png","michelangeloE.png","michelangeloS.png"};
 
             Joueur J1 = new Joueur(1,1,1,imagesJ1);
             Joueur J2 = new Joueur(2,3,1,imagesJ2);
