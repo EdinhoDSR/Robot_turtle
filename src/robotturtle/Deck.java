@@ -66,7 +66,7 @@ public class Deck {
         for (int i = 0; i<sizedeck; i++) {
 
             // génération d'indice aléatoire
-            randomCardIndex = random.nextInt((this.cards.size()-1 -0 )+1)+ 0;
+            randomCardIndex = random.nextInt((this.cards.size()-1 )+1);
 
             // on prends des cartes au hasard du deck pour les mettres dans le deck temporaire
             tmpDeck.add(this.cards.get(randomCardIndex));

@@ -1,7 +1,7 @@
 package robotturtle;
 
 import javax.swing.*;
-import java.io.IOException;
+import java.awt.*;
 import java.util.*;
 
 public class Main {
@@ -11,17 +11,25 @@ public class Main {
     public static int nombreDeJoueurs ;
     public static Cases[][] plateau = new Cases[10][10];
     public static ArrayList<Joueur> listeDeJoueur = new ArrayList<>();
+    public static int nombreDeJoyau;
     public static Fenetre fenetre = new Fenetre();
     public static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
 
 
-    public static void main(String[] args) throws IOException {
-       run();
+    public static void main(String[] args) {
+        //fenetre.initialisation();
+        //fenetre.fenterePlateau();
+        //listeDeJoueur = initialisation(2);
+        //fenetre.menuTourDeJeu(listeDeJoueur.get(0));
+        //run();
 
-   }
 
 
-    private static ArrayList<Joueur> initialisation(int nombreJoueurs) throws IOException {
+
+    }
+
+
+    public static ArrayList<Joueur> initialisation(int nombreJoueurs){
 
         ArrayList<Joueur> listeJoueur = new ArrayList<>();
 
@@ -142,30 +150,27 @@ public class Main {
         return listeJoueur;
     }
 
-
-
-    private static void afficher(){
+    public static void afficher(){
         for(int i=0; i<10; i++){
             for(int j=0; j<10; j++){System.out.print(plateau[i][j].getType());}// on a une ligne
             System.out.println();// on a le retour a la ligne
         }
     }
 
-    public static void run() throws IOException {
+    public static void run(){
 
         fenetre.fenterePlateau();
         System.out.println("Veuillez saisir le nombre de joueur ");
         nombreDeJoueurs = scanner.nextInt();
         ArrayList<Joueur>listeDeJoueur = initialisation(nombreDeJoueurs);
-        while (listeDeJoueur.size() >1){
+        while (nombreDeJoyau != 0){
             for (Joueur joueur : listeDeJoueur) {
                 System.out.println("tour du joueur "+joueur.getNumero());
-//                afficher();
+                afficher();
                 tourDeJeu(joueur);
                 defausseJoueur(joueur);
                 remplissageMain(joueur);
                 joueur.affichage();
-                System.out.println(listeDeJoueur.size());
                 if(listeDeJoueur.size() == 1){break;}
             }
         }
