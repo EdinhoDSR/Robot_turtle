@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Fenetre extends JFrame{
     JLabel jl;
@@ -89,14 +90,25 @@ public class Fenetre extends JFrame{
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         String listeCartes ="";
+                        ArrayList<Integer> A = new ArrayList<>();
+                        System.out.println(listeCB.size());
                         for(int i = 0; i < listeCB.size();i++){
+
+                            System.out.println(i);
                             if(listeCB.get(i).isSelected()){
+                                System.out.println(i);
                                 listeCartes = listeCartes + " " + listeCB.get(i).getText();
-                                joueur.mainDujoueur.Defausse(joueur.mainDujoueur,joueur.programme,i);
+                                A.add(i);
+
                                 frameAjoutCarte.dispose();
 
                             }
                         }
+                        Collections.sort(A,Collections.reverseOrder());
+                        for (Integer i:A) {
+                            joueur.mainDujoueur.Defausse(joueur.mainDujoueur,joueur.programme,i);
+                        }
+
                         valider("Vous avez placé les cartes : " + listeCartes);
                     }
                 });
@@ -179,14 +191,19 @@ public class Fenetre extends JFrame{
                 valider.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        ArrayList<Integer> A = new ArrayList<>();
                         String listeCartes ="";
                         for(int i = 0; i < listeCB.size();i++){
                             if(listeCB.get(i).isSelected()){
                                 listeCartes = listeCartes + " " + listeCB.get(i).getText();
-                                joueur.defausse.ajouter_programme(joueur.mainDujoueur, i);
+                                A.add(i);
                                 frameAjoutCarte.dispose();
 
                             }
+                        }
+                        Collections.sort(A,Collections.reverseOrder());
+                        for (Integer i:A) {
+                            joueur.mainDujoueur.Defausse(joueur.mainDujoueur,joueur.programme,i);
                         }
                         valider("Vous avez défaussé les cartes : " + listeCartes);
                     }

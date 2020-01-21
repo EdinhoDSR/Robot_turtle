@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="15" />
+            <state relative-caret-position="129">
+              <caret line="143" selection-start-line="143" selection-end-line="143" />
               <folding>
                 <element signature="e#2203#2204#0" expanded="true" />
                 <element signature="e#2243#2244#0" expanded="true" />
@@ -50,11 +50,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="457" selection-start-line="457" selection-end-line="457" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="94" column="51" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
+            <state relative-caret-position="305">
+              <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Fenetre#0;class#Fenetre#0" />
@@ -65,7 +74,6 @@
                 <element signature="method#executionProgramme#0;class#Fenetre#0" />
                 <element signature="e#4994#4995#0" expanded="true" />
                 <element signature="e#5038#5039#0" expanded="true" />
-                <element signature="class#5860:6566" />
                 <element signature="method#mur#0;class#Fenetre#0" />
                 <element signature="method#initialisation#0;class#Fenetre#0" />
                 <element signature="method#fenterePlateau#0;class#Fenetre#0" />
@@ -240,7 +248,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579642421477" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579643203226" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP2_G1D_EDINHO_DOSREIS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -319,7 +327,7 @@
       <workItem from="1579422190390" duration="17973000" />
       <workItem from="1579451796214" duration="6438000" />
       <workItem from="1579514257449" duration="3821000" />
-      <workItem from="1579545513165" duration="23515000" />
+      <workItem from="1579545513165" duration="24077000" />
     </task>
     <task id="LOCAL-00001" summary="la vie est belle">
       <created>1578707692115</created>
@@ -370,12 +378,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579641497518</updated>
     </task>
-    <task id="LOCAL-00008" summary="test 1">
-      <created>1574517649421</created>
+    <task id="LOCAL-00008" summary="j'ai fait de mon mieux">
+      <created>1579642461657</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1574517649421</updated>
+      <updated>1579642461657</updated>
     </task>
     <task id="LOCAL-00009" summary="version clean">
       <created>1574699123545</created>
@@ -468,11 +476,11 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99503000" />
+    <option name="totallyTimeSpent" value="100065000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -485,6 +493,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.13484849" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -676,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="457" selection-start-line="457" selection-end-line="457" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/util/Objects.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -717,17 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="15" />
-          <folding>
-            <element signature="e#2203#2204#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -735,10 +726,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="457" selection-start-line="457" selection-end-line="457" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+          <folding>
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="94" column="51" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
+        <state relative-caret-position="305">
+          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Fenetre#0;class#Fenetre#0" />
@@ -749,7 +758,6 @@
             <element signature="method#executionProgramme#0;class#Fenetre#0" />
             <element signature="e#4994#4995#0" expanded="true" />
             <element signature="e#5038#5039#0" expanded="true" />
-            <element signature="class#5860:6566" />
             <element signature="method#mur#0;class#Fenetre#0" />
             <element signature="method#initialisation#0;class#Fenetre#0" />
             <element signature="method#fenterePlateau#0;class#Fenetre#0" />
