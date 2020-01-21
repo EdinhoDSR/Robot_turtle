@@ -92,7 +92,7 @@ public class Fenetre extends JFrame{
                         for(int i = 0; i < listeCB.size();i++){
                             if(listeCB.get(i).isSelected()){
                                 listeCartes = listeCartes + " " + listeCB.get(i).getText();
-                                joueur.programme.ajouter_programme(joueur.mainDujoueur, i);
+                                joueur.mainDujoueur.Defausse(joueur.mainDujoueur,joueur.programme,i);
                                 frameAjoutCarte.dispose();
 
                             }
