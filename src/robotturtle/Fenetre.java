@@ -7,16 +7,54 @@ import java.util.ArrayList;
 
 public class Fenetre extends JFrame{
     JLabel jl;
+    public static int i;
     private static JFrame frame;
     private static JButton poserUnMurButton;
     private static JButton executerLeProgrammeButton;
     private static JButton ajouterUneCarteAuButton;
     private static JPanel p;
     private static JLabel lab;
+    public static ArrayList<Joueur> listeDeJoueurs;
 
 
     public Fenetre(){
 
+
+    }
+    public static JButton cancel(Joueur joueur){
+        JButton buttonC = new JButton("Retour");
+        buttonC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                menuTourDeJeu(joueur);
+            }
+        });
+        return buttonC;
+    }
+    public static void valider(String texte){
+
+        JFrame frameV = new JFrame();
+        frameV.setTitle("Validation");
+        frameV.setVisible(true);
+        frameV.setSize(240, 150);
+        frameV.setLocationRelativeTo(null);
+
+        JPanel panelV = new JPanel();
+
+        JTextField textFieldV = new JTextField(texte);
+
+        JButton buttonV = new JButton("Valider");
+
+        panelV.add(textFieldV);
+        panelV.add(buttonV);
+        frameV.add(panelV);
+
+        buttonV.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frameV.dispose();
+            }
+        });
 
     }
     public static void ajouterUneCarte(Joueur joueur){
@@ -24,15 +62,43 @@ public class Fenetre extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
+
                 JFrame frameAjoutCarte = new JFrame();
                 frameAjoutCarte.setTitle("Selection de cartes");
                 frameAjoutCarte.setVisible(true);
                 frameAjoutCarte.setSize(240, 150);
                 frameAjoutCarte.setLocationRelativeTo(null);
-                frameAjoutCarte.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
                 JPanel panelCarte = new JPanel();
                 panelCarte.setBackground(Color.black);
+
+                ArrayList<JCheckBox> listeCB = new ArrayList<>();
+
+                for(int i = 0; i < joueur.mainDujoueur.TailleDeck(); i++){
+                    JCheckBox cb = new JCheckBox(joueur.mainDujoueur.getCard(i).toString());
+                    listeCB.add(cb);
+                    panelCarte.add(cb);
+                }
+
+                JButton valider = new JButton("Valider");
+                panelCarte.add(valider);
+
+                valider.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        String listeCartes ="";
+                        for(int i = 0; i < listeCB.size();i++){
+                            if(listeCB.get(i).isSelected()){
+                                listeCartes = listeCartes + " " + listeCB.get(i).getText();
+                                joueur.programme.ajouter_programme(joueur.mainDujoueur, i);
+                                frameAjoutCarte.dispose();
+
+                            }
+                        }
+                        valider("Vous avez placé les cartes : " + listeCartes);
+                    }
+                });
+                frameAjoutCarte.add(panelCarte);
             }
         });
     }
@@ -41,27 +107,19 @@ public class Fenetre extends JFrame{
         executerLeProgrammeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                String A="";
-                ArrayList<String> listeCarteProgramme = new ArrayList<>();
-                JFrame frameExecution = new JFrame();
-                frameExecution.setTitle("Execution du programme");
-                frameExecution.setVisible(true);
-                frameExecution.setSize(240, 150);
-                frameExecution.setLocationRelativeTo(null);
-                frameExecution.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-                JPanel panelExecution = new JPanel();
-                panelExecution.setBackground(Color.black);
+
+                frame.dispose();
+                String listeCarteProgramme="Vous avez joué";
+
 
                 for (int i = 0; i<joueur.programme.TailleDeck();i++) {
-                    listeCarteProgramme.add(joueur.programme.getCard(i).toString());
-                    A = A + "\n" + joueur.programme.getCard(i).toString();
+
+                    listeCarteProgramme = listeCarteProgramme + " " + joueur.programme.getCard(i).toString();
+                    joueur.executionProgramme();
                 }
-                JTextField carteProgrammes = new JTextField();
-                carteProgrammes.setText(A);
-                panelExecution.add(carteProgrammes);
-                frameExecution.add(panelExecution);
+                valider(listeCarteProgramme);
+
             }
         });
     }
@@ -71,6 +129,7 @@ public class Fenetre extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
+
                 JFrame frameMur = new JFrame();
                 frameMur.setTitle("Selection type de mur");
                 frameMur.setVisible(true);
@@ -107,7 +166,7 @@ public class Fenetre extends JFrame{
                                 positionX = Integer.parseInt(JOptionPane.showInputDialog(null,"Entrez la position en X"));
                                 positionY = Integer.parseInt(JOptionPane.showInputDialog(null,"Entrez la position en Y"));
                             }while (positionX>9 || positionY>9 || Main.plateau[positionY][positionX].getType()!='V');
-                            Main.plateau[positionY][positionX].setType('G');
+                            Main.plateau[positionY][positionX].glace();
                             joueur.mursGlace.removeCard(0);
                             frameMur.dispose();
                         }
@@ -132,7 +191,7 @@ public class Fenetre extends JFrame{
                                 positionX = Integer.parseInt(JOptionPane.showInputDialog(null,"Entrez la position en X"));
                                 positionY = Integer.parseInt(JOptionPane.showInputDialog(null,"Entrez la position en Y"));
                             }while (positionX>9 || positionY>9 || Main.plateau[positionY][positionX].getType()!='V');
-                            Main.plateau[positionY][positionX].setType('P');
+                            Main.plateau[positionY][positionX].pierre();
                             joueur.mursPierre.removeCard(0);
                             frameMur.dispose();
                         }
@@ -142,7 +201,8 @@ public class Fenetre extends JFrame{
             }
         });
     }
-    public static void initialisation(){
+    public static int initialisation(){
+
         JFrame frameMenu = new JFrame();
         frameMenu.setTitle("menuInitialisation");
         frameMenu.setVisible(true);
@@ -157,22 +217,38 @@ public class Fenetre extends JFrame{
         Joueurs2Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                frameMenu.dispose();
                 Main.initialisation(2);
-                Main.afficher();
+                i=2;
+                //Main.listeDeJoueur = Main.initialisation(2);
+
+
             }
         });
+
         JButton Joueurs3Button = new JButton("3 Joueurs");
         Joueurs3Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                frameMenu.dispose();
                 Main.initialisation(3);
+                i=3;
+                //listeDeJoueurs = Main.initialisation(3);
+                //Main.listeDeJoueur = Main.initialisation(3);
+
             }
         });
+
         JButton Joueurs4Button = new JButton("4 Joueurs");
         Joueurs4Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                frameMenu.dispose();
                 Main.initialisation(4);
+                i=4;
+                //listeDeJoueurs = Main.initialisation(4);
+                //Main.listeDeJoueur = Main.initialisation(4);
+
             }
         });
 
@@ -181,11 +257,12 @@ public class Fenetre extends JFrame{
         pMenu.add(Joueurs4Button);
 
         frameMenu.add(pMenu);
+        return i;
     }
     public static void menuTourDeJeu(Joueur joueur){
 
         frame = new JFrame();
-        frame.setTitle("menuTourDeJeu");
+        frame.setTitle("Tour du joueur"+joueur.getNumero());
         frame.setVisible(true);
         frame.setSize(270, 150);
         frame.setLocationRelativeTo(null);
@@ -195,12 +272,14 @@ public class Fenetre extends JFrame{
         p.setBackground(Color.black);
 
         poserUnMurButton = new JButton("                  Poser un mur                  ");
-
         mur(joueur);
 
         executerLeProgrammeButton = new JButton("      Executer le programme         ");
         executionProgramme(joueur);
+
         ajouterUneCarteAuButton = new JButton("Ajouter une carte au programme");
+        ajouterUneCarte(joueur);
+
         p.add(poserUnMurButton);
         p.add(executerLeProgrammeButton);
         p.add(ajouterUneCarteAuButton);

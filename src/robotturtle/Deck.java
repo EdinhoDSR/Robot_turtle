@@ -128,13 +128,13 @@ public class Deck {
         provenance.removeCard(i);
     }
 
-    public void creerListeMursPierre() throws IOException {
+    public void creerListeMursPierre() {
         for(int i=0; i<3;i++){
             this.addCard(new Card(Valeurs.Mdp));
         }
 
     }
-    public void creerListeMursGlace() throws IOException {
+    public void creerListeMursGlace() {
         for(int i=0; i<2;i++){
             this.addCard(new Card(Valeurs.Mdg));
         }
