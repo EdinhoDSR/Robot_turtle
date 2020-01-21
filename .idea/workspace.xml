@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,18 +61,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/robotturtle/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+            <state relative-caret-position="63">
+              <caret line="193" column="45" selection-start-line="193" selection-start-column="45" selection-end-line="193" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Fenetre#0;class#Fenetre#0" />
                 <element signature="method#cancel#0;class#Fenetre#0" />
-                <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
                 <element signature="method#valider#0;class#Fenetre#0" />
                 <element signature="method#executionProgramme#0;class#Fenetre#0" />
-                <element signature="e#4994#4995#0" expanded="true" />
-                <element signature="e#5038#5039#0" expanded="true" />
+                <element signature="e#5451#5452#0" expanded="true" />
+                <element signature="e#5506#5507#0" expanded="true" />
                 <element signature="method#mur#0;class#Fenetre#0" />
                 <element signature="method#initialisation#0;class#Fenetre#0" />
                 <element signature="method#fenterePlateau#0;class#Fenetre#0" />
@@ -248,7 +247,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579643203226" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579643305176" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP2_G1D_EDINHO_DOSREIS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -327,7 +326,7 @@
       <workItem from="1579422190390" duration="17973000" />
       <workItem from="1579451796214" duration="6438000" />
       <workItem from="1579514257449" duration="3821000" />
-      <workItem from="1579545513165" duration="24077000" />
+      <workItem from="1579545513165" duration="24316000" />
     </task>
     <task id="LOCAL-00001" summary="la vie est belle">
       <created>1578707692115</created>
@@ -385,12 +384,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579642461657</updated>
     </task>
-    <task id="LOCAL-00009" summary="version clean">
-      <created>1574699123545</created>
+    <task id="LOCAL-00009" summary="Testez moi ce putain de jeu">
+      <created>1579643226516</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1574699123545</updated>
+      <updated>1579643226516</updated>
     </task>
     <task id="LOCAL-00010" summary="J'ai rajouté de quoi faire un tableau d'objet">
       <created>1575291906904</created>
@@ -476,11 +475,11 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100065000" />
+    <option name="totallyTimeSpent" value="100304000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,7 +620,8 @@
     <MESSAGE value="j'avance sur le graphique" />
     <MESSAGE value="j'en ai marre" />
     <MESSAGE value="j'ai fait de mon mieux" />
-    <option name="LAST_COMMIT_MESSAGE" value="j'ai fait de mon mieux" />
+    <MESSAGE value="Testez moi ce putain de jeu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testez moi ce putain de jeu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -746,18 +746,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robotturtle/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+        <state relative-caret-position="63">
+          <caret line="193" column="45" selection-start-line="193" selection-start-column="45" selection-end-line="193" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Fenetre#0;class#Fenetre#0" />
             <element signature="method#cancel#0;class#Fenetre#0" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
             <element signature="method#valider#0;class#Fenetre#0" />
             <element signature="method#executionProgramme#0;class#Fenetre#0" />
-            <element signature="e#4994#4995#0" expanded="true" />
-            <element signature="e#5038#5039#0" expanded="true" />
+            <element signature="e#5451#5452#0" expanded="true" />
+            <element signature="e#5506#5507#0" expanded="true" />
             <element signature="method#mur#0;class#Fenetre#0" />
             <element signature="method#initialisation#0;class#Fenetre#0" />
             <element signature="method#fenterePlateau#0;class#Fenetre#0" />

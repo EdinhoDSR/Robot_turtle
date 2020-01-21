@@ -203,7 +203,7 @@ public class Fenetre extends JFrame{
                         }
                         Collections.sort(A,Collections.reverseOrder());
                         for (Integer i:A) {
-                            joueur.mainDujoueur.Defausse(joueur.mainDujoueur,joueur.programme,i);
+                            joueur.mainDujoueur.Defausse(joueur.mainDujoueur,joueur.defausse,i);
                         }
                         valider("Vous avez défaussé les cartes : " + listeCartes);
                     }
