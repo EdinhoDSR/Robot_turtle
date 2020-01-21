@@ -18,11 +18,11 @@ public class Main {
 
     public static void main(String[] args) {
         //fenetre.initialisation();
-        //fenetre.fenterePlateau();
+        fenetre.fenterePlateau();
         //int i = fenetre.initialisation();
-        listeDeJoueurs = initialisation(2);
-        System.out.println(listeDeJoueurs.get(0));
-        //run(2);
+        //listeDeJoueurs = initialisation(2);
+        //System.out.println(listeDeJoueurs.get(0));
+        run(2);
 
 
 
@@ -58,7 +58,7 @@ public class Main {
             String[] imagesJ1 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
             String[] imagesJ2 = {"raphaelN.png","raphaelO.png","raphaelE.png","raphaelS.png"};
             plateau[8][4].joyau();
-            Joueur J1 = new Joueur(1,4,1,imagesJ1);
+            Joueur J1 = new Joueur(1,2,1,imagesJ1);
             plateau[1][2].setJoueur(J1);
             Joueur J2 = new Joueur(2,6,1,imagesJ2);
             plateau[1][6].setJoueur(J2);
@@ -172,23 +172,26 @@ public class Main {
         }
         System.out.println("Fin de la partie");
     }
-    public static void run(int i){
 
-        fenetre.fenterePlateau();
+    public static void run(int i){
 
         ArrayList<Joueur>listeDeJoueur = initialisation(i);
 
 
-        while (true){
-            System.out.println(listeDeJoueurs.get(0));
-            for (Joueur joueur : listeDeJoueurs) {
+        while (listeDeJoueur.size()!=1){
+            System.out.println(listeDeJoueur.get(0));
+            for (Joueur joueur : listeDeJoueur) {
                 System.out.println("tour du joueur "+joueur.getNumero());
                 afficher();
-                tourDeJeu(joueur);
-                defausseJoueur(joueur);
+                fenetre.menuTourDeJeu(joueur);
+                String text = scanner.nextLine();
+                fenetre.defausse(joueur);
+                text = scanner.nextLine();
+                //tourDeJeu(joueur);
+                //defausseJoueur(joueur);
                 remplissageMain(joueur);
-                joueur.affichage();
-                if(listeDeJoueurs.size() == 1){break;}
+                //joueur.affichage();
+                if(listeDeJoueur.size() == 1){break;}
             }
         }
 

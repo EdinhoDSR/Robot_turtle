@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Fenetre extends JFrame{
     JLabel jl;
     public static int i;
+    public static boolean jouer = true;
     private static JFrame frame;
     private static JButton poserUnMurButton;
     private static JButton executerLeProgrammeButton;
@@ -53,6 +54,7 @@ public class Fenetre extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frameV.dispose();
+                jouer = false;
             }
         });
 
@@ -120,6 +122,76 @@ public class Fenetre extends JFrame{
                 }
                 valider(listeCarteProgramme);
 
+            }
+        });
+    }
+    public static void defausse(Joueur joueur){
+        //frame.dispose();
+
+        JFrame frameDefausse = new JFrame();
+        frameDefausse.setTitle("Defausse");
+        frameDefausse.setVisible(true);
+        frameDefausse.setSize(240, 150);
+        frameDefausse.setLocationRelativeTo(null);
+        frameDefausse.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panelDefausse = new JPanel();
+        panelDefausse.setBackground(Color.black);
+
+        JButton ouiButton = new JButton("OUI");
+        JButton nonButton = new JButton("NON");
+
+        panelDefausse.add(ouiButton);
+        panelDefausse.add(nonButton);
+        frameDefausse.add(panelDefausse);
+
+        nonButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frameDefausse.dispose();
+            }
+        });
+        ouiButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frameDefausse.dispose();
+
+                JFrame frameAjoutCarte = new JFrame();
+                frameAjoutCarte.setTitle("Selection de cartes");
+                frameAjoutCarte.setVisible(true);
+                frameAjoutCarte.setSize(240, 150);
+                frameAjoutCarte.setLocationRelativeTo(null);
+
+                JPanel panelCarte = new JPanel();
+                panelCarte.setBackground(Color.black);
+
+                ArrayList<JCheckBox> listeCB = new ArrayList<>();
+
+                for(int i = 0; i < joueur.mainDujoueur.TailleDeck(); i++){
+                    JCheckBox cb = new JCheckBox(joueur.mainDujoueur.getCard(i).toString());
+                    listeCB.add(cb);
+                    panelCarte.add(cb);
+                }
+
+                JButton valider = new JButton("Valider");
+                panelCarte.add(valider);
+
+                valider.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        String listeCartes ="";
+                        for(int i = 0; i < listeCB.size();i++){
+                            if(listeCB.get(i).isSelected()){
+                                listeCartes = listeCartes + " " + listeCB.get(i).getText();
+                                joueur.defausse.ajouter_programme(joueur.mainDujoueur, i);
+                                frameAjoutCarte.dispose();
+
+                            }
+                        }
+                        valider("Vous avez défaussé les cartes : " + listeCartes);
+                    }
+                });
+                frameAjoutCarte.add(panelCarte);
             }
         });
     }
@@ -218,8 +290,10 @@ public class Fenetre extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frameMenu.dispose();
-                Main.initialisation(2);
-                i=2;
+                listeDeJoueurs = Main.initialisation(2);
+                for (Joueur joueur:listeDeJoueurs) {
+                    menuTourDeJeu(joueur);
+                }
                 //Main.listeDeJoueur = Main.initialisation(2);
 
 
@@ -233,7 +307,7 @@ public class Fenetre extends JFrame{
                 frameMenu.dispose();
                 Main.initialisation(3);
                 i=3;
-                //listeDeJoueurs = Main.initialisation(3);
+
                 //Main.listeDeJoueur = Main.initialisation(3);
 
             }
