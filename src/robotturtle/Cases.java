@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Cases {
 
     protected int positionX,positionY;
-    protected char type; //robotturtle.Joueur : J, joyau : j, robotturtle.Mur de pierre : P, robotturtle.Mur de glace : G, robotturtle.Mur de bois : B, Vide : V
+    protected char type; //robotturtle.Joueur : J, joyau : j, robotturtle.Mur de pierre : P, robotturtle.Mur de glace : G, robotturtle.Mur de bois : B, Vide : V, H : hors du plateau
     protected Joueur joueur;
     public JLabel imageGlace;
     public JLabel imageJoyau;
@@ -89,7 +89,6 @@ public class Cases {
     }
     public void joyau(){//Pour s'assurer que la case est occupe et simplifier l'init
         this.type = 'j';
-        Main.plateau[1][2] = new Cases(2,3);
         this.imageJoyau = new JLabel(new ImageIcon("joyau.png"));
         Main.fenetre.remove(Main.plateauVisu);
         this.imageJoyau.setBounds(16+71*(this.getPositionX()-1),15+71*(this.getPositionY()-1),71,71);

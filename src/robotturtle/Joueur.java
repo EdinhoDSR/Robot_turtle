@@ -63,11 +63,11 @@ public class Joueur extends Cases{
                 }
                 if (caseEnCours.type == 'J'){
 
-                    if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (Main.listeDeJoueur.size() == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (Main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                    if (Main.listeDeJoueur.size() >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
                         this.retourCaseDepart();
                         caseEnCours.joueur.retourCaseDepart();
                         break;
@@ -90,11 +90,11 @@ public class Joueur extends Cases{
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (Main.listeDeJoueur.size() == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (Main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                    if (Main.listeDeJoueur.size() >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
                         this.retourCaseDepart();
                         caseEnCours.joueur.retourCaseDepart();
                         break;
@@ -116,11 +116,11 @@ public class Joueur extends Cases{
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (Main.listeDeJoueur.size() == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (Main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                    if (Main.listeDeJoueur.size() >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
                         this.retourCaseDepart();
                         caseEnCours.joueur.retourCaseDepart();
                         break;
@@ -142,11 +142,11 @@ public class Joueur extends Cases{
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (Main.listeDeJoueur.size() == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (Main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                    if (Main.listeDeJoueur.size() >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
                         this.retourCaseDepart();
                         caseEnCours.joueur.retourCaseDepart();
                         break;

@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Cases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Cases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +124,7 @@
       <workItem from="1579268565969" duration="1323000" />
       <workItem from="1579270652861" duration="1554000" />
       <workItem from="1579272828874" duration="3093000" />
-      <workItem from="1579438000545" duration="1799000" />
+      <workItem from="1579438000545" duration="14870000" />
     </task>
     <task id="LOCAL-00001" summary="la vie est belle">
       <created>1578707692115</created>
@@ -175,12 +175,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579433022158</updated>
     </task>
-    <task id="LOCAL-00008" summary="test 1">
-      <created>1574517649421</created>
+    <task id="LOCAL-00008" summary="correction fonctuion Kévin défausse">
+      <created>1579440519867</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1574517649421</updated>
+      <updated>1579440519867</updated>
     </task>
     <task id="LOCAL-00009" summary="version clean">
       <created>1574699123545</created>
@@ -273,7 +273,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +327,8 @@
     <MESSAGE value="version sans bug" />
     <MESSAGE value="affichage avec Delay" />
     <MESSAGE value="version clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="version clean" />
+    <MESSAGE value="correction fonctuion Kévin défausse" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction fonctuion Kévin défausse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
