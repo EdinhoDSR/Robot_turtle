@@ -211,11 +211,13 @@ public class Main {
 
                 f.jouer = true;
                 //String text = scanner.nextLine();
-                f.defausse(joueur);
-                while (f.jouer){
-                    System.out.print("");
+                if(joueur.mainDujoueur.TailleDeck()!=0){
+                    f.defausse(joueur);
+                    while (f.jouer){
+                        System.out.print("");
+                    }
+                    f.jouer = true;
                 }
-                f.jouer = true;
                 //text = scanner.nextLine();
                 //tourDeJeu(joueur);
                 //defausseJoueur(joueur);
