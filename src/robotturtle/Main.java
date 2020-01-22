@@ -1,22 +1,25 @@
 package robotturtle;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.*;
 
 public class Main {
 
 
     private static Scanner scanner = new Scanner(System.in);
-    private static int nombreDeJoueurs ;
-   private static Cases[][] plateau = new Cases[10][10];
-    private static int nombreDeJoyau;
-    private static ArrayList<Joueur> listeDeJoueurs = new ArrayList<>();
-    private static Fenetre fenetre = new Fenetre();
-    private static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
+    public static boolean jouer = true;
+    public static int nombreDeJoueurs ;
+    public static Cases[][] plateau = new Cases[10][10];
+    public static int nombreDeJoyau;
+    public static ArrayList<Joueur> listeDeJoueurs = new ArrayList<>();
+    public static Fenetre fenetre = new Fenetre();
+    public static Fenetre f = new Fenetre();
+    public static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
 
 
     public static void main(String[] args) {
- //       fenetre.initialisation();
+        //fenetre.initialisation();
         fenetre.fenterePlateau();
         //int i = fenetre.initialisation();
         //listeDeJoueurs = initialisation(2);
@@ -26,25 +29,7 @@ public class Main {
 
 
     }
-    public static Fenetre getFenetre(){
-        return (fenetre);
-    }
 
-    public static int getNombreDeJoueurs() {
-        return nombreDeJoueurs;
-    }
-
-    public static JLabel getPlateauVisu() {
-        return plateauVisu;
-    }
-
-    public static Cases[][] getPlateau() {
-        return plateau;
-    }
-
-    public static ArrayList<Joueur> getListeDeJoueurs() {
-        return listeDeJoueurs;
-    }
 
     public static ArrayList<Joueur> initialisation(int nombreJoueurs){
 
@@ -199,11 +184,18 @@ public class Main {
             System.out.println(listeDeJoueur.get(0));
             for (Joueur joueur : listeDeJoueur) {
                 System.out.println("tour du joueur "+joueur.getNumero());
-//                afficher();
-                fenetre.menuTourDeJeu(joueur);
-                String text = scanner.nextLine();
-                fenetre.defausse(joueur);
-                text = scanner.nextLine();
+                afficher();
+                f.menuTourDeJeu(joueur);
+                while (f.jouer){System.out.print("");}
+
+                f.jouer = true;
+                //String text = scanner.nextLine();
+                f.defausse(joueur);
+                while (f.jouer){
+                    System.out.print("");
+                }
+                f.jouer = true;
+                //text = scanner.nextLine();
                 //tourDeJeu(joueur);
                 //defausseJoueur(joueur);
                 remplissageMain(joueur);
