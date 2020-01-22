@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="Testez moi ce putain de jeu">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,12 +28,129 @@
     <expand />
     <select />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/robotturtle/Cases.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2193">
+              <caret line="143" selection-start-line="143" selection-end-line="143" />
+              <folding>
+                <element signature="e#2203#2204#0" expanded="true" />
+                <element signature="e#2243#2244#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/robotturtle/Fenetre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="737">
+              <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Fenetre#0;class#Fenetre#0" />
+                <element signature="method#cancel#0;class#Fenetre#0" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
+                <element signature="e#9220#9823#1" />
+                <element signature="method#initialisation#0;class#Fenetre#0" />
+                <element signature="method#fenterePlateau#0;class#Fenetre#0" />
+                <element signature="method#deplacerJoueur#0;class#Fenetre#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/robotturtle/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initialisation#0;class#Main#0" />
+                <element signature="method#afficher#0;class#Main#0" />
+                <element signature="method#run2#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/robotturtle/Card.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/robotturtle/Valeurs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pro</find>
+      <find>créerDeck</find>
+      <find>avancer</find>
+      <find>I</find>
+      <find>J</find>
+      <find>Programme</find>
+      <find>demiTour</find>
+      <find>P</find>
+      <find>Voici les cartes dans votre programme</find>
+      <find>ajouter_programme</find>
+      <find>creerListeMurs</find>
+      <find>setJoueur</find>
+      <find>scanner</find>
+      <find>jaipasdenom</find>
+      <find>autreJoueur</find>
+      <find>oui?</find>
+      <find>test</find>
+      <find>mélanger()</find>
+      <find>throws IOException</find>
+      <find>listeJoueur</find>
+      <find>nombreDeJoyau</find>
+      <find>Scanner</find>
+      <find>listeCarteProgramme</find>
+      <find>frameAjoutCarte</find>
+      <find>frameMenu</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -42,7 +160,27 @@
     </option>
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/robotturtle/Valeurs.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/robotturtle/Cases.java" />
+        <option value="$PROJECT_DIR$/src/robotturtle/MenuTourDeJeu.java" />
+        <option value="$PROJECT_DIR$/src/robotturtle/Deck.java" />
+        <option value="$PROJECT_DIR$/src/robotturtle/Joueur.java" />
+        <option value="$PROJECT_DIR$/src/robotturtle/Main.java" />
+        <option value="$PROJECT_DIR$/src/robotturtle/Fenetre.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="PhpServers">
     <servers />
@@ -53,17 +191,48 @@
     <option name="width" value="697" />
     <option name="height" value="391" />
   </component>
-  <component name="ProjectId" id="1WkLCoxX3nvdLVB7qv7YAXYEUZX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Robot_turtle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Robot_turtle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Robot_turtle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Robot_turtle" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Robot_turtle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Robot_turtle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Robot_turtle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Robot_turtle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="robotturtle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Robot_turtle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579643305176" />
@@ -72,6 +241,18 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.test">
     <configuration name="MenuTourDeJeu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -99,18 +280,6 @@
         <item itemvalue="Application.MenuTourDeJeu" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -298,7 +467,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100304000" />
+    <option name="totallyTimeSpent" value="103685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -309,6 +478,72 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13484849" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49848485" weight="0.32973805" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990755" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32973805" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49848485" weight="0.32973805" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32973805" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151515" side_tool="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32973805" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32954547" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32954547" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13484849" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49848485" weight="0.32973805" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990755" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32973805" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49848485" weight="0.32973805" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32973805" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151515" side_tool="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32973805" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32954547" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32954547" />
+    </layout-to-restore>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -318,7 +553,20 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -363,67 +611,215 @@
     <MESSAGE value="Testez moi ce putain de jeu" />
     <option name="LAST_COMMIT_MESSAGE" value="Testez moi ce putain de jeu" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="357" y="55" key="CommitChangelistDialog2" timestamp="1579692039831">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="357" y="55" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1579692039830" />
-    <state x="357" y="55" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1579645360863" />
-    <state width="1358" height="201" key="GridCell.Tab.0.bottom" timestamp="1579692044141">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state width="1358" height="201" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1579692044141" />
-    <state width="1358" height="200" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1579645890492" />
-    <state width="1358" height="201" key="GridCell.Tab.0.center" timestamp="1579692044141">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state width="1358" height="201" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1579692044141" />
-    <state width="1358" height="200" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1579645890491" />
-    <state width="1358" height="201" key="GridCell.Tab.0.left" timestamp="1579692044140">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state width="1358" height="201" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1579692044140" />
-    <state width="1358" height="200" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1579645890490" />
-    <state width="1358" height="201" key="GridCell.Tab.0.right" timestamp="1579692044141">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state width="1358" height="201" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1579692044141" />
-    <state width="1358" height="200" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1579645890491" />
-    <state width="1358" height="249" key="GridCell.Tab.1.bottom" timestamp="1579689218679">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state width="1358" height="249" key="GridCell.Tab.1.bottom/0.23.1440.827@0.23.1440.827" timestamp="1579689218679" />
-    <state width="1358" height="249" key="GridCell.Tab.1.center" timestamp="1579689218677">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state width="1358" height="249" key="GridCell.Tab.1.center/0.23.1440.827@0.23.1440.827" timestamp="1579689218677" />
-    <state width="1358" height="249" key="GridCell.Tab.1.left" timestamp="1579689218675">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state width="1358" height="249" key="GridCell.Tab.1.left/0.23.1440.827@0.23.1440.827" timestamp="1579689218675" />
-    <state width="1358" height="249" key="GridCell.Tab.1.right" timestamp="1579689218678">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state width="1358" height="249" key="GridCell.Tab.1.right/0.23.1440.827@0.23.1440.827" timestamp="1579689218678" />
-    <state x="403" y="288" key="com.intellij.ide.util.TipDialog" timestamp="1579688529690">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="403" y="288" key="com.intellij.ide.util.TipDialog/0.23.1440.827@0.23.1440.827" timestamp="1579688529690" />
-    <state x="513" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579688719839">
-      <screen x="0" y="23" width="1440" height="827" />
-    </state>
-    <state x="513" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.827@0.23.1440.827" timestamp="1579688719839" />
-    <state x="513" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.828@0.23.1440.828" timestamp="1579645630011" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../TP2_G1D_EDINHO_DOSREIS/src/TP2.java</url>
           <line>111</line>
+          <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
+          <folding>
+            <element signature="e#10225#10226#0" expanded="true" />
+            <element signature="e#10308#10309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/MenuTourDeJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="145" column="7" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Valeurs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="371" selection-start-line="371" selection-end-line="371" />
+          <folding>
+            <element signature="e#13945#13946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Cases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="457" selection-start-line="457" selection-end-line="457" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+          <folding>
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Joueur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialisation#0;class#Main#0" />
+            <element signature="method#afficher#0;class#Main#0" />
+            <element signature="method#run2#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robotturtle/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Fenetre#0;class#Fenetre#0" />
+            <element signature="method#cancel#0;class#Fenetre#0" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#9220#9823#1" />
+            <element signature="method#initialisation#0;class#Fenetre#0" />
+            <element signature="method#fenterePlateau#0;class#Fenetre#0" />
+            <element signature="method#deplacerJoueur#0;class#Fenetre#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Robot_turtle</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -34,11 +34,11 @@ public class Fenetre extends JFrame{
         return buttonC;
     }
     public static void valider(String texte){
-
+        frame.dispose();
         JFrame frameV = new JFrame();
         frameV.setTitle("Validation");
         frameV.setVisible(true);
-        frameV.setSize(500,200);
+        frameV.setSize(240, 150);
         frameV.setLocationRelativeTo(null);
 
         JPanel panelV = new JPanel();
@@ -69,16 +69,16 @@ public class Fenetre extends JFrame{
                 JFrame frameAjoutCarte = new JFrame();
                 frameAjoutCarte.setTitle("Selection de cartes");
                 frameAjoutCarte.setVisible(true);
-                frameAjoutCarte.setSize(500, 200);
+                frameAjoutCarte.setSize(240, 150);
                 frameAjoutCarte.setLocationRelativeTo(null);
 
                 JPanel panelCarte = new JPanel();
-                panelCarte.setBackground(Color.white);
+                panelCarte.setBackground(Color.black);
 
                 ArrayList<JCheckBox> listeCB = new ArrayList<>();
 
                 for(int i = 0; i < joueur.mainDujoueur.TailleDeck(); i++){
-                    JCheckBox cb = new JCheckBox(String.valueOf(joueur.mainDujoueur.getCard(i).getvaleurs()));
+                    JCheckBox cb = new JCheckBox(joueur.mainDujoueur.getCard(i).toString());
                     listeCB.add(cb);
                     panelCarte.add(cb);
                 }
@@ -91,12 +91,10 @@ public class Fenetre extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         String listeCartes ="";
                         ArrayList<Integer> A = new ArrayList<>();
-                        System.out.println(listeCB.size());
+
                         for(int i = 0; i < listeCB.size();i++){
 
- //                           System.out.println(i);
                             if(listeCB.get(i).isSelected()){
-//                                System.out.println(i);
                                 listeCartes = listeCartes + " " + listeCB.get(i).getText();
                                 A.add(i);
 
@@ -124,15 +122,14 @@ public class Fenetre extends JFrame{
 
 
                 frame.dispose();
-                String listeCarteProgramme="Vous avez joué :";
+                String listeCarteProgramme="Vous avez joué";
 
 
                 for (int i = 0; i<joueur.programme.TailleDeck();i++) {
 
-                    listeCarteProgramme = listeCarteProgramme + "/ " + joueur.programme.getCard(i).toString();
-
+                    listeCarteProgramme = listeCarteProgramme + " " + joueur.programme.getCard(i).toString();
+                    joueur.executionProgramme();
                 }
-                joueur.executionProgramme();
                 valider(listeCarteProgramme);
 
             }
@@ -144,12 +141,13 @@ public class Fenetre extends JFrame{
         JFrame frameDefausse = new JFrame();
         frameDefausse.setTitle("Defausse");
         frameDefausse.setVisible(true);
-        frameDefausse.setSize(500, 200);
+        frameDefausse.setSize(240, 150);
         frameDefausse.setLocationRelativeTo(null);
         frameDefausse.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panelDefausse = new JPanel();
-        panelDefausse.setBackground(Color.white);
+        panelDefausse.setBackground(Color.black);
+
         JButton ouiButton = new JButton("OUI");
         JButton nonButton = new JButton("NON");
 
@@ -161,6 +159,7 @@ public class Fenetre extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frameDefausse.dispose();
+                jouer = false;
             }
         });
         ouiButton.addActionListener(new ActionListener() {
@@ -171,11 +170,11 @@ public class Fenetre extends JFrame{
                 JFrame frameAjoutCarte = new JFrame();
                 frameAjoutCarte.setTitle("Selection de cartes");
                 frameAjoutCarte.setVisible(true);
-                frameAjoutCarte.setSize(500, 200);
+                frameAjoutCarte.setSize(240, 150);
                 frameAjoutCarte.setLocationRelativeTo(null);
 
                 JPanel panelCarte = new JPanel();
-                panelCarte.setBackground(Color.white);
+                panelCarte.setBackground(Color.black);
 
                 ArrayList<JCheckBox> listeCB = new ArrayList<>();
 
@@ -193,7 +192,6 @@ public class Fenetre extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         ArrayList<Integer> A = new ArrayList<>();
                         String listeCartes ="";
-
                         for(int i = 0; i < listeCB.size();i++){
                             if(listeCB.get(i).isSelected()){
                                 listeCartes = listeCartes + " " + listeCB.get(i).getText();
@@ -228,13 +226,14 @@ public class Fenetre extends JFrame{
                 frameMur.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
                 JPanel panelMur = new JPanel();
-                panelMur.setBackground(Color.white);
+                panelMur.setBackground(Color.black);
 
                 JButton glaceButton = new JButton("Glace");
                 JButton pierreButton = new JButton("Pierre");
 
                 panelMur.add(glaceButton);
                 panelMur.add(pierreButton);
+
                 frameMur.add(panelMur);
 
                 glaceButton.addActionListener(new ActionListener() {
@@ -243,11 +242,8 @@ public class Fenetre extends JFrame{
                         int positionX;
                         int positionY;
                         if (joueur.mursGlace.TailleDeck() == 0){
-                            panelMur.removeAll();
-                            JTextField output = new JTextField();
-                            output.setText( "Vous n'avez pas de murs de glace");
-                            panelMur.add(output);
-                            frameMur.repaint();
+                            frameMur.dispose();
+                            valider("Vous n'avez pas de mur");
                             menuTourDeJeu(joueur);
                         }
                         else{
@@ -257,6 +253,7 @@ public class Fenetre extends JFrame{
                             }while (positionX>9 || positionY>9 || Main.plateau[positionY][positionX].getType()!='V');
                             Main.plateau[positionY][positionX].glace();
                             joueur.mursGlace.removeCard(0);
+                            valider("Mur posé");
                             frameMur.dispose();
                         }
                     }
@@ -268,11 +265,8 @@ public class Fenetre extends JFrame{
                         int positionX;
                         int positionY;
                         if (joueur.mursPierre.TailleDeck() == 0){
-                            panelMur.removeAll();
-                            JTextField output = new JTextField();
-                            output.setText("Vous n'avez pas de murs de pierre");
-                            panelMur.add(output);
-                            frameMur.repaint();
+                            frameMur.dispose();
+                            valider("Vous n'avez pas de mur");
                             menuTourDeJeu(joueur);
                         }
                         else{
@@ -282,6 +276,7 @@ public class Fenetre extends JFrame{
                             }while (positionX>9 || positionY>9 || Main.plateau[positionY][positionX].getType()!='V');
                             Main.plateau[positionY][positionX].pierre();
                             joueur.mursPierre.removeCard(0);
+                            valider("Mur posé");
                             frameMur.dispose();
                         }
                     }
@@ -355,13 +350,12 @@ public class Fenetre extends JFrame{
         frame = new JFrame();
         frame.setTitle("Tour du joueur"+joueur.getNumero());
         frame.setVisible(true);
-        frame.setSize(500, 200);
+        frame.setSize(270, 150);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         p = new JPanel();
-        p.setBackground(Color.white);
-        p.setPreferredSize(new Dimension(1000,1000));
+        p.setBackground(Color.black);
 
         poserUnMurButton = new JButton("                  Poser un mur                  ");
         mur(joueur);
