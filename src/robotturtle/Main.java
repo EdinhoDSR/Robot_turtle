@@ -1,7 +1,7 @@
 package robotturtle;
 
 import javax.swing.*;
-import java.io.IOException;
+import java.awt.*;
 import java.util.*;
 
 public class Main {
@@ -10,21 +10,28 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
     public static int nombreDeJoueurs ;
     public static Cases[][] plateau = new Cases[10][10];
-    public static ArrayList<Joueur> listeDeJoueur = new ArrayList<>();
+    public static int nombreDeJoyau;
+    public static ArrayList<Joueur> listeDeJoueurs = new ArrayList<>();
     public static Fenetre fenetre = new Fenetre();
     public static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
 
 
-    public static void main(String[] args) throws IOException {
-       run();
+    public static void main(String[] args) {
+        //fenetre.initialisation();
+        fenetre.fenterePlateau();
+        //int i = fenetre.initialisation();
+        //listeDeJoueurs = initialisation(2);
+        //System.out.println(listeDeJoueurs.get(0));
+        run(2);
 
-   }
 
 
-    private static ArrayList<Joueur> initialisation(int nombreJoueurs) throws IOException {
+    }
 
-        ArrayList<Joueur> listeJoueur = new ArrayList<>();
 
+    public static ArrayList<Joueur> initialisation(int nombreJoueurs){
+
+        ArrayList<Joueur> listeDeJoueur = new ArrayList<>();
         plateauVisu.setBounds(0,0,600,600);
 
         for (int i=0;i<10;i++){// boucle qui fait les cases vides
@@ -51,13 +58,13 @@ public class Main {
             String[] imagesJ1 = {"leonardoN.png","leonardoO.png","leonardoE.png","leonardoS.png"};
             String[] imagesJ2 = {"raphaelN.png","raphaelO.png","raphaelE.png","raphaelS.png"};
             plateau[8][4].joyau();
-            Joueur J1 = new Joueur(1,4,7,imagesJ1);
+            Joueur J1 = new Joueur(1,2,1,imagesJ1);
             plateau[1][2].setJoueur(J1);
             Joueur J2 = new Joueur(2,6,1,imagesJ2);
             plateau[1][6].setJoueur(J2);
 
-            listeJoueur.add(J1);
-            listeJoueur.add(J2);
+            listeDeJoueur.add(J1);
+            listeDeJoueur.add(J2);
 
             // Initialisation de la fenêtre joueur
             fenetre.deplacerJoueur(J1,J1.getPositionX(),J1.getPositionY());
@@ -86,9 +93,9 @@ public class Main {
             plateau[1][4].setJoueur(J2);
             plateau[1][7].setJoueur(J3);
 
-            listeJoueur.add(J1);
-            listeJoueur.add(J2);
-            listeJoueur.add(J3);
+            listeDeJoueur.add(J1);
+            listeDeJoueur.add(J2);
+            listeDeJoueur.add(J3);
 
             // Initialisation de la fenêtre joueur
 
@@ -120,10 +127,10 @@ public class Main {
             plateau[1][6].setJoueur(J3);
             plateau[1][8].setJoueur(J4);
 
-            listeJoueur.add(J1);
-            listeJoueur.add(J2);
-            listeJoueur.add(J3);
-            listeJoueur.add(J4);
+            listeDeJoueur.add(J1);
+            listeDeJoueur.add(J2);
+            listeDeJoueur.add(J3);
+            listeDeJoueur.add(J4);
 
             // Initialisation de la fenêtre joueur
 
@@ -139,37 +146,55 @@ public class Main {
             fenetre.repaint();
 
         }
-        return listeJoueur;
+    return listeDeJoueur;
     }
 
-
-
-    private static void afficher(){
+    public static void afficher(){
         for(int i=0; i<10; i++){
             for(int j=0; j<10; j++){System.out.print(plateau[i][j].getType());}// on a une ligne
             System.out.println();// on a le retour a la ligne
         }
     }
-
-    public static void run() throws IOException {
+    public static void run2(){
 
         fenetre.fenterePlateau();
-        System.out.println("Veuillez saisir le nombre de joueur ");
-        nombreDeJoueurs = scanner.nextInt();
-        ArrayList<Joueur>listeDeJoueur = initialisation(nombreDeJoueurs);
-        while (listeDeJoueur.size() >1){
+        fenetre.initialisation();
+        ArrayList<Joueur> listeDeJoueur = fenetre.listeDeJoueurs;
+        while (listeDeJoueur.size()>1){
+            System.out.println(listeDeJoueur.get(0));
             for (Joueur joueur : listeDeJoueur) {
+                System.out.println("good");
                 System.out.println("tour du joueur "+joueur.getNumero());
-//                afficher();
-                tourDeJeu(joueur);
-                defausseJoueur(joueur);
-                remplissageMain(joueur);
-                joueur.affichage();
-                System.out.println(listeDeJoueur.size());
+                afficher();
+                fenetre.menuTourDeJeu(joueur);
                 if(listeDeJoueur.size() == 1){break;}
             }
         }
         System.out.println("Fin de la partie");
+    }
+
+    public static void run(int i){
+
+        ArrayList<Joueur>listeDeJoueur = initialisation(i);
+
+
+        while (listeDeJoueur.size()!=1){
+            System.out.println(listeDeJoueur.get(0));
+            for (Joueur joueur : listeDeJoueur) {
+                System.out.println("tour du joueur "+joueur.getNumero());
+                afficher();
+                fenetre.menuTourDeJeu(joueur);
+                String text = scanner.nextLine();
+                fenetre.defausse(joueur);
+                text = scanner.nextLine();
+                //tourDeJeu(joueur);
+                //defausseJoueur(joueur);
+                remplissageMain(joueur);
+                //joueur.affichage();
+                if(listeDeJoueur.size() == 1){break;}
+            }
+        }
+
     }
 
     public static void tourDeJeu(Joueur joueur){

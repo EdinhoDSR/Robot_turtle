@@ -24,7 +24,7 @@ public class Joueur extends Cases{
     }
 
 
-    public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart, String[] nomsFichiersImages) throws IOException {
+    public Joueur(int pNumero, int pPositionXDepart, int pPositionYDepart, String[] nomsFichiersImages)  {
 
         this.type = 'J';
         this.positionXDepart = pPositionXDepart;
@@ -45,6 +45,7 @@ public class Joueur extends Cases{
         this.defausse = new Deck();
         this.mainDujoueur = new Deck();
         this.programme = new Deck();
+        this.programme.addCard(new Card(Valeurs.LASER));
         Main.remplissageMain(this);
         this.imageElement = new JLabel(new ImageIcon(nomsFichiersImages[3]));
         this.listeImages = nomsFichiersImages;
@@ -328,7 +329,7 @@ public class Joueur extends Cases{
             caseDirection.setType('V');
             casesJoueur.setType('V');
             System.out.println("J"+this.numero+" a gagné");
-            Main.listeDeJoueur.remove(this);
+            Main.listeDeJoueurs.remove(this);
             Main.fenetre.remove(caseDirection.imageJoyau);
             Main.fenetre.remove(this.imageElement);
             Main.fenetre.repaint();
