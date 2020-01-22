@@ -1,19 +1,18 @@
 package robotturtle;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.*;
 
 public class Main {
 
 
     private static Scanner scanner = new Scanner(System.in);
-    public static int nombreDeJoueurs ;
-    public static Cases[][] plateau = new Cases[10][10];
-    public static int nombreDeJoyau;
-    public static ArrayList<Joueur> listeDeJoueurs = new ArrayList<>();
-    public static Fenetre fenetre = new Fenetre();
-    public static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
+    private static int nombreDeJoueurs ;
+   private static Cases[][] plateau = new Cases[10][10];
+    private static int nombreDeJoyau;
+    private static ArrayList<Joueur> listeDeJoueurs = new ArrayList<>();
+    private static Fenetre fenetre = new Fenetre();
+    private static JLabel plateauVisu = new JLabel(new ImageIcon("plateau.png"));
 
 
     public static void main(String[] args) {
@@ -27,7 +26,25 @@ public class Main {
 
 
     }
+    public static Fenetre getFenetre(){
+        return (fenetre);
+    }
 
+    public static int getNombreDeJoueurs() {
+        return nombreDeJoueurs;
+    }
+
+    public static JLabel getPlateauVisu() {
+        return plateauVisu;
+    }
+
+    public static Cases[][] getPlateau() {
+        return plateau;
+    }
+
+    public static ArrayList<Joueur> getListeDeJoueurs() {
+        return listeDeJoueurs;
+    }
 
     public static ArrayList<Joueur> initialisation(int nombreJoueurs){
 

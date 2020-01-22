@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class Joueur extends Cases{
 
 
-    public int numero,positionXDepart,positionYDepart;
+    private int numero,positionXDepart,positionYDepart;
     public char direction;
     public Deck defausse,mainDujoueur,deck,programme,mursGlace,mursPierre;
     public JLabel imageElement;
@@ -56,20 +56,20 @@ public class Joueur extends Cases{
     public void laser(){
         if (this.direction == 'N'){// Cas où le joueur regarde vers le nord
             for (int i = 1;i<this.getPositionY();i++){
-                Cases caseEnCours = Main.plateau[this.getPositionY()-i][this.getPositionX()];
+                Cases caseEnCours = Main.getPlateau()[this.getPositionY()-i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
-                    Main.fenetre.remove(caseEnCours.imageGlace);
-                    Main.fenetre.repaint();
+                    Main.getFenetre().remove(caseEnCours.imageGlace);
+                    Main.getFenetre().repaint();
                     break;
                 }
                 if (caseEnCours.type == 'J'){
 
-                    if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (Main.getNombreDeJoueurs() == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (Main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                    if (Main.getNombreDeJoueurs() >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
                         this.retourCaseDepart();
                         caseEnCours.joueur.retourCaseDepart();
                         break;
@@ -82,21 +82,21 @@ public class Joueur extends Cases{
             }
         }
         if (this.direction == 'S'){// Cas où le joueur regarde vers le Sud
-            for (int i = this.getPositionY()+1;i<Main.plateau.length;i++){
-                Cases caseEnCours = Main.plateau[i][this.getPositionX()];
+            for (int i = this.getPositionY()+1;i<Main.getPlateau().length;i++){
+                Cases caseEnCours = Main.getPlateau()[i][this.getPositionX()];
                 if (caseEnCours.type == 'G'){
                     System.out.println("coucou");
                     caseEnCours.setType('V');
-                    Main.fenetre.remove(caseEnCours.imageGlace);
-                    Main.fenetre.repaint();
+                    Main.getFenetre().remove(caseEnCours.imageGlace);
+                    Main.getFenetre().repaint();
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (Main.getNombreDeJoueurs() == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (Main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                    if (Main.getNombreDeJoueurs() >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
                         this.retourCaseDepart();
                         caseEnCours.joueur.retourCaseDepart();
                         break;
@@ -109,20 +109,20 @@ public class Joueur extends Cases{
             }
         }
         if (this.direction == 'E'){// Cas où le joueur regarde vers l'Est
-            for (int i = this.getPositionX()+1;i<Main.plateau.length;i++){
-                Cases caseEnCours = Main.plateau[this.getPositionY()][i];
+            for (int i = this.getPositionX()+1;i<Main.getPlateau().length;i++){
+                Cases caseEnCours = Main.getPlateau()[this.getPositionY()][i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
-                    Main.fenetre.remove(caseEnCours.imageGlace);
-                    Main.fenetre.repaint();
+                    Main.getFenetre().remove(caseEnCours.imageGlace);
+                    Main.getFenetre().repaint();
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (Main.getNombreDeJoueurs() == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (Main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                    if (Main.getNombreDeJoueurs() >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
                         this.retourCaseDepart();
                         caseEnCours.joueur.retourCaseDepart();
                         break;
@@ -136,19 +136,19 @@ public class Joueur extends Cases{
         }
         if (this.direction == 'O'){// Cas où le joueur regarde vers l'ouest
             for (int i = 1;i<this.getPositionX();i++){
-                Cases caseEnCours = Main.plateau[this.getPositionY()][this.getPositionX()-i];
+                Cases caseEnCours = Main.getPlateau()[this.getPositionY()][this.getPositionX()-i];
                 if (caseEnCours.type == 'G'){
                     caseEnCours.setType('V');
-                    Main.fenetre.remove(caseEnCours.imageGlace);
-                    Main.fenetre.repaint();
+                    Main.getFenetre().remove(caseEnCours.imageGlace);
+                    Main.getFenetre().repaint();
                     break;
                 }
                 if (caseEnCours.type == 'J'){
-                    if (Main.nombreDeJoueurs == 2){// si il y a que deux joueurs, le joueur fait demi-tour
+                    if (Main.getNombreDeJoueurs() == 2){// si il y a que deux joueurs, le joueur fait demi-tour
                         caseEnCours.joueur.demiTour();
                         break;
                     }
-                    if (Main.nombreDeJoueurs >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
+                    if (Main.getNombreDeJoueurs() >2){//Si il y en a plus, les deux joueur reviennent à leur case initiale
                         this.retourCaseDepart();
                         caseEnCours.joueur.retourCaseDepart();
                         break;
@@ -165,44 +165,44 @@ public class Joueur extends Cases{
 
         if(this.direction=='N'){
             this.direction='E';
-            Main.fenetre.remove(this.imageElement);
+            Main.getFenetre().remove(this.imageElement);
             this.imageElement = new JLabel(new ImageIcon(this.listeImages[2]));
-            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
-            Main.fenetre.remove(Main.plateauVisu);
-            Main.fenetre.add(this.imageElement);
-            Main.fenetre.add(Main.plateauVisu);
-            Main.fenetre.repaint();
+            Main.getFenetre().deplacerJoueur(this,this.positionX,this.positionY);
+            Main.getFenetre().remove(Main.getPlateauVisu());
+            Main.getFenetre().add(this.imageElement);
+            Main.getFenetre().add(Main.getPlateauVisu());
+            Main.getFenetre().repaint();
 
         }
         else if(
                 this.direction=='E'){this.direction='S';
-            Main.fenetre.remove(this.imageElement);
+            Main.getFenetre().remove(this.imageElement);
             this.imageElement = new JLabel(new ImageIcon(this.listeImages[3]));
-            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
-            Main.fenetre.remove(Main.plateauVisu);
-            Main.fenetre.add(this.imageElement);
-            Main.fenetre.add(Main.plateauVisu);
-            Main.fenetre.repaint();
+            Main.getFenetre().deplacerJoueur(this,this.positionX,this.positionY);
+            Main.getFenetre().remove(Main.getPlateauVisu());
+            Main.getFenetre().add(this.imageElement);
+            Main.getFenetre().add(Main.getPlateauVisu());
+            Main.getFenetre().repaint();
         }
         else if(
                 this.direction=='S'){this.direction='O';
-            Main.fenetre.remove(this.imageElement);
+            Main.getFenetre().remove(this.imageElement);
             this.imageElement = new JLabel(new ImageIcon(this.listeImages[1]));
-            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
-            Main.fenetre.remove(Main.plateauVisu);
-            Main.fenetre.add(this.imageElement);
-            Main.fenetre.add(Main.plateauVisu);
-            Main.fenetre.repaint();
+            Main.getFenetre().deplacerJoueur(this,this.positionX,this.positionY);
+            Main.getFenetre().remove(Main.getPlateauVisu());
+            Main.getFenetre().add(this.imageElement);
+            Main.getFenetre().add(Main.getPlateauVisu());
+            Main.getFenetre().repaint();
         }
         else if(this.direction=='O'){
             this.direction='N';
-            Main.fenetre.remove(this.imageElement);
+            Main.getFenetre().remove(this.imageElement);
             this.imageElement = new JLabel(new ImageIcon(this.listeImages[0]));
-            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
-            Main.fenetre.remove(Main.plateauVisu);
-            Main.fenetre.add(this.imageElement);
-            Main.fenetre.add(Main.plateauVisu);
-            Main.fenetre.repaint();
+            Main.getFenetre().deplacerJoueur(this,this.positionX,this.positionY);
+            Main.getFenetre().remove(Main.getPlateauVisu());
+            Main.getFenetre().add(this.imageElement);
+            Main.getFenetre().add(Main.getPlateauVisu());
+            Main.getFenetre().repaint();
         }
         try {
             TimeUnit.MILLISECONDS.sleep(500);
@@ -214,43 +214,43 @@ public class Joueur extends Cases{
 
         if(this.direction=='N'){
             this.direction='O';
-            Main.fenetre.remove(this.imageElement);
+            Main.getFenetre().remove(this.imageElement);
             this.imageElement = new JLabel(new ImageIcon(this.listeImages[1]));
-            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
-            Main.fenetre.remove(Main.plateauVisu);
-            Main.fenetre.add(this.imageElement);
-            Main.fenetre.add(Main.plateauVisu);
-            Main.fenetre.repaint();
+            Main.getFenetre().deplacerJoueur(this,this.positionX,this.positionY);
+            Main.getFenetre().remove(Main.getPlateauVisu());
+            Main.getFenetre().add(this.imageElement);
+            Main.getFenetre().add(Main.getPlateauVisu());
+            Main.getFenetre().repaint();
         }
         else if(this.direction=='O'){
             this.direction='S';
-            Main.fenetre.remove(this.imageElement);
+            Main.getFenetre().remove(this.imageElement);
             this.imageElement = new JLabel(new ImageIcon(this.listeImages[3]));
-            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
-            Main.fenetre.remove(Main.plateauVisu);
-            Main.fenetre.add(this.imageElement);
-            Main.fenetre.add(Main.plateauVisu);
-            Main.fenetre.repaint();
+            Main.getFenetre().deplacerJoueur(this,this.positionX,this.positionY);
+            Main.getFenetre().remove(Main.getPlateauVisu());
+            Main.getFenetre().add(this.imageElement);
+            Main.getFenetre().add(Main.getPlateauVisu());
+            Main.getFenetre().repaint();
         }
         else if(this.direction=='S'){
             this.direction='E';
-            Main.fenetre.remove(this.imageElement);
+            Main.getFenetre().remove(this.imageElement);
             this.imageElement = new JLabel(new ImageIcon(this.listeImages[2]));
-            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
-            Main.fenetre.remove(Main.plateauVisu);
-            Main.fenetre.add(this.imageElement);
-            Main.fenetre.add(Main.plateauVisu);
-            Main.fenetre.repaint();
+            Main.getFenetre().deplacerJoueur(this,this.positionX,this.positionY);
+            Main.getFenetre().remove(Main.getPlateauVisu());
+            Main.getFenetre().add(this.imageElement);
+            Main.getFenetre().add(Main.getPlateauVisu());
+            Main.getFenetre().repaint();
         }
         else if(this.direction=='E'){
             this.direction='N';
-            Main.fenetre.remove(this.imageElement);
+            Main.getFenetre().remove(this.imageElement);
             this.imageElement = new JLabel(new ImageIcon(this.listeImages[0]));
-            Main.fenetre.deplacerJoueur(this,this.positionX,this.positionY);
-            Main.fenetre.remove(Main.plateauVisu);
-            Main.fenetre.add(this.imageElement);
-            Main.fenetre.add(Main.plateauVisu);
-            Main.fenetre.repaint();
+            Main.getFenetre().deplacerJoueur(this,this.positionX,this.positionY);
+            Main.getFenetre().remove(Main.getPlateauVisu());
+            Main.getFenetre().add(this.imageElement);
+            Main.getFenetre().add(Main.getPlateauVisu());
+            Main.getFenetre().repaint();
         }
         try {
             TimeUnit.MILLISECONDS.sleep(500);
@@ -263,43 +263,43 @@ public class Joueur extends Cases{
         this.tournerG();
     }
     public void est(){
-        Main.plateau[this.positionY][this.positionX+1].setJoueur(this);
-        Main.plateau[this.positionY][this.positionX].setType('V');
+        Main.getPlateau()[this.positionY][this.positionX+1].setJoueur(this);
+        Main.getPlateau()[this.positionY][this.positionX].setType('V');
         this.positionX=this.positionX+1;
     }
     public void nord(){
-        Main.plateau[this.positionY-1][this.positionX].setJoueur(this);
-        Main.plateau[this.positionY][this.positionX].setType('V');
+        Main.getPlateau()[this.positionY-1][this.positionX].setJoueur(this);
+        Main.getPlateau()[this.positionY][this.positionX].setType('V');
         this.positionY=this.positionY-1;
     }
     public void sud(){
-        Main.plateau[this.positionY+1][this.positionX].setJoueur(this);
-        Main.plateau[this.positionY][this.positionX].setType('V');
+        Main.getPlateau()[this.positionY+1][this.positionX].setJoueur(this);
+        Main.getPlateau()[this.positionY][this.positionX].setType('V');
         this.positionY=this.positionY+1;
     }
     public void ouest(){
-        Main.plateau[this.positionY][this.positionX-1].setJoueur(this);
-        Main.plateau[this.positionY][this.positionX].setType('V');
+        Main.getPlateau()[this.positionY][this.positionX-1].setJoueur(this);
+        Main.getPlateau()[this.positionY][this.positionX].setType('V');
         this.positionX=this.positionX-1;
     }
     public void retourCaseDepart(){
-        if(Main.plateau[this.positionYDepart][this.positionXDepart].getType() == 'J'){
+        if(Main.getPlateau()[this.positionYDepart][this.positionXDepart].getType() == 'J'){
 
-            Joueur autreJoueur = Main.plateau[this.positionYDepart][this.positionXDepart].getJoueur();
-            Main.plateau[this.positionYDepart][this.positionXDepart].setType('V');
-            Main.plateau[this.positionYDepart][this.positionXDepart].setJoueur(autreJoueur);
+            Joueur autreJoueur = Main.getPlateau()[this.positionYDepart][this.positionXDepart].getJoueur();
+            Main.getPlateau()[this.positionYDepart][this.positionXDepart].setType('V');
+            Main.getPlateau()[this.positionYDepart][this.positionXDepart].setJoueur(autreJoueur);
         }
         this.setDirection('S');
-        Main.plateau[this.positionYDepart][this.positionXDepart].setJoueur(this);
-        Main.plateau[this.positionY][this.positionX].setType('V');
+        Main.getPlateau()[this.positionYDepart][this.positionXDepart].setJoueur(this);
+        Main.getPlateau()[this.positionY][this.positionX].setType('V');
         this.positionX=this.positionXDepart;
         this.positionY=this.positionYDepart;
-        Main.fenetre.remove(this.imageElement);
+        Main.getFenetre().remove(this.imageElement);
         this.imageElement = new JLabel(new ImageIcon(this.listeImages[3]));
-        Main.fenetre.remove(Main.plateauVisu);
-        Main.fenetre.add(this.imageElement);
-        Main.fenetre.add(Main.plateauVisu);
-        Main.fenetre.repaint();
+        Main.getFenetre().remove(Main.getPlateauVisu());
+        Main.getFenetre().add(this.imageElement);
+        Main.getFenetre().add(Main.getPlateauVisu());
+        Main.getFenetre().repaint();
     }
 
     public void avancer(){
@@ -315,7 +315,7 @@ public class Joueur extends Cases{
         else if(this.direction=='O'){
             ouest();
         }
-        Main.fenetre.deplacerJoueur(this,this.getPositionX(),this.getPositionY());
+        Main.getFenetre().deplacerJoueur(this,this.getPositionX(),this.getPositionY());
         try {
             TimeUnit.MILLISECONDS.sleep(500);
         } catch (InterruptedException ie) {
@@ -330,10 +330,10 @@ public class Joueur extends Cases{
             caseDirection.setType('V');
             casesJoueur.setType('V');
             System.out.println("J"+this.numero+" a gagné");
-            Main.listeDeJoueurs.remove(this);
-            Main.fenetre.remove(caseDirection.imageJoyau);
-            Main.fenetre.remove(this.imageElement);
-            Main.fenetre.repaint();
+            Main.getListeDeJoueurs().remove(this);
+            Main.getFenetre().remove(caseDirection.imageJoyau);
+            Main.getFenetre().remove(this.imageElement);
+            Main.getFenetre().repaint();
         }
         else if(typeCaseDirection == 'V'){
             this.avancer();
@@ -359,34 +359,34 @@ public class Joueur extends Cases{
         // Si vide avancer, si joueur, les deux reculent, si mur, reculer, si joyaux gagner
         //plateau[y][x]
         if (this.direction == 'N') {
-            char typeCaseDirection = Main.plateau[this.positionY - 1][this.positionX].getType();
-            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
-            Cases caseDirection = Main.plateau[this.positionY - 1][this.positionX];
+            char typeCaseDirection = Main.getPlateau()[this.positionY - 1][this.positionX].getType();
+            Cases casesJoueur = Main.getPlateau()[this.positionY][this.positionX];
+            Cases caseDirection = Main.getPlateau()[this.positionY - 1][this.positionX];
             actionJoueur(typeCaseDirection, casesJoueur, caseDirection);
 
         } else if (this.direction == 'E') {
-            char typeCaseDirection = Main.plateau[this.positionY][this.positionX + 1].getType();
-            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
-            Cases caseDirection = Main.plateau[this.positionY][this.positionX + 1];
+            char typeCaseDirection = Main.getPlateau()[this.positionY][this.positionX + 1].getType();
+            Cases casesJoueur = Main.getPlateau()[this.positionY][this.positionX];
+            Cases caseDirection = Main.getPlateau()[this.positionY][this.positionX + 1];
             actionJoueur(typeCaseDirection, casesJoueur, caseDirection);
         } else if (this.direction == 'S') {
-            char typeCaseDirection = Main.plateau[this.positionY + 1][this.positionX].getType();
-            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
-            Cases caseDirection = Main.plateau[this.positionY + 1][this.positionX];
+            char typeCaseDirection = Main.getPlateau()[this.positionY + 1][this.positionX].getType();
+            Cases casesJoueur = Main.getPlateau()[this.positionY][this.positionX];
+            Cases caseDirection = Main.getPlateau()[this.positionY + 1][this.positionX];
             actionJoueur(typeCaseDirection, casesJoueur, caseDirection);
 
         } else if (this.direction == 'O') {
-            char typeCaseDirection = Main.plateau[this.positionY][this.positionX - 1].getType();
-            Cases casesJoueur = Main.plateau[this.positionY][this.positionX];
-            Cases caseDirection = Main.plateau[this.positionY][this.positionX - 1];
+            char typeCaseDirection = Main.getPlateau()[this.positionY][this.positionX - 1].getType();
+            Cases casesJoueur = Main.getPlateau()[this.positionY][this.positionX];
+            Cases caseDirection = Main.getPlateau()[this.positionY][this.positionX - 1];
             actionJoueur(typeCaseDirection, casesJoueur, caseDirection);
         }
     }
     public void pousser(){
         //C'est fait en fonction du nombre de joueur reste plus qu'à changer la place du joueur dans le tableau
         if(this.direction=='N'){
-            if(Main.plateau[this.positionY-2][this.positionX].getType() != 'V'){// test si la case en face du bois est vide
-                Main.plateau[this.positionY-2][this.positionX].setType('B');
+            if(Main.getPlateau()[this.positionY-2][this.positionX].getType() != 'V'){// test si la case en face du bois est vide
+                Main.getPlateau()[this.positionY-2][this.positionX].setType('B');
                 nord();
                 System.out.println("ça pousse");
             }
@@ -395,8 +395,8 @@ public class Joueur extends Cases{
             }
         }
         else if(this.direction=='E'){
-            if(Main.plateau[this.positionY][this.positionX+2].getType() != 'V'){
-                Main.plateau[this.positionY][this.positionX+2].setType('B');
+            if(Main.getPlateau()[this.positionY][this.positionX+2].getType() != 'V'){
+                Main.getPlateau()[this.positionY][this.positionX+2].setType('B');
                 est();
                 System.out.println("ça pousse");
             }
@@ -406,8 +406,8 @@ public class Joueur extends Cases{
         }
 
         else if(this.direction=='S'){
-            if(Main.plateau[this.positionY+2][this.positionX].getType() != 'V'){
-                Main.plateau[this.positionY+2][this.positionX].setType('B');
+            if(Main.getPlateau()[this.positionY+2][this.positionX].getType() != 'V'){
+                Main.getPlateau()[this.positionY+2][this.positionX].setType('B');
                 sud();
                 System.out.println("ça pousse");
             }
@@ -416,8 +416,8 @@ public class Joueur extends Cases{
             }
         }
         else if(this.direction=='O'){
-            if(Main.plateau[this.positionY][this.positionX-2].getType() != 'V'){
-                Main.plateau[this.positionY][this.positionX-2].setType('B');
+            if(Main.getPlateau()[this.positionY][this.positionX-2].getType() != 'V'){
+                Main.getPlateau()[this.positionY][this.positionX-2].setType('B');
                 ouest();
                 System.out.println("ça pousse");
             }
