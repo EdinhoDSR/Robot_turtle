@@ -250,8 +250,8 @@ public class Fenetre extends JFrame{
                             do{
                                 positionX = Integer.parseInt(JOptionPane.showInputDialog(null,"Entrez la position en X"));
                                 positionY = Integer.parseInt(JOptionPane.showInputDialog(null,"Entrez la position en Y"));
-                            }while (positionX>9 || positionY>9 || Main.plateau[positionY][positionX].getType()!='V');
-                            Main.plateau[positionY][positionX].glace();
+                            }while (positionX>9 || positionY>9 || Main.getPlateau()[positionY][positionX].getType()!='V');
+                            Main.getPlateau()[positionY][positionX].glace();
                             joueur.mursGlace.removeCard(0);
                             valider("Mur posé");
                             frameMur.dispose();
@@ -273,8 +273,8 @@ public class Fenetre extends JFrame{
                             do{
                                 positionX = Integer.parseInt(JOptionPane.showInputDialog(null,"Entrez la position en X"));
                                 positionY = Integer.parseInt(JOptionPane.showInputDialog(null,"Entrez la position en Y"));
-                            }while (positionX>9 || positionY>9 || Main.plateau[positionY][positionX].getType()!='V');
-                            Main.plateau[positionY][positionX].pierre();
+                            }while (positionX>9 || positionY>9 || Main.getPlateau()[positionY][positionX].getType()!='V');
+                            Main.getPlateau()[positionY][positionX].pierre();
                             joueur.mursPierre.removeCard(0);
                             valider("Mur posé");
                             frameMur.dispose();
