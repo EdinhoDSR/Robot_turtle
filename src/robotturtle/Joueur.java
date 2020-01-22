@@ -45,7 +45,8 @@ public class Joueur extends Cases{
         this.defausse = new Deck();
         this.mainDujoueur = new Deck();
         this.programme = new Deck();
-        this.programme.addCard(new Card(Valeurs.LASER));
+//        this.programme.addCard(new Card(Valeurs.avancer));
+
         Main.remplissageMain(this);
         this.imageElement = new JLabel(new ImageIcon(nomsFichiersImages[3]));
         this.listeImages = nomsFichiersImages;
@@ -443,7 +444,7 @@ public class Joueur extends Cases{
         int taille = this.programme.cards.size();
 
         for(int i=0; i< taille ; i++) {
-            System.out.println("la carte traitée est " + this.programme.cards.get(i));
+//            System.out.println("la carte traitée est " + this.programme.cards.get(i));
             a= this.programme.cards.get(i);
             switch (a.getvaleurs()) {
 

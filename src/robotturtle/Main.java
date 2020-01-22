@@ -17,7 +17,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        //fenetre.initialisation();
+ //       fenetre.initialisation();
         fenetre.fenterePlateau();
         //int i = fenetre.initialisation();
         //listeDeJoueurs = initialisation(2);
@@ -182,7 +182,7 @@ public class Main {
             System.out.println(listeDeJoueur.get(0));
             for (Joueur joueur : listeDeJoueur) {
                 System.out.println("tour du joueur "+joueur.getNumero());
-                afficher();
+//                afficher();
                 fenetre.menuTourDeJeu(joueur);
                 String text = scanner.nextLine();
                 fenetre.defausse(joueur);
