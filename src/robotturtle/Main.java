@@ -7,7 +7,7 @@ import java.util.*;
 public class Main {
 
 
-    private static Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in);
     public static boolean jouer = true;
     public static int nombreDeJoueurs ;
     public static Cases[][] plateau = new Cases[10][10];
@@ -24,12 +24,33 @@ public class Main {
         //int i = fenetre.initialisation();
         //listeDeJoueurs = initialisation(2);
         //System.out.println(listeDeJoueurs.get(0));
-        run(2);
+        System.out.println("nombre de joueurs?");
+        int i = scanner.nextInt();
+        run(i);
 
 
 
     }
 
+    public static ArrayList<Joueur> getListeDeJoueurs() {
+        return listeDeJoueurs;
+    }
+
+    public static Cases[][] getPlateau() {
+        return plateau;
+    }
+
+    public static int getNombreDeJoueurs() {
+        return nombreDeJoueurs;
+    }
+
+    public static JLabel getPlateauVisu() {
+        return plateauVisu;
+    }
+
+    public static Fenetre getFenetre(){
+        return fenetre;
+    }
 
     public static ArrayList<Joueur> initialisation(int nombreJoueurs){
 
