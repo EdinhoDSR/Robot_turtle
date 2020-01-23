@@ -442,8 +442,8 @@ public class Joueur extends Cases{
         int taille = this.programme.cards.size();
 
         for(int i=0; i< taille ; i++) {
-            System.out.println("la carte traitée est " + this.programme.cards.get(i));
-            a= this.programme.cards.get(i);
+            System.out.println("la carte traitée est " + this.programme.cards.get(taille-1-i));
+            a= this.programme.cards.get(taille-1-i);
             switch (a.getvaleurs()) {
 
                 case avancer:
