@@ -91,6 +91,7 @@ public class Fenetre extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         String listeCartes ="";
                         ArrayList<Integer> A = new ArrayList<>();
+                        frameAjoutCarte.dispose();
 
                         for(int i = 0; i < listeCB.size();i++){
 
@@ -98,7 +99,7 @@ public class Fenetre extends JFrame{
                                 listeCartes = listeCartes + " " + listeCB.get(i).getText();
                                 A.add(i);
 
-                                frameAjoutCarte.dispose();
+
 
                             }
                         }
@@ -192,11 +193,11 @@ public class Fenetre extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         ArrayList<Integer> A = new ArrayList<>();
                         String listeCartes ="";
+                        frameAjoutCarte.dispose();
                         for(int i = 0; i < listeCB.size();i++){
                             if(listeCB.get(i).isSelected()){
                                 listeCartes = listeCartes + " " + listeCB.get(i).getText();
                                 A.add(i);
-                                frameAjoutCarte.dispose();
 
                             }
                         }
@@ -302,10 +303,8 @@ public class Fenetre extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frameMenu.dispose();
-                listeDeJoueurs = Main.initialisation(2);
-                for (Joueur joueur:listeDeJoueurs) {
-                    menuTourDeJeu(joueur);
-                }
+                Main.initialisation(2);
+                i=2;
                 //Main.listeDeJoueur = Main.initialisation(2);
 
 
