@@ -205,7 +205,7 @@ public class Main {
             System.out.println(listeDeJoueur.get(0));
             for (Joueur joueur : listeDeJoueur) {
                 System.out.println("tour du joueur "+joueur.getNumero());
-                afficher();
+ //               afficher();
                 f.menuTourDeJeu(joueur);
                 while (f.jouer){System.out.print("");}
 

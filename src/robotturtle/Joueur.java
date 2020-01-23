@@ -294,10 +294,12 @@ public class Joueur extends Cases{
         this.positionY=this.positionYDepart;
         Main.getFenetre().remove(this.imageElement);
         this.imageElement = new JLabel(new ImageIcon(this.listeImages[3]));
+        Main.fenetre.deplacerJoueur(this, this.positionX,this.positionY);
         Main.getFenetre().remove(Main.getPlateauVisu());
         Main.getFenetre().add(this.imageElement);
         Main.getFenetre().add(Main.getPlateauVisu());
         Main.getFenetre().repaint();
+        System.out.println("coucou");
     }
 
     public void avancer(){

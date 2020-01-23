@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="Testez moi ce putain de jeu">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="373e1241-6a87-418f-a180-69df1f7c132d" name="Default Changelist" comment="version execution dans le bon ordre2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Fenetre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robotturtle/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/robotturtle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robotturtle/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,9 +69,9 @@
         <option value="bill &lt;edinhodsr@gmailcom&gt;" />
       </list>
     </option>
-    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpServers">
     <servers />
@@ -236,12 +237,12 @@
       <option name="project" value="LOCAL" />
       <updated>1579713854229</updated>
     </task>
-    <task id="LOCAL-00011" summary="J'ai rajouté de quoi faire un tableau d'objet">
-      <created>1577957323623</created>
+    <task id="LOCAL-00011" summary="version execution dans le bon ordre">
+      <created>1579785649740</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1577957323623</updated>
+      <updated>1579785649740</updated>
     </task>
     <task id="LOCAL-00012" summary="Fusion pion et cases et début fonction d'initialisation">
       <created>1577962416630</created>
@@ -313,7 +314,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578660235061</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +370,8 @@
     <MESSAGE value="j'ai fait de mon mieux" />
     <MESSAGE value="Testez moi ce putain de jeu" />
     <MESSAGE value="caca" />
-    <option name="LAST_COMMIT_MESSAGE" value="caca" />
+    <MESSAGE value="version execution dans le bon ordre" />
+    <option name="LAST_COMMIT_MESSAGE" value="version execution dans le bon ordre" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
